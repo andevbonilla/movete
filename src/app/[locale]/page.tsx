@@ -3,6 +3,10 @@ import { useTranslations } from 'next-intl';
 import { Dela_Gothic_One } from "@next/font/google";
 import Image from 'next/image';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { Stat } from '@/components/Stat';
+
 const robotoFuente = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
     style: ["normal"],
@@ -52,7 +56,7 @@ export default function Index() {
                         width={200}
                         height={50}
                     />
-                    <div className='bg-white flex items-center justify-center'>
+                    <div className='bg-white flex flex-col items-center justify-center text-center text-black'>
                         <Image
                             src={require('@/assets/profile-img-example.jpg')}
                             alt='background image example'
@@ -60,7 +64,35 @@ export default function Index() {
                             width={100}
                             height={100}
                         />
+                        <h3 className='-translate-y-12 mt-3 font-bold px-[12%] text-lg'>Alexa</h3>
+                        <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
+                            <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className='text-black' />
+                            <Image
+                                src={require('@/assets/svgs/instagram-svgrepo-com.svg')}
+                                alt='intagram svg'
+                                className='ml-5'
+                                width={22}
+                                height={22}
+                            />
+                            <Image
+                                src={require('@/assets/svgs/twitter-boxed-svgrepo-com.svg')}
+                                alt='twitter svg'
+                                className='ml-5'
+                                width={22}
+                                height={22}
+                            />
+                        </div>
+                        <p className='-translate-y-12 mt-1 px-[12%]'>{t('alexa-example-desc')}</p>
                     </div>
+                    <div className='bg-white text-black'>
+
+                        <Stat />
+                        <Stat />
+                        <Stat />
+                        <Stat />
+
+                    </div>
+
                 </section>
             </main>
         </>
