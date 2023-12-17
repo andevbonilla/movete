@@ -1,5 +1,19 @@
 {
   "Index": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "presentation-part1": " The. ",
+    "presentation-part2": "link",
+    "presentation-part3": " that represents your",
+    "presentation-part4": "lifestyle,",
+    "presentation-part5": " show off your ",
+    "presentation-part6": "sporting achievements",
+    "presentation-part7": " with. ",
+    "presentation-part8": "Fitalgo.",
+    "sub-presentation": "The link that represents your lifestyle, show off your sporting achievements with fitalgo.",
+    "yourname-placeholder": "yourname",
+    "get-url": "Get Your Url"
+  },
+  "Navbar": {
+    "logo": "Fitalgo"
   }
 }
