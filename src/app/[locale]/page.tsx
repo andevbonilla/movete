@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Stat } from '@/components/Stat';
+import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Footer } from '@/components/Footer';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -20,6 +22,7 @@ export default function Index() {
 
 
     const t = useTranslations('Index');
+    const navbarTranstalate = useTranslations('Navbar');
 
     return (
         <>
@@ -67,20 +70,8 @@ export default function Index() {
                         <h3 className='-translate-y-12 mt-3 font-bold px-[12%] text-lg'>Alexa</h3>
                         <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
                             <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className='text-black' />
-                            <Image
-                                src={require('@/assets/svgs/instagram-svgrepo-com.svg')}
-                                alt='intagram svg'
-                                className='ml-5'
-                                width={22}
-                                height={22}
-                            />
-                            <Image
-                                src={require('@/assets/svgs/twitter-boxed-svgrepo-com.svg')}
-                                alt='twitter svg'
-                                className='ml-5'
-                                width={22}
-                                height={22}
-                            />
+                            <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className='text-black ml-6' />
+                            <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className='text-black ml-6' />
                         </div>
                         <p className='-translate-y-12 mt-1 px-[12%]'>{t('alexa-example-desc')}</p>
                     </div>
@@ -95,6 +86,7 @@ export default function Index() {
 
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

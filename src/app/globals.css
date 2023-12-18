@@ -29,3 +29,28 @@
     auto calc(var(--underline-width) * 1px),
     auto calc(var(--underline-width) * 1px);
 }
+
+.move-animation{
+    animation-name: sidefromright;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.move-bye-animation{
+    animation-name: byesidefromright;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes sidefromright {
+  0%{transform: translateX(20rem);}
+  100%{transform: translateX(0rem);}
+}
+
+@keyframes byesidefromright {
+  0%{transform: translateX(0rem);}
+  100%{transform: translateX(20rem);}
+}
+

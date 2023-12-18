@@ -1,17 +1,12 @@
-import Image from 'next/image'
-import React from 'react'
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 export const Stat = () => {
     return (
         <div className='flex items-center justify-between mx-8 py-4 px-5 bg-yellow-300 rounded-lg mb-5'>
             <div className='flex items-center'>
-                <Image
-                    src={require('@/assets/svgs/twitter-boxed-svgrepo-com.svg')}
-                    alt='twitter svg'
-                    className='mr-4'
-                    width={25}
-                    height={25}
-                />
+                <FontAwesomeIcon icon={faDumbbell} className='mr-4' />
                 <div>
                     <h4 className='font-bold'>Squat</h4>
                     <p>Reps: 3</p>

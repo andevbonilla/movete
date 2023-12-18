@@ -1,9 +1,9 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
+"use client"
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Dela_Gothic_One } from '@next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -12,11 +12,51 @@ const delaGothic = Dela_Gothic_One({
 });
 
 export const Navbar = () => {
-    const t = useTranslations('Navbar');
+
+    const [showSideMenu, setshowSideMenu] = useState(false);
+
+    const openSideMenu = () => {
+        setshowSideMenu(true);
+    }
+
+    const closeSideMenu = () => {
+        setshowSideMenu(false);
+    }
+
     return (
-        <div className='bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
-            <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Fitalgo</Link>
-            <FontAwesomeIcon icon={faBars} width={34} height={34} className='text-white' />
-        </div>
+        <nav>
+            <div className='bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
+                <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Fitalgo</Link>
+                <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu' />
+            </div>
+            {
+                showSideMenu && <div className='fixed h-screen w-full top-0 left-0 z-[995] flex'>
+
+                    <div onClick={closeSideMenu} className='bg-black bg-opacity-60 w-1/3 h-screen'></div>
+
+                    <div className='bg-black bg-opacity-60 w-2/3 h-screen'>
+                        <div className={`${showSideMenu && "move-animation"} bg-white text-black py-5 px-10 h-full w-full flex flex-col items-start`}>
+
+                            <FontAwesomeIcon onClick={closeSideMenu} icon={faTimes} size='3x' className='openSideMenu my-5' />
+
+                            <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
+                                About
+                            </Link>
+                            <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
+                                Search
+                            </Link>
+                            <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
+                                Profile
+                            </Link>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            }
+
+        </nav>
     )
 };
