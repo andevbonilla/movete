@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Stat } from '@/components/Stat';
 
-const robotoFuente = Dela_Gothic_One({
+const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
     style: ["normal"],
     subsets: ["latin"]
-})
+});
 
 export default function Index() {
 
@@ -24,9 +24,9 @@ export default function Index() {
     return (
         <>
             <Navbar />
-            <main className='bg-[#001429] text-white p-[10%]'>
+            <main className='text-white p-[10%] mt-10'>
                 <section className='mt-[4rem] mb-[5rem]'>
-                    <h2 className={`text-4xl ${robotoFuente.className}`}>
+                    <h2 className={`text-4xl ${delaGothic.className}`}>
                         {t('presentation-part1')}
                         <span className='beautiful-underline'>{t('presentation-part2')}</span>
                         {t('presentation-part3')}
