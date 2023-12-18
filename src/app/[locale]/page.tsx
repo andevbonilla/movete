@@ -1,13 +1,9 @@
-import { Navbar } from '@/components/Navbar';
 import { useTranslations } from 'next-intl';
 import { Dela_Gothic_One } from "@next/font/google";
-import Image from 'next/image';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { Stat } from '@/components/Stat';
-import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { ExampleProfiles } from '@/components/ExampleProfiles';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -19,7 +15,6 @@ export default function Index() {
 
     // 1. #001429
     // 2. #00FF8F
-
 
     const t = useTranslations('Index');
     const navbarTranstalate = useTranslations('Navbar');
@@ -51,40 +46,9 @@ export default function Index() {
                     </div>
                 </section>
 
-                <section className='bg-white rounded-2xl'>
-                    <Image
-                        src={require('@/assets/background-img-example.jpg')}
-                        alt='background image example'
-                        className='w-full h-32 rounded-t-2xl'
-                        width={200}
-                        height={50}
-                    />
-                    <div className='bg-white flex flex-col items-center justify-center text-center text-black'>
-                        <Image
-                            src={require('@/assets/profile-img-example.jpg')}
-                            alt='background image example'
-                            className='rounded-full -translate-y-12'
-                            width={100}
-                            height={100}
-                        />
-                        <h3 className='-translate-y-12 mt-3 font-bold px-[12%] text-lg'>Alexa</h3>
-                        <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
-                            <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className='text-black' />
-                            <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className='text-black ml-6' />
-                            <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className='text-black ml-6' />
-                        </div>
-                        <p className='-translate-y-12 mt-1 px-[12%]'>{t('alexa-example-desc')}</p>
-                    </div>
-                    <div className='bg-white text-black'>
 
-                        <Stat />
-                        <Stat />
-                        <Stat />
-                        <Stat />
+                <ExampleProfiles />
 
-                    </div>
-
-                </section>
             </main>
             <Footer />
         </>
