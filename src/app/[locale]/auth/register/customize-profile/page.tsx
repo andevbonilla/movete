@@ -22,7 +22,7 @@ const CustomizePage = () => {
 
     const [exercises, setExercises] = useState<any>([]);
 
-    const [nameExercise, setNameExercise] = useState("");
+    const [nameExercise, setNameExercise] = useState("squats");
     const [respsExercise, setRepsExercise] = useState("");
     const [weightExercise, setWeightExercise] = useState("");
 
@@ -181,7 +181,7 @@ const CustomizePage = () => {
 
                     <div className='w-full flex flex-col items-start mb-10'>
                         <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
-                        <select defaultValue={"squats"} value={nameExercise} onChange={(e) => setNameExercise(e.currentTarget.value)} id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
+                        <select value={nameExercise} onChange={(e) => setNameExercise(e.currentTarget.value)} id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
                             <option value="squats">Squats</option>
                             <option value="deadlifts">Deadlifts</option>
                             <option value="bench-press">Bench Press</option>

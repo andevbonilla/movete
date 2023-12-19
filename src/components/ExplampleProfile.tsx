@@ -79,6 +79,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                             Weight={exer.weight}
                             ExerciseType={exer.name}
                             NumReps={exer.reps}
+                            key={index}
                         />
                     ))
                 }
