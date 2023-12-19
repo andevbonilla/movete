@@ -138,7 +138,7 @@ const RegisterPage = () => {
                                 Fitalgo
                             </h2>
                         </Link>
-                        <h1 className="mb-8 font-bold text-xl text-white">Create your profile</h1>
+                        <h1 className="mb-8 font-bold text-xl text-white">Welcome back!</h1>
                     </div>
 
                     <form className="flex flex-col items-center mb-4 md:max-w-[60%]" onSubmit={handleSubmit}>
@@ -161,15 +161,15 @@ const RegisterPage = () => {
 
                         <input className="border-black border-solid border-[0.08rem] py-3 px-4 rounded mb-8 w-full" type="password" name="password" placeholder={texts.passwordPlaceholder} />
 
-                        <button className="bg-[#00FF8F] text-white text-lg py-2 px-4 rounded-full w-full" type="submit">Continue</button>
+                        <button className="bg-[#00FF8F] text-white text-lg py-3 px-5 rounded w-full" type="submit">Log in</button>
 
                         {error && <span className="text-red-500 mt-4">{error}</span>}
 
                     </form>
 
                     <p className="text-sm text-center opacity-90 px-20 md:max-w-[80%] text-white">
-                        If you already have a profile:
-                        <Link className="text-[#00FF8F] font-bold pl-2" href={'/en/auth/register'}>Login</Link>
+                        Don't have an account?:
+                        <Link className="text-[#00FF8F] font-bold pl-2" href={'/en/auth/register/link'}>Sign Up</Link>
                     </p>
 
                 </div>

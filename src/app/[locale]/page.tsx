@@ -42,7 +42,7 @@ export default function Index() {
                             <span className='font-bold'>fitalgo.com/</span>
                             <input className='w-full' type="text" placeholder={`${t('yourname-placeholder')}`} />
                         </div>
-                        <button className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>{t('get-url')}</button>
+                        <button type='button' className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>{t('get-url')}</button>
                     </div>
                 </section>
 
@@ -55,7 +55,7 @@ export default function Index() {
                         Create and customize your bio fitness with fitalgo in a short time
                     </h2>
                     <p className='mt-3'>Show everyone how much weight you lift, add your links like tiktok, instagram, website, etc. connect with people with the same interest as you and much more.</p>
-                    <button className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Get starter</button>
+                    <button type='button' className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Get starter</button>
                 </section>
 
                 <section className='p-[10%]'>
@@ -63,7 +63,7 @@ export default function Index() {
                         The fitness child between linktree and VSCO
                     </h2>
                     <p className='mt-3'>Upload photos of your lifestyle, show what you listen to most when you exercise, add custom buttons like: train with me and meet people with the same interests and much more.</p>
-                    <button className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Get starter</button>
+                    <button type='button' className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Get starter</button>
                 </section>
 
 

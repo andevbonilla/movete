@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { FormEvent, useState } from 'react';
 
 import { Dela_Gothic_One } from "@next/font/google";
+import { useRouter } from 'next/navigation';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -18,6 +19,8 @@ const RegisterPage = () => {
 
     const [languageLink, setLanguageLink] = useState("");
 
+    const router = useRouter();
+
     const [texts, settexts] = useState({
         signIn: "Sign In With",
         googleButton: "Continue With Google",
@@ -30,6 +33,10 @@ const RegisterPage = () => {
 
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+
+        e.preventDefault();
+        router.push("/en/auth/register/customize-profile");
+        return;
 
         e.preventDefault();
 
@@ -138,7 +145,7 @@ const RegisterPage = () => {
                                 Fitalgo
                             </h2>
                         </Link>
-                        <h1 className="mb-8 font-bold text-xl text-white">Create your profile</h1>
+                        <h1 className="mb-8 font-bold text-xl text-white p-[5%]">let&apos;s finish creating your profile</h1>
                     </div>
 
                     <form className="flex flex-col items-center mb-4 md:max-w-[60%]" onSubmit={handleSubmit}>
@@ -161,7 +168,7 @@ const RegisterPage = () => {
 
                         <input className="border-black border-solid border-[0.08rem] py-3 px-4 rounded mb-8 w-full" type="password" name="password" placeholder={texts.passwordPlaceholder} />
 
-                        <button className="bg-[#00FF8F] text-white text-lg py-2 px-4 rounded-full w-full" type="submit">Continue</button>
+                        <button className="bg-[#00FF8F] text-white text-lg py-3 px-5 rounded w-full" type="submit">Continue</button>
 
                         {error && <span className="text-red-500 mt-4">{error}</span>}
 
