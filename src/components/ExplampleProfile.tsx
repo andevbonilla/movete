@@ -10,7 +10,7 @@ import { Profile } from '@/interfaces/ProfileInterface';
 export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl }: Profile) => {
 
     return (
-        <div className='bg-white rounded-2xl'>
+        <div className='bg-white rounded-2xl max-h-[40rem] overflow-y-scroll'>
             <Image
                 src={require(`@/assets/${bannerUrl}`)}
                 alt='background image example'
