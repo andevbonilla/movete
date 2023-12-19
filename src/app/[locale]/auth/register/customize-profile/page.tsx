@@ -26,6 +26,9 @@ const CustomizePage = () => {
     const [respsExercise, setRepsExercise] = useState("");
     const [weightExercise, setWeightExercise] = useState("");
 
+    const [buttonTrainWithme, setButtonTrainWithme] = useState(false);
+    const [showProfileOnSeach, setShowProfileOnSeach] = useState(false);
+
     const router = useRouter();
 
     const continueUserInfo = () => {
@@ -59,6 +62,14 @@ const CustomizePage = () => {
 
         setExercises([...exercises, newExer]);
 
+    }
+
+    const toggleButtonTrainWithMe = () => {
+        setButtonTrainWithme(!buttonTrainWithme);
+    }
+
+    const toggleButtonShowProfile = () => {
+        setShowProfileOnSeach(!showProfileOnSeach)
     }
 
 
@@ -234,15 +245,15 @@ const CustomizePage = () => {
                     <div className='flex justify-between w-full items-center mb-10'>
                         <p className='text-white text-lg'>Show button: train with me?</p>
                         <div className='flex items-center'>
-                            <button type='button' className='bg-[#00FF8F] text-white py-3 px-4 '>No</button>
-                            <button type='button' className='bg-black text-white py-2 px-3 '>Yes</button>
+                            <button onClick={toggleButtonTrainWithMe} type='button' className={`${!buttonTrainWithme ? "bg-[#00FF8F] py-3 px-4" : "bg-black py-2 px-3"} text-white`}>No</button>
+                            <button onClick={toggleButtonTrainWithMe} type='button' className={`${buttonTrainWithme ? "bg-[#00FF8F] py-3 px-4" : "bg-black py-2 px-3"} text-white`}>Yes</button>
                         </div>
                     </div>
                     <div className='flex justify-between w-full items-center mb-10'>
                         <p className='text-white text-lg'>Do you want to appear in the app&apos;s search engine?</p>
                         <div className='flex items-center'>
-                            <button type='button' className='bg-[#00FF8F] text-white py-3 px-4 '>No</button>
-                            <button type='button' className='bg-black text-white py-2 px-3 '>Yes</button>
+                            <button onClick={toggleButtonShowProfile} type='button' className={`${!showProfileOnSeach ? "bg-[#00FF8F] py-3 px-4" : "bg-black py-2 px-3"} text-white`}>No</button>
+                            <button onClick={toggleButtonShowProfile} type='button' className={`${showProfileOnSeach ? "bg-[#00FF8F] py-3 px-4" : "bg-black py-2 px-3"} text-white`}>Yes</button>
                         </div>
                     </div>
                 </div>
