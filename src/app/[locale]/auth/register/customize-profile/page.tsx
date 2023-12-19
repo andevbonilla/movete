@@ -2,7 +2,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const delaGothic = Dela_Gothic_One({
@@ -23,9 +23,9 @@ const CustomizePage = () => {
     return (
         <>
 
-            <div className='h-screen flex flex-col items-center p-[10%] overflow-y-scroll relative'>
+            <div className='flex flex-col items-center p-[10%] overflow-y-scroll relative'>
 
-                <button type='button' className='fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#00FF8F] text-white font-bold text-xl rounded-full py-3 px-6'>
+                <button type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#00FF8F] text-white font-bold text-xl rounded-full py-3 px-6'>
                     <FontAwesomeIcon icon={faEye} className='mr-3' />
                     Preview Profile
                 </button>
@@ -36,6 +36,11 @@ const CustomizePage = () => {
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Tell us your name:</p>
                     <input type="text" placeholder='Your Name' className='py-3 px-5 text-black w-full rounded' />
+                </div>
+
+                <div className='w-full flex flex-col items-start mb-10'>
+                    <p className='text-white mb-2 text-lg font-bold'>Description:</p>
+                    <textarea className='w-full h-20 rounded py-3 px-5' placeholder='Write a short description about yourself'></textarea>
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
@@ -65,7 +70,54 @@ const CustomizePage = () => {
                     </div>
                 </div>
 
-                <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Continue</button>
+                <h2 className='text-white mb-10 text-xl font-bold'>Add at least one exercise:</h2>
+                <div className='w-full flex flex-col items-start mb-10'>
+
+                    <div className='w-full flex flex-col items-start mb-10'>
+                        <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
+                        <select id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
+                            <option value="squats">Squats</option>
+                            <option value="deadlifts">Deadlifts</option>
+                            <option value="bench-press">Bench Press</option>
+                            <option value="pull-ups">Pull-ups</option>
+                            <option value="lunges">Lunges</option>
+                            <option value="push-ups">Push-ups</option>
+                            <option value="plank">Plank</option>
+                            <option value="burpees">Burpees</option>
+                            <option value="rows">Rows</option>
+                            <option value="bicep-curls">Bicep Curls</option>
+                            <option value="tricep-dips">Tricep Dips</option>
+                            <option value="sit-ups">Sit-ups</option>
+                            <option value="leg-press">Leg Press</option>
+                            <option value="shoulder-press">Shoulder Press</option>
+                            <option value="box-jumps">Box Jumps</option>
+                        </select>
+                    </div>
+
+                    <div className='w-full flex flex-col items-start mb-10'>
+                        <p className='text-white mb-2 text-lg font-bold'>How much weight do you lift in this exercise?:</p>
+                        <div className='flex items-center w-full'>
+                            <input type="number" placeholder='Example: 200' className='py-3 px-5 text-black w-2/3 rounded-l h-full' />
+                            <select name="measure" className='py-[.7rem] px-5 text-black w-1/3 h-full rounded-r font-bold'>
+                                <option value="kg">Kg</option>
+                                <option value="lb">Lb</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div className='w-full flex flex-col items-start mb-10'>
+                        <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
+                        <input type="number" placeholder='Example: 4' className='py-3 px-5 text-black w-full rounded' />
+                    </div>
+
+                    <div className='flex justify-center items-center'>
+                        <button type='button' className='text-[#00FF8F] text-lg' ><FontAwesomeIcon icon={faPlus} /> Add Exercise</button>
+                    </div>
+
+                </div>
+
+                <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
 
             </div>
         </>
