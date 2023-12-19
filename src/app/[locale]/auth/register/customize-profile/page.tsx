@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
 import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NoUserSVG } from '@/lib/Svgs';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -39,7 +40,7 @@ const CustomizePage = () => {
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
-                    <p className='text-white mb-2 text-lg font-bold'>Description:</p>
+                    <p className='text-white mb-2 text-lg font-bold'>Description (optional):</p>
                     <textarea className='w-full h-20 rounded py-3 px-5' placeholder='Write a short description about yourself'></textarea>
                 </div>
 
@@ -68,6 +69,26 @@ const CustomizePage = () => {
                         </div>
 
                     </div>
+                </div>
+
+                <div className='w-full flex flex-col items-start mb-10'>
+                    <p className='text-white mb-2 text-lg font-bold'>Select a profile picture (optional):</p>
+                    <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
+                        Select a picture
+                        <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
+                    </div>
+                    <div className='mt-8 flex items-center justify-center w-full'>
+                        <NoUserSVG classList={"w-16 h-16"} color={"#ffffff"} />
+                    </div>
+                </div>
+
+                <div className='w-full flex flex-col items-start mb-10'>
+                    <p className='text-white mb-2 text-lg font-bold'>Select a banner picture (optional):</p>
+                    <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
+                        Select a picture
+                        <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
+                    </div>
+                    <div className='mt-8 h-24 rounded-t-lg w-full bg-slate-500'></div>
                 </div>
 
                 <h2 className='text-white mb-10 text-xl font-bold'>Add at least one exercise:</h2>
@@ -115,6 +136,24 @@ const CustomizePage = () => {
                         <button type='button' className='text-[#00FF8F] text-lg' ><FontAwesomeIcon icon={faPlus} /> Add Exercise</button>
                     </div>
 
+                </div>
+
+                <div>
+                    <h2 className='text-white mb-10 text-xl font-bold'>Optional configurations:</h2>
+                    <div className='flex justify-between w-full items-center mb-10'>
+                        <p className='text-white text-lg'>Show button: train with me?</p>
+                        <div className='flex items-center'>
+                            <button type='button' className='bg-[#00FF8F] text-white py-3 px-4 '>No</button>
+                            <button type='button' className='bg-black text-white py-2 px-3 '>Yes</button>
+                        </div>
+                    </div>
+                    <div className='flex justify-between w-full items-center mb-10'>
+                        <p className='text-white text-lg'>Do you want to appear in the app's search engine?</p>
+                        <div className='flex items-center'>
+                            <button type='button' className='bg-[#00FF8F] text-white py-3 px-4 '>No</button>
+                            <button type='button' className='bg-black text-white py-2 px-3 '>Yes</button>
+                        </div>
+                    </div>
                 </div>
 
                 <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
