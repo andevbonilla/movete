@@ -13,24 +13,28 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
     const colorsPalettes = [
         {
             primary: "#ffffff",
-            secondary: "#0092F7"
+            secondary: "#0092F7",
+            texts: "#ffffff"
         },
         {
             primary: "#001429",
-            secondary: "#00FF8F"
+            secondary: "#00FF8F",
+            texts: "#ffffff"
         },
         {
             primary: "#ffffff",
-            secondary: "#FF0303"
+            secondary: "#FF0303",
+            texts: "#ffffff"
         },
         {
             primary: "#ffffff",
-            secondary: "#7203FF"
+            secondary: "#7203FF",
+            texts: "#ffffff"
         },
     ]
 
     return (
-        <div className={`bg-white rounded-2xl max-h-[40rem] overflow-y-scroll bg-[${colorsPalettes[colorPalette].primary}]`}>
+        <div className={`min-h-[100vh] overflow-y-scroll bg-[${colorsPalettes[colorPalette].primary}]`}>
             {
                 (bannerUrl === "")
                     ? <div className='h-32 rounded-t-lg w-full bg-slate-500'></div>
@@ -42,7 +46,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                         height={50}
                     />
             }
-            <div className='bg-white flex flex-col items-center justify-center text-center text-black'>
+            <div className='flex flex-col items-center justify-center text-center text-black'>
                 {
                     (imgUrl === "")
                         ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color={"#000000"} />
@@ -62,12 +66,12 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                 </div>
                 <p className='-translate-y-12 mt-1 px-[12%]'>{desc}</p>
             </div>
-            <div className='bg-white text-black'>
+            <div className='text-black'>
 
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
 
             </div>
         </div>

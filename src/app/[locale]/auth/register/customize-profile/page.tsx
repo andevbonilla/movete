@@ -43,7 +43,7 @@ const CustomizePage = () => {
     return (
         <>
             {
-                showPreviewProfile && <div className='fixed top-0 bg-white w-full h-screen overflow-y-scroll z-[999]'>
+                showPreviewProfile && <div className={`fixed top-0 w-full z-[999]`}>
                     <ExampleProfile
                         username={nameInput}
                         desc={descInput}
@@ -61,7 +61,7 @@ const CustomizePage = () => {
 
             <div className='flex flex-col items-center p-[10%] overflow-y-scroll relative'>
 
-                <button onClick={openPreview} type='button' className='z-[900] opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#00FF8F] text-white font-bold text-xl rounded-full py-3 px-6'>
+                <button onClick={openPreview} type='button' className='z-[900] opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#0092F7] text-white font-bold text-xl rounded-full py-3 px-6'>
                     <FontAwesomeIcon icon={faEye} className='mr-3' />
                     Preview Profile
                 </button>
