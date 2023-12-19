@@ -1,10 +1,11 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
 import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NoUserSVG } from '@/lib/Svgs';
+import { ExampleProfile } from '@/components/ExplampleProfile';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -14,6 +15,8 @@ const delaGothic = Dela_Gothic_One({
 
 const CustomizePage = () => {
 
+    const [showPreviewProfile, setShowPreviewProfile] = useState(false);
+
     const router = useRouter();
 
     const continueUserInfo = () => {
@@ -21,12 +24,36 @@ const CustomizePage = () => {
         // router.push("/en/auth/register");
     };
 
+    const openPreview = () => {
+        setShowPreviewProfile(true);
+    }
+
+    const closePreview = () => {
+        setShowPreviewProfile(false);
+    }
+
+
     return (
         <>
+            {
+                showPreviewProfile && <div className='fixed top-0 bg-white w-full h-screen overflow-y-scroll z-[999]'>
+                    <ExampleProfile
+                        username={"carl"}
+                        desc={"asd"}
+                        imgUrl={""}
+                        bannerUrl={""}
+                    />
+                    <button onClick={closePreview} type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-red-600 text-white font-bold text-xl rounded-full py-3 px-6'>
+                        <FontAwesomeIcon icon={faEye} className='mr-3' />
+                        Close Preview
+                    </button>
+                </div>
+            }
+
 
             <div className='flex flex-col items-center p-[10%] overflow-y-scroll relative'>
 
-                <button type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#00FF8F] text-white font-bold text-xl rounded-full py-3 px-6'>
+                <button onClick={openPreview} type='button' className='z-[900] opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#00FF8F] text-white font-bold text-xl rounded-full py-3 px-6'>
                     <FontAwesomeIcon icon={faEye} className='mr-3' />
                     Preview Profile
                 </button>
@@ -78,7 +105,7 @@ const CustomizePage = () => {
                         <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
                     </div>
                     <div className='mt-8 flex items-center justify-center w-full'>
-                        <NoUserSVG classList={"w-16 h-16"} color={"#ffffff"} />
+                        <NoUserSVG classList={"w-20 h-20"} color={"#000000"} />
                     </div>
                 </div>
 
