@@ -168,7 +168,7 @@ const RegisterPage = () => {
                     </form>
 
                     <p className="text-sm text-center opacity-90 px-20 md:max-w-[80%] text-white">
-                        Don't have an account?:
+                        Don&apos;t have an account?:
                         <Link className="text-[#00FF8F] font-bold pl-2" href={'/en/auth/register/link'}>Sign Up</Link>
                     </p>
 

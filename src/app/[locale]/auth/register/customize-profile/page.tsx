@@ -21,7 +21,7 @@ const CustomizePage = () => {
     return (
         <div className='h-screen flex flex-col items-center p-[10%] overflow-y-scroll'>
             <h1 className={`text-white ${delaGothic.className} text-2xl mt-[3rem]`}>Customization</h1>
-            <p className='text-white text-lg text-center mt-4 mb-[3rem]'>All right, now let's customize your profile.</p>
+            <p className='text-white text-lg text-center mt-4 mb-[3rem]'>All right, now let&apos;s customize your profile.</p>
 
             <div className='w-full flex flex-col items-start mb-10'>
                 <p className='text-white mb-2 text-lg font-bold'>Tell us your name:</p>
