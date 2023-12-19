@@ -16,6 +16,9 @@ const delaGothic = Dela_Gothic_One({
 const CustomizePage = () => {
 
     const [showPreviewProfile, setShowPreviewProfile] = useState(false);
+    const [nameInput, setNameInput] = useState("");
+    const [descInput, setDescInput] = useState("");
+    const [colorPalletInput, setColorPalletInput] = useState(0);
 
     const router = useRouter();
 
@@ -32,16 +35,21 @@ const CustomizePage = () => {
         setShowPreviewProfile(false);
     }
 
+    const changePaleteOfColor = (color: number) => {
+        setColorPalletInput(color);
+    }
+
 
     return (
         <>
             {
                 showPreviewProfile && <div className='fixed top-0 bg-white w-full h-screen overflow-y-scroll z-[999]'>
                     <ExampleProfile
-                        username={"carl"}
-                        desc={"asd"}
+                        username={nameInput}
+                        desc={descInput}
                         imgUrl={""}
                         bannerUrl={""}
+                        colorPalette={colorPalletInput}
                     />
                     <button onClick={closePreview} type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-red-600 text-white font-bold text-xl rounded-full py-3 px-6'>
                         <FontAwesomeIcon icon={faEye} className='mr-3' />
@@ -63,37 +71,61 @@ const CustomizePage = () => {
 
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Tell us your name:</p>
-                    <input type="text" placeholder='Your Name' className='py-3 px-5 text-black w-full rounded' />
+                    <input
+                        onChange={(e) => setNameInput(e.currentTarget.value)}
+                        value={nameInput}
+                        type="text"
+                        placeholder='Your Name'
+                        className='py-3 px-5 text-black w-full rounded'
+                    />
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Description (optional):</p>
-                    <textarea className='w-full h-20 rounded py-3 px-5' placeholder='Write a short description about yourself'></textarea>
+                    <textarea
+                        onChange={(e) => setDescInput(e.currentTarget.value)}
+                        value={descInput}
+                        className='w-full h-20 rounded py-3 px-5'
+                        placeholder='Write a short description about yourself'
+                    >
+                    </textarea>
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Select the color palette:</p>
                     <div className='flex justify-center items-center w-full mt-4'>
 
-                        <div className='flex items-center rotate-45 border-2 border-white rounded-full'>
+                        <button
+                            onClick={() => setColorPalletInput(0)}
+                            type='button'
+                            className={`${colorPalletInput === 0 ? "border-[.4rem] border-[#00FF8F]" : "border-2 border-white"} flex items-center rotate-45 rounded-full`}>
                             <div className='bg-[#ffffff] w-[1rem] h-[2rem] rounded-l-full'></div>
                             <div className='bg-[#0092F7] w-[1rem] h-[2rem] rounded-r-full'></div>
-                        </div>
+                        </button>
 
-                        <div className='flex items-center rotate-45 ml-10 border-2 border-white rounded-full'>
+                        <button
+                            onClick={() => setColorPalletInput(1)}
+                            type='button'
+                            className={`${colorPalletInput === 1 ? "border-[.4rem] border-[#00FF8F]" : "border-2 border-white"} flex items-center rotate-45 ml-10 rounded-full`}>
                             <div className='bg-[#001429] w-[1rem] h-[2rem] rounded-l-full'></div>
                             <div className='bg-[#00FF8F] w-[1rem] h-[2rem] rounded-r-full'></div>
-                        </div>
+                        </button>
 
-                        <div className='flex items-center rotate-45 ml-10 border-2 border-white rounded-full'>
+                        <button
+                            onClick={() => setColorPalletInput(2)}
+                            type='button'
+                            className={`${colorPalletInput === 2 ? "border-[.4rem] border-[#00FF8F]" : "border-2 border-white"} flex items-center rotate-45 ml-10 rounded-full`}>
                             <div className='bg-[#ffffff] w-[1rem] h-[2rem] rounded-l-full'></div>
                             <div className='bg-[#FF0303] w-[1rem] h-[2rem] rounded-r-full'></div>
-                        </div>
+                        </button>
 
-                        <div className='flex items-center rotate-45 ml-10 border-2 border-white rounded-full'>
+                        <button
+                            onClick={() => setColorPalletInput(3)}
+                            type='button'
+                            className={`${colorPalletInput === 3 ? "border-[.4rem] border-[#00FF8F]" : "border-2 border-white"} flex items-center rotate-45 ml-10 rounded-full`}>
                             <div className='bg-[#ffffff] w-[1rem] h-[2rem] rounded-l-full'></div>
                             <div className='bg-[#7203FF] w-[1rem] h-[2rem] rounded-r-full'></div>
-                        </div>
+                        </button>
 
                     </div>
                 </div>

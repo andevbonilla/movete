@@ -8,10 +8,29 @@ import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Profile } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 
-export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl }: Profile) => {
+export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette }: Profile) => {
+
+    const colorsPalettes = [
+        {
+            primary: "#ffffff",
+            secondary: "#0092F7"
+        },
+        {
+            primary: "#001429",
+            secondary: "#00FF8F"
+        },
+        {
+            primary: "#ffffff",
+            secondary: "#FF0303"
+        },
+        {
+            primary: "#ffffff",
+            secondary: "#7203FF"
+        },
+    ]
 
     return (
-        <div className='bg-white rounded-2xl max-h-[40rem] overflow-y-scroll'>
+        <div className={`bg-white rounded-2xl max-h-[40rem] overflow-y-scroll bg-[${colorsPalettes[colorPalette].primary}]`}>
             {
                 (bannerUrl === "")
                     ? <div className='h-32 rounded-t-lg w-full bg-slate-500'></div>
@@ -45,10 +64,10 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl }: Profile) =
             </div>
             <div className='bg-white text-black'>
 
-                <Stat />
-                <Stat />
-                <Stat />
-                <Stat />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
 
             </div>
         </div>

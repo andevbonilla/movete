@@ -2,5 +2,6 @@ export interface Profile {
     username: string,
     desc: string,
     imgUrl: string,
-    bannerUrl: string
+    bannerUrl: string,
+    colorPalette: number
 }
