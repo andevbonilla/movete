@@ -22,8 +22,8 @@ export default function Index() {
     return (
         <>
             <Navbar />
-            <main className='text-white p-[10%] mt-10'>
-                <section className='mt-[4rem] mb-[5rem]'>
+            <main className='text-white mt-10'>
+                <section className='mt-[4rem] mb-[3rem] p-[10%]'>
                     <h2 className={`text-4xl ${delaGothic.className}`}>
                         {t('presentation-part1')}
                         <span className='beautiful-underline'>{t('presentation-part2')}</span>
@@ -46,8 +46,9 @@ export default function Index() {
                     </div>
                 </section>
 
-
-                <ExampleProfiles />
+                <div className='overflow-hidden mb-10'>
+                    <ExampleProfiles />
+                </div>
 
             </main>
             <Footer />

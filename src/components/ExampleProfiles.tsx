@@ -9,7 +9,7 @@ export const ExampleProfiles = () => {
 
 
     return (
-        <div className='mx-w-[80%] scale-95'>
+        <div className='mx-[12%]'>
 
             <Swiper
                 effect={'cards'}
