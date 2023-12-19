@@ -8,7 +8,7 @@ import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Profile } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 
-export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette }: Profile) => {
+export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises }: Profile) => {
 
     const colorsPalettes = [
         {
@@ -72,10 +72,16 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
             </div>
             <div className='text-black'>
 
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                {
+                    exercises.map((exer, index) => (
+                        <Stat
+                            backColor={colorsPalettes[colorPalette].secondary}
+                            Weight={exer.weight}
+                            ExerciseType={exer.name}
+                            NumReps={exer.reps}
+                        />
+                    ))
+                }
 
             </div>
         </div>

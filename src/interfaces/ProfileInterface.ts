@@ -3,5 +3,6 @@ export interface Profile {
     desc: string,
     imgUrl: string,
     bannerUrl: string,
-    colorPalette: number
+    colorPalette: number,
+    exercises: Array<any>
 }

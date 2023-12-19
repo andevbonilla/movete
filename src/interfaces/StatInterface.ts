@@ -1,3 +1,6 @@
 export interface StatInterface {
-    backColor: string
+    backColor: string,
+    NumReps: number, 
+    ExerciseType: string, 
+    Weight: number
 }

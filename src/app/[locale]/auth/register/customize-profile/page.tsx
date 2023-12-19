@@ -20,6 +20,12 @@ const CustomizePage = () => {
     const [descInput, setDescInput] = useState("");
     const [colorPalletInput, setColorPalletInput] = useState(0);
 
+    const [exercises, setExercises] = useState<any>([]);
+
+    const [nameExercise, setNameExercise] = useState("");
+    const [respsExercise, setRepsExercise] = useState("");
+    const [weightExercise, setWeightExercise] = useState("");
+
     const router = useRouter();
 
     const continueUserInfo = () => {
@@ -35,8 +41,24 @@ const CustomizePage = () => {
         setShowPreviewProfile(false);
     }
 
-    const changePaleteOfColor = (color: number) => {
-        setColorPalletInput(color);
+    const addNewExercise = () => {
+
+        const newExer = {
+            name: nameExercise,
+            reps: respsExercise,
+            weight: weightExercise
+        }
+
+        if (newExer.name === "" || newExer.reps === "" || newExer.weight === "") {
+            return;
+        }
+
+        if (exercises.length > 5) {
+            return;
+        }
+
+        setExercises([...exercises, newExer]);
+
     }
 
 
@@ -50,6 +72,7 @@ const CustomizePage = () => {
                         imgUrl={""}
                         bannerUrl={""}
                         colorPalette={colorPalletInput}
+                        exercises={exercises}
                     />
                     <button onClick={closePreview} type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-red-600 text-white font-bold text-xl rounded-full py-3 px-6'>
                         <FontAwesomeIcon icon={faEye} className='mr-3' />
@@ -150,12 +173,15 @@ const CustomizePage = () => {
                     <div className='mt-8 h-24 rounded-t-lg w-full bg-slate-500'></div>
                 </div>
 
+                {/* ================================= add exercise ================================== */}
+                {/* ================================================================================= */}
+
                 <h2 className='text-[#00FF8F] mb-10 text-xl font-bold mt-10'>Add at least one exercise</h2>
                 <div className='w-full flex flex-col items-start mb-10'>
 
                     <div className='w-full flex flex-col items-start mb-10'>
                         <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
-                        <select id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
+                        <select defaultValue={"squats"} value={nameExercise} onChange={(e) => setNameExercise(e.currentTarget.value)} id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
                             <option value="squats">Squats</option>
                             <option value="deadlifts">Deadlifts</option>
                             <option value="bench-press">Bench Press</option>
@@ -177,7 +203,7 @@ const CustomizePage = () => {
                     <div className='w-full flex flex-col items-start mb-10'>
                         <p className='text-white mb-2 text-lg font-bold'>How much weight do you lift in this exercise?:</p>
                         <div className='flex items-center w-full'>
-                            <input type="number" placeholder='Example: 200' className='py-3 px-5 text-black w-2/3 rounded-l h-full' />
+                            <input value={weightExercise} onChange={(e) => setWeightExercise(e.currentTarget.value)} type="number" placeholder='Example: 200' className='py-3 px-5 text-black w-2/3 rounded-l h-full' />
                             <select name="measure" className='py-[.7rem] px-5 text-black w-1/3 h-full rounded-r font-bold'>
                                 <option value="kg">Kg</option>
                                 <option value="lb">Lb</option>
@@ -188,15 +214,21 @@ const CustomizePage = () => {
 
                     <div className='w-full flex flex-col items-start mb-10'>
                         <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
-                        <input type="number" placeholder='Example: 4' className='py-3 px-5 text-black w-full rounded' />
+                        <input value={respsExercise} onChange={(e) => setRepsExercise(e.currentTarget.value)} type="number" placeholder='Example: 4' className='py-3 px-5 text-black w-full rounded' />
                     </div>
 
                     <div className='flex justify-center items-center'>
-                        <button type='button' className='text-[#00FF8F] text-lg' ><FontAwesomeIcon icon={faPlus} /> Add Exercise</button>
+                        <button
+                            onClick={addNewExercise}
+                            type='button'
+                            className='text-[#00FF8F] text-lg'
+                        ><FontAwesomeIcon icon={faPlus} /> Add Exercise</button>
                     </div>
 
                 </div>
 
+                {/* ================================= optional configs ================================== */}
+                {/* ================================================================================= */}
                 <div>
                     <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Optional configurations</h2>
                     <div className='flex justify-between w-full items-center mb-10'>
