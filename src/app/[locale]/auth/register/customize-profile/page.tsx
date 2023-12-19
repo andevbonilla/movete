@@ -150,7 +150,7 @@ const CustomizePage = () => {
                     <div className='mt-8 h-24 rounded-t-lg w-full bg-slate-500'></div>
                 </div>
 
-                <h2 className='text-white mb-10 text-xl font-bold'>Add at least one exercise:</h2>
+                <h2 className='text-[#00FF8F] mb-10 text-xl font-bold mt-10'>Add at least one exercise</h2>
                 <div className='w-full flex flex-col items-start mb-10'>
 
                     <div className='w-full flex flex-col items-start mb-10'>
@@ -198,7 +198,7 @@ const CustomizePage = () => {
                 </div>
 
                 <div>
-                    <h2 className='text-white mb-10 text-xl font-bold'>Optional configurations:</h2>
+                    <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Optional configurations</h2>
                     <div className='flex justify-between w-full items-center mb-10'>
                         <p className='text-white text-lg'>Show button: train with me?</p>
                         <div className='flex items-center'>

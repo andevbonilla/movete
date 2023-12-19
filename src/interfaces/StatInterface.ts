@@ -1,4 +1,3 @@
 export interface StatInterface {
-    backColor: string,
-    textColor: string
+    backColor: string
 }

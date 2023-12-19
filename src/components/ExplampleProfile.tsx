@@ -14,22 +14,26 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
         {
             primary: "#ffffff",
             secondary: "#0092F7",
-            texts: "#ffffff"
+            texts: "#000000",
+            userIconColor: "#000000"
         },
         {
             primary: "#001429",
             secondary: "#00FF8F",
-            texts: "#ffffff"
+            texts: "#ffffff",
+            userIconColor: "#ffffff"
         },
         {
             primary: "#ffffff",
             secondary: "#FF0303",
-            texts: "#ffffff"
+            texts: "#000000",
+            userIconColor: "#000000"
         },
         {
             primary: "#ffffff",
             secondary: "#7203FF",
-            texts: "#ffffff"
+            texts: "#000000",
+            userIconColor: "#000000"
         },
     ]
 
@@ -46,10 +50,10 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                         height={50}
                     />
             }
-            <div className='flex flex-col items-center justify-center text-center text-black'>
+            <div className={`flex flex-col items-center justify-center text-center text-[${colorsPalettes[colorPalette].texts}]`}>
                 {
                     (imgUrl === "")
-                        ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color={"#000000"} />
+                        ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color={colorsPalettes[colorPalette].userIconColor} />
                         : <Image
                             src={require(`@/assets/${bannerUrl}`)}
                             alt='background image example'
@@ -60,18 +64,18 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                 }
                 <h3 className='-translate-y-12 mt-3 font-bold px-[12%] text-lg'>{username}</h3>
                 <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
-                    <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className='text-black' />
-                    <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className='text-black ml-6' />
-                    <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className='text-black ml-6' />
+                    <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}]`} />
+                    <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
+                    <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
                 </div>
                 <p className='-translate-y-12 mt-1 px-[12%]'>{desc}</p>
             </div>
             <div className='text-black'>
 
-                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
-                <Stat backColor={colorsPalettes[colorPalette].secondary} textColor={colorsPalettes[colorPalette].texts} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
+                <Stat backColor={colorsPalettes[colorPalette].secondary} />
 
             </div>
         </div>
