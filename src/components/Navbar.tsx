@@ -45,7 +45,7 @@ export const Navbar = () => {
                             <Link href={"/en/search"} className={`${delaGothic.className} text-xl my-5`}>
                                 Search
                             </Link>
-                            <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
+                            <Link href={"/en/auth/register"} className={`${delaGothic.className} text-xl my-5`}>
                                 Profile
                             </Link>
 

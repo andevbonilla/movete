@@ -22,7 +22,7 @@ export default function Index() {
     return (
         <>
             <Navbar />
-            <main className='text-white mt-10'>
+            <main className='text-white mt-18'>
                 <section className='mt-[4rem] mb-[3rem] p-[10%]'>
                     <h2 className={`text-4xl ${delaGothic.className}`}>
                         {t('presentation-part1')}
