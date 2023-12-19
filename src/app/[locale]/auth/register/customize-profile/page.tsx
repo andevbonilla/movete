@@ -148,7 +148,7 @@ const CustomizePage = () => {
                         </div>
                     </div>
                     <div className='flex justify-between w-full items-center mb-10'>
-                        <p className='text-white text-lg'>Do you want to appear in the app's search engine?</p>
+                        <p className='text-white text-lg'>Do you want to appear in the app&apos;s search engine?</p>
                         <div className='flex items-center'>
                             <button type='button' className='bg-[#00FF8F] text-white py-3 px-4 '>No</button>
                             <button type='button' className='bg-black text-white py-2 px-3 '>Yes</button>
@@ -156,7 +156,11 @@ const CustomizePage = () => {
                     </div>
                 </div>
 
-                <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
+                <div className='flex justify-between w-full items-center'>
+                    <button onClick={continueUserInfo} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
+                    <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
+                </div>
+
 
             </div>
         </>
