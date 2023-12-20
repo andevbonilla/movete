@@ -127,6 +127,10 @@ const RegisterPage = () => {
     //     onError: err => setError('There was an error in google authentication, please try again.')
     // });
 
+    const goBackButton = () => {
+        router.push("/en/auth/register/link");
+    }
+
     if (isLogin) {
 
         return <></>
@@ -169,7 +173,7 @@ const RegisterPage = () => {
                         <input className="border-black border-solid border-[0.08rem] py-3 px-4 rounded mb-8 w-full" type="password" name="password" placeholder={texts.passwordPlaceholder} />
 
                         <div className='flex justify-between w-full items-center'>
-                            <button type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
+                            <button onClick={goBackButton} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
                             <button type='submit' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
                         </div>
 

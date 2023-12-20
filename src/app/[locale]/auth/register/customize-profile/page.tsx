@@ -72,6 +72,9 @@ const CustomizePage = () => {
         setShowProfileOnSeach(!showProfileOnSeach)
     }
 
+    const goBackButton = () => {
+        router.push("/en/auth/register");
+    }
 
     return (
         <>
@@ -259,7 +262,7 @@ const CustomizePage = () => {
                 </div>
 
                 <div className='flex justify-between w-full items-center'>
-                    <button onClick={continueUserInfo} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
+                    <button onClick={goBackButton} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
                     <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
                 </div>
 
