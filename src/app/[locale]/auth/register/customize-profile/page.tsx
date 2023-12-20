@@ -171,7 +171,7 @@ const CustomizePage = () => {
                         <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
                     </div>
                     <div className='mt-8 flex items-center justify-center w-full'>
-                        <NoUserSVG classList={"w-20 h-20"} color={"#000000"} />
+                        <NoUserSVG classList={"w-20 h-20"} color={"#ffffff"} />
                     </div>
                 </div>
 

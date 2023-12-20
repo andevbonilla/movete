@@ -54,7 +54,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
             <div className={`flex flex-col items-center justify-center text-center text-[${colorsPalettes[colorPalette].texts}]`}>
                 {
                     (imgUrl === "")
-                        ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color={colorsPalettes[colorPalette].userIconColor} />
+                        ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color="#ffffff" />
                         : <Image
                             src={require(`@/assets/${bannerUrl}`)}
                             alt='background image example'
