@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { Stat } from './Stat';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ import { NoUserSVG } from '@/lib/Svgs';
 
 export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises }: Profile) => {
 
-    const colorsPalettes = [
+    const [colorsPalettes, setColorsPalettes] = useState([
         {
             primary: "#ffffff",
             secondary: "#0092F7",
@@ -35,7 +35,8 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
             texts: "#000000",
             userIconColor: "#000000"
         },
-    ]
+    ]);
+
 
     return (
         <div className={`min-h-[100vh] overflow-y-scroll bg-[${colorsPalettes[colorPalette].primary}]`}>
@@ -62,15 +63,15 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                             height={100}
                         />
                 }
-                <h3 className='-translate-y-12 mt-3 font-bold px-[12%] text-lg'>{username}</h3>
+                <h3 className={`-translate-y-12 mt-3 font-bold px-[12%] text-lg text-[${colorsPalettes[colorPalette].texts}]`}>{username}</h3>
                 <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
                     <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}]`} />
                     <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
                     <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
                 </div>
-                <p className='-translate-y-12 mt-1 px-[12%]'>{desc}</p>
+                <p className={`-translate-y-12 mt-1 px-[12%] text-[${colorsPalettes[colorPalette].texts}]`}>{desc}</p>
             </div>
-            <div className='text-black'>
+            <div>
 
                 {
                     exercises.map((exer, index) => (
