@@ -8,6 +8,10 @@ import { NoUserSVG } from '@/lib/Svgs';
 import { ExampleProfile } from '@/components/ExplampleProfile';
 import { NoPhotoBanner } from '@/components/NoPhotoBanner';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { PrettySelect } from '@/components/PrettySelect';
+
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
     style: ["normal"],
@@ -15,6 +19,8 @@ const delaGothic = Dela_Gothic_One({
 });
 
 const CustomizePage = () => {
+
+    const notifySuccess = (message: string) => toast.success(message);
 
     const [showPreviewProfile, setShowPreviewProfile] = useState(false);
     const [nameInput, setNameInput] = useState("");
@@ -63,6 +69,12 @@ const CustomizePage = () => {
 
         setExercises([...exercises, newExer]);
 
+        setNameExercise("Squads");
+        setRepsExercise("0");
+        setWeightExercise("0");
+
+        notifySuccess("The exercise was successfully added.");
+
     }
 
     const toggleButtonTrainWithMe = () => {
@@ -79,6 +91,7 @@ const CustomizePage = () => {
 
     return (
         <>
+            <ToastContainer />
             {
                 showPreviewProfile && <div className={`fixed top-0 w-full z-[999]`}>
                     <ExampleProfile
@@ -99,7 +112,7 @@ const CustomizePage = () => {
 
             <div className='flex flex-col items-center p-[10%] overflow-y-scroll relative'>
 
-                <button onClick={openPreview} type='button' className='z-[900] opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#0092F7] text-white font-bold text-xl rounded-full py-3 px-6'>
+                <button onClick={openPreview} type='button' className='z-[900] flex items-center justify-center opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-[#0092F7] text-white font-bold text-xl rounded-full py-3 px-6'>
                     <FontAwesomeIcon icon={faEye} className='mr-3' />
                     Preview Profile
                 </button>
@@ -195,36 +208,29 @@ const CustomizePage = () => {
                 <div className='w-full flex flex-col items-start mb-10'>
 
                     <div className='w-full flex flex-col items-start mb-10'>
+
                         <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
-                        <select value={nameExercise} onChange={(e) => setNameExercise(e.currentTarget.value)} id="exerciseList" name="exerciseList" className='py-3 px-5 text-black w-full rounded'>
-                            <option value="squats">Squats</option>
-                            <option value="deadlifts">Deadlifts</option>
-                            <option value="bench-press">Bench Press</option>
-                            <option value="pull-ups">Pull-ups</option>
-                            <option value="lunges">Lunges</option>
-                            <option value="push-ups">Push-ups</option>
-                            <option value="plank">Plank</option>
-                            <option value="burpees">Burpees</option>
-                            <option value="rows">Rows</option>
-                            <option value="bicep-curls">Bicep Curls</option>
-                            <option value="tricep-dips">Tricep Dips</option>
-                            <option value="sit-ups">Sit-ups</option>
-                            <option value="leg-press">Leg Press</option>
-                            <option value="shoulder-press">Shoulder Press</option>
-                            <option value="box-jumps">Box Jumps</option>
-                        </select>
+
+                        <PrettySelect
+                            listElem={["Squats", "Deadlifts"]}
+                            titleSelect={"Select an exercise"}
+                        />
+
                     </div>
 
                     <div className='w-full flex flex-col items-start mb-10'>
                         <p className='text-white mb-2 text-lg font-bold'>How much weight do you lift in this exercise?:</p>
-                        <div className='flex items-center w-full'>
-                            <input value={weightExercise} onChange={(e) => setWeightExercise(e.currentTarget.value)} type="number" placeholder='Example: 200' className='py-3 px-5 text-black w-2/3 rounded-l h-full' />
-                            <select name="measure" className='py-[.7rem] px-5 text-black w-1/3 h-full rounded-r font-bold'>
-                                <option value="kg">Kg</option>
-                                <option value="lb">Lb</option>
-                            </select>
-                        </div>
-
+                        <input
+                            value={weightExercise}
+                            onChange={(e) => setWeightExercise(e.currentTarget.value)}
+                            type="number"
+                            placeholder='Example: 200'
+                            className='py-3 px-5 text-black w-full rounded-l h-full mb-4'
+                        />
+                        <PrettySelect
+                            listElem={["Kg", "Lb"]}
+                            titleSelect={"Kg"}
+                        />
                     </div>
 
                     <div className='w-full flex flex-col items-start mb-10'>
