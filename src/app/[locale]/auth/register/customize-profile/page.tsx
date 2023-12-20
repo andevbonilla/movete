@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
-import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faGlobe, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NoUserSVG } from '@/lib/Svgs';
 import { ExampleProfile } from '@/components/ExplampleProfile';
@@ -11,6 +11,7 @@ import { NoPhotoBanner } from '@/components/NoPhotoBanner';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { PrettySelect } from '@/components/PrettySelect';
+import { faFacebook, faInstagram, faLinkedin, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -341,6 +342,41 @@ const CustomizePage = () => {
                         ><FontAwesomeIcon icon={faPlus} /> Add Exercise</button>
                     </div>
 
+                </div>
+
+                {/* ================================= social media ================================== */}
+                {/* ================================================================================= */}
+                <div className='w-full'>
+                    <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Links</h2>
+                    <p className='text-white mb-2 text-lg font-bold text-start'>Add the links you want to be displayed on your profile:</p>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faGlobe} className='mr-2' />
+                        Website
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faInstagram} className='mr-2' />
+                        Instagram
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faTwitter} className='mr-2' />
+                        Twitter
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faLinkedin} className='mr-2' />
+                        LinkedIn
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faFacebook} className='mr-2' />
+                        Facebook
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faTwitch} className='mr-2' />
+                        Twich
+                    </button>
+                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        <FontAwesomeIcon icon={faYoutube} className='mr-2' />
+                        Youtube
+                    </button>
                 </div>
 
                 {/* ================================= optional configs ================================== */}
