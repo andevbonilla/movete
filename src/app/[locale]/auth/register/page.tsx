@@ -35,7 +35,8 @@ const RegisterPage = () => {
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
         e.preventDefault();
-        router.push("/en/auth/register/customize-profile");
+        return;
+        router.push("/en");
         return;
 
         e.preventDefault();
@@ -174,7 +175,7 @@ const RegisterPage = () => {
 
                         <div className='flex justify-between w-full items-center'>
                             <button onClick={goBackButton} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
-                            <button type='submit' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
+                            <button type='submit' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Create</button>
                         </div>
 
                         {error && <span className="text-red-500 mt-4">{error}</span>}

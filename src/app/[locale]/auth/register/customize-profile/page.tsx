@@ -30,6 +30,9 @@ const CustomizePage = () => {
 
     const [exercises, setExercises] = useState<any>([]);
 
+    const [profileImg, setProfileImg] = useState("");
+    const [bannerImg, setBannerImg] = useState("");
+
     const [nameExercise, setNameExercise] = useState("");
     const [metricType, setMetricType] = useState("");
     const [respsExercise, setRepsExercise] = useState("");
@@ -41,8 +44,7 @@ const CustomizePage = () => {
     const router = useRouter();
 
     const continueUserInfo = () => {
-        return;
-        // router.push("/en/auth/register");
+        router.push("/en/auth/register");
     };
 
     const openPreview = () => {
@@ -103,6 +105,24 @@ const CustomizePage = () => {
 
     const goBackButton = () => {
         router.push("/en/auth/register");
+    }
+
+    const previewProfilePicture = (e: any) => {
+        const data = new FileReader();
+        data.addEventListener("load", () => {
+            let result: any = (data.result) ? data.result : "";
+            setProfileImg(result);
+        })
+        data.readAsDataURL(e.target.files[0]);
+    }
+
+    const previewBannerPicture = (e: any) => {
+        const data = new FileReader();
+        data.addEventListener("load", () => {
+            let result: any = (data.result) ? data.result : "";
+            setBannerImg(result);
+        })
+        data.readAsDataURL(e.target.files[0]);
     }
 
     return (
@@ -201,10 +221,24 @@ const CustomizePage = () => {
                     <p className='text-white mb-2 text-lg font-bold'>Select a profile picture (optional):</p>
                     <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
                         Select a picture
-                        <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
+                        <input
+                            type="file"
+                            className='absolute top-0 left-0 right-0 h-full opacity-0'
+                            onChange={previewProfilePicture}
+                        />
                     </div>
                     <div className='mt-8 flex items-center justify-center w-full'>
-                        <NoUserSVG classList={"w-20 h-20"} color={"#ffffff"} />
+
+                        {
+                            (profileImg !== "")
+                                ? <img
+                                    src={profileImg}
+                                    alt='profile img preview'
+                                    className='rounded-full w-[5rem] h-[5rem]'
+                                />
+                                : <NoUserSVG classList={"w-20 h-20"} color={"#ffffff"} />
+                        }
+
                     </div>
                 </div>
 
@@ -212,9 +246,21 @@ const CustomizePage = () => {
                     <p className='text-white mb-2 text-lg font-bold'>Select a banner picture (optional):</p>
                     <div className='text-white w-full mb-10 relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
                         Select a picture
-                        <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
+                        <input
+                            type="file"
+                            className='absolute top-0 left-0 right-0 h-full opacity-0'
+                            onChange={previewBannerPicture}
+                        />
                     </div>
-                    <NoPhotoBanner title={nameInput} />
+                    {
+                        (bannerImg !== "")
+                            ? <img
+                                src={bannerImg}
+                                alt='banner img preview'
+                                className='w-full h-[8rem]'
+                            />
+                            : <NoPhotoBanner title={nameInput} />
+                    }
                 </div>
 
                 {/* ================================= add exercise ================================== */}

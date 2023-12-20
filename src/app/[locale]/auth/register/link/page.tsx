@@ -15,7 +15,7 @@ const SetLinkPage = () => {
     const router = useRouter();
 
     const continueUserInfo = () => {
-        router.push("/en/auth/register");
+        router.push("/en/auth/register/customize-profile");
     };
 
     return (
