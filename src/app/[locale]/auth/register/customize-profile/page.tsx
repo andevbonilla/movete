@@ -21,6 +21,7 @@ const delaGothic = Dela_Gothic_One({
 const CustomizePage = () => {
 
     const notifySuccess = (message: string) => toast.success(message);
+    const notifyError = (message: string) => toast.error(message);
 
     const [showPreviewProfile, setShowPreviewProfile] = useState(false);
     const [nameInput, setNameInput] = useState("");
@@ -59,11 +60,23 @@ const CustomizePage = () => {
             weight: weightExercise
         }
 
-        if (newExer.name === "" || newExer.reps === "" || newExer.weight === "") {
+        if (newExer.name === "") {
+            notifyError("First select an exercise to be added.");
+            return;
+        }
+
+        if (newExer.reps === "") {
+            notifyError("to add an exercise, you must specify how many repetitions you do it with, for example 3.");
+            return;
+        }
+
+        if (newExer.weight === "") {
+            notifyError("To add an exercise you must enter how much weight you lift in that exercise.");
             return;
         }
 
         if (exercises.length > 5) {
+            notifyError("Only a maximum of 6 exercises can be added.");
             return;
         }
 
