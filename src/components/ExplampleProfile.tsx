@@ -7,6 +7,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Profile } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
+import { NoPhotoBanner } from './NoPhotoBanner';
 
 export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises }: Profile) => {
 
@@ -42,7 +43,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
         <div className={`min-h-[100vh] overflow-y-scroll bg-[${colorsPalettes[colorPalette].primary}]`}>
             {
                 (bannerUrl === "")
-                    ? <div className='h-32 rounded-t-lg w-full bg-slate-500'></div>
+                    ? <NoPhotoBanner title={username} />
                     : <Image
                         src={require(`@/assets/${bannerUrl}`)}
                         alt='background image example'

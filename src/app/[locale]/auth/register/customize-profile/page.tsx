@@ -6,6 +6,7 @@ import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NoUserSVG } from '@/lib/Svgs';
 import { ExampleProfile } from '@/components/ExplampleProfile';
+import { NoPhotoBanner } from '@/components/NoPhotoBanner';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -180,11 +181,11 @@ const CustomizePage = () => {
 
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Select a banner picture (optional):</p>
-                    <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
+                    <div className='text-white w-full mb-10 relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
                         Select a picture
                         <input type="file" className='absolute top-0 left-0 right-0 h-full opacity-0' />
                     </div>
-                    <div className='mt-8 h-24 rounded-t-lg w-full bg-slate-500'></div>
+                    <NoPhotoBanner title={nameInput} />
                 </div>
 
                 {/* ================================= add exercise ================================== */}
