@@ -349,34 +349,112 @@ const CustomizePage = () => {
                 <div className='w-full'>
                     <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Links</h2>
                     <p className='text-white mb-2 text-lg font-bold text-start'>Add the links you want to be displayed on your profile:</p>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faGlobe} className='mr-2' />
                         Website
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faInstagram} className='mr-2' />
                         Instagram
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faTwitter} className='mr-2' />
                         Twitter
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faLinkedin} className='mr-2' />
                         LinkedIn
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faFacebook} className='mr-2' />
                         Facebook
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faTwitch} className='mr-2' />
                         Twich
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                     <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faYoutube} className='mr-2' />
                         Youtube
                     </button>
+                    <div className='flex flex-col w-full'>
+                        <input
+                            type='text'
+                            placeholder='example.com'
+                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                        />
+                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            Add Website
+                        </button>
+                    </div>
+
                 </div>
 
                 {/* ================================= optional configs ================================== */}
