@@ -133,8 +133,8 @@ const CustomizePage = () => {
                     <ExampleProfile
                         username={nameInput}
                         desc={descInput}
-                        imgUrl={""}
-                        bannerUrl={""}
+                        imgUrl={profileImg}
+                        bannerUrl={bannerImg}
                         colorPalette={colorPalletInput}
                         exercises={exercises}
                     />

@@ -44,24 +44,20 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />
-                    : <Image
-                        src={require(`@/assets/${bannerUrl}`)}
+                    : <img
+                        src={`${bannerUrl}`}
                         alt='background image example'
-                        className='w-full h-32 rounded-t-2xl'
-                        width={200}
-                        height={50}
+                        className='w-full h-[8rem] rounded-t-2xl'
                     />
             }
             <div className={`flex flex-col items-center justify-center text-center text-[${colorsPalettes[colorPalette].texts}]`}>
                 {
                     (imgUrl === "")
                         ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color="#ffffff" />
-                        : <Image
-                            src={require(`@/assets/${bannerUrl}`)}
+                        : <img
+                            src={`${imgUrl}`}
                             alt='background image example'
-                            className='rounded-full -translate-y-12 w-16 h-16'
-                            width={100}
-                            height={100}
+                            className='rounded-full -translate-y-12 w-[6rem] h-[6rem] p-1 bg-white'
                         />
                 }
                 <h3 className={`-translate-y-12 mt-3 font-bold px-[12%] text-lg text-[${colorsPalettes[colorPalette].texts}]`}>{username}</h3>
