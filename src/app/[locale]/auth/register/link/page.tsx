@@ -2,6 +2,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
+import Link from 'next/link';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -26,6 +27,10 @@ const SetLinkPage = () => {
                 <input className='w-full' type="text" placeholder={`your username`} />
             </div>
             <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Continue</button>
+            <div className='flex items-center justify-center mx-[10%] text-base mt-6'>
+                <p className='text-white font-bold'>Already have an account? <Link className='text-[#00FF8F] ml-1' href={"/en/auth/login"}>Login</Link></p>
+            </div>
+
         </div>
     )
 }
