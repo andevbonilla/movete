@@ -3,14 +3,15 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
-export const PrettySelect = ({ listElem, titleSelect }: any) => {
+export const PrettySelect = ({ listElem, titleSelect, changeStateFunction }: any) => {
 
     const [openSelect, setOpenSelect] = useState(false);
     const [selectedValue, setSelectedValue] = useState("");
 
     const changeSelectedValue = (name: string) => {
         setOpenSelect(false);
-        setSelectedValue(name)
+        setSelectedValue(name);
+        changeStateFunction(name);
     }
 
     return (

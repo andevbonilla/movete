@@ -30,7 +30,8 @@ const CustomizePage = () => {
 
     const [exercises, setExercises] = useState<any>([]);
 
-    const [nameExercise, setNameExercise] = useState("squats");
+    const [nameExercise, setNameExercise] = useState("");
+    const [metricType, setMetricType] = useState("");
     const [respsExercise, setRepsExercise] = useState("");
     const [weightExercise, setWeightExercise] = useState("");
 
@@ -57,7 +58,8 @@ const CustomizePage = () => {
         const newExer = {
             name: nameExercise,
             reps: respsExercise,
-            weight: weightExercise
+            weight: weightExercise,
+            metric: metricType
         }
 
         if (newExer.name === "") {
@@ -82,7 +84,8 @@ const CustomizePage = () => {
 
         setExercises([...exercises, newExer]);
 
-        setNameExercise("Squads");
+        setNameExercise("");
+        setMetricType("");
         setRepsExercise("0");
         setWeightExercise("0");
 
@@ -225,8 +228,39 @@ const CustomizePage = () => {
                         <p className='text-white mb-2 text-lg font-bold'>With how many repetitions do you lift this weight?:</p>
 
                         <PrettySelect
-                            listElem={["Squats", "Deadlifts"]}
+                            listElem={[
+                                "Squats",
+                                "Bench Press",
+                                "Deadlifts",
+                                "Pull-ups",
+                                "Triceps Dips",
+                                "Military Press",
+                                "Barbell Rows",
+                                "Bicep Curls",
+                                "Planks",
+                                "Hip Thrusts",
+                                "Shoulder Press",
+                                "Lunges",
+                                "Pull-ups",
+                                "Shoulder Press",
+                                "Ab Crunches",
+                                "Leg Press",
+                                "Hamstring Curls",
+                                "Calf Raises",
+                                "Oblique Crunches",
+                                "Burpees",
+                                "Push-ups",
+                                "Hammer Curls",
+                                "Lateral Raises",
+                                "Ab Wheel Rollouts",
+                                "Mountain Climbers",
+                                "Face Pulls",
+                                "Hack Squats",
+                                "Bird Dogs",
+                                "Push-ups",
+                            ]}
                             titleSelect={"Select an exercise"}
+                            changeStateFunction={setNameExercise}
                         />
 
                     </div>
@@ -240,9 +274,11 @@ const CustomizePage = () => {
                             placeholder='Example: 200'
                             className='py-3 px-5 text-black w-full rounded-l h-full mb-4'
                         />
+
                         <PrettySelect
                             listElem={["Kg", "Lb"]}
                             titleSelect={"Kg"}
+                            changeStateFunction={setMetricType}
                         />
                     </div>
 
