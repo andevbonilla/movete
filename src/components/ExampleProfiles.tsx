@@ -27,6 +27,7 @@ export const ExampleProfiles = () => {
                         bannerUrl='background-img-example.jpg'
                         colorPalette={0}
                         exercises={[]}
+                        socialMedia={[]}
                     />
 
 
@@ -41,6 +42,7 @@ export const ExampleProfiles = () => {
                         bannerUrl='background-img-2-example.jpg'
                         colorPalette={0}
                         exercises={[]}
+                        socialMedia={[]}
                     />
 
 
@@ -55,6 +57,7 @@ export const ExampleProfiles = () => {
                         bannerUrl='background-img-3-example.jpg'
                         colorPalette={0}
                         exercises={[]}
+                        socialMedia={[]}
                     />
 
 
