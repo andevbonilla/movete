@@ -42,6 +42,16 @@ const CustomizePage = () => {
     const [buttonTrainWithme, setButtonTrainWithme] = useState(false);
     const [showProfileOnSeach, setShowProfileOnSeach] = useState(false);
 
+
+    const [openSocialMediaForm, setopenSocialMediaForm] = useState(0);
+
+    const [instagramAccount, setInstagramAccount] = useState("");
+    const [twitterAccount, settwitterAccount] = useState("");
+    const [facebookAccount, setfacebookAccount] = useState("");
+    const [youtubeAccount, setyoutubeAccount] = useState("");
+    const [websiteAccount, setwebsiteAccount] = useState("");
+    const [twichAccount, setTwichAccount] = useState("");
+
     const router = useRouter();
 
     const continueUserInfo = () => {
@@ -350,110 +360,148 @@ const CustomizePage = () => {
                     <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Links</h2>
                     <p className='text-white mb-2 text-lg font-bold text-start'>Add the links you want to be displayed on your profile:</p>
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                    <button
+                        onClick={() => { openSocialMediaForm === 1 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(1) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faGlobe} className='mr-2' />
                         Website
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 1) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your website'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Website
+                            </button>
+                        </div>
+                    }
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+
+                    <button
+                        onClick={() => { openSocialMediaForm === 2 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(2) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faInstagram} className='mr-2' />
                         Instagram
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 2) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your instagram account'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Instagram
+                            </button>
+                        </div>
+                    }
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                    <button
+                        onClick={() => { openSocialMediaForm === 3 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(3) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faTwitter} className='mr-2' />
                         Twitter
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 3) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your twitter account'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Twitter
+                            </button>
+                        </div>
+                    }
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+
+                    <button
+                        onClick={() => { openSocialMediaForm === 4 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(4) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faLinkedin} className='mr-2' />
                         LinkedIn
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 4) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your linkedin profile'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add LinkedIn
+                            </button>
+                        </div>
+                    }
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                    <button
+                        onClick={() => { openSocialMediaForm === 5 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(5) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faFacebook} className='mr-2' />
                         Facebook
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 5) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your facebook account'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Facebook
+                            </button>
+                        </div>
+                    }
 
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+
+                    <button
+                        onClick={() => { openSocialMediaForm === 6 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(6) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faTwitch} className='mr-2' />
                         Twich
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
-
-                    <button type='button' className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                    {
+                        (openSocialMediaForm === 6) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your twich account'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Twich
+                            </button>
+                        </div>
+                    }
+                    <button
+                        onClick={() => { openSocialMediaForm === 7 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(7) }}
+                        type='button'
+                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
                         <FontAwesomeIcon icon={faYoutube} className='mr-2' />
                         Youtube
                     </button>
-                    <div className='flex flex-col w-full'>
-                        <input
-                            type='text'
-                            placeholder='example.com'
-                            className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
-                        />
-                        <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
-                            Add Website
-                        </button>
-                    </div>
+                    {
+                        (openSocialMediaForm === 7) && <div className='flex flex-col w-full'>
+                            <input
+                                type='text'
+                                placeholder='Link of your youtube channel'
+                                className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
+                            />
+                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                                Add Youtube
+                            </button>
+                        </div>
+                    }
+
 
                 </div>
 
