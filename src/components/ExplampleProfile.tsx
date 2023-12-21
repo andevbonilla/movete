@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import { Stat } from './Stat';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faTwitch, faTwitter, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Profile } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 import { NoPhotoBanner } from './NoPhotoBanner';
 
-export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises }: Profile) => {
+export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises, socialMedia }: Profile) => {
 
     const [colorsPalettes, setColorsPalettes] = useState([
         {
@@ -61,11 +61,40 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                         />
                 }
                 <h3 className={`-translate-y-12 mt-3 font-bold px-[12%] text-lg text-[${colorsPalettes[colorPalette].texts}]`}>{username}</h3>
+
+                {/* icons of social media */}
                 <div className='flex justify-between px-[20%] -translate-y-12 my-3'>
-                    <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}]`} />
-                    <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
-                    <FontAwesomeIcon icon={faXTwitter} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ml-6`} />
+
+                    {
+                        socialMedia.includes("instagram") && <FontAwesomeIcon icon={faInstagram} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "instagram" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("website") && <FontAwesomeIcon icon={faGlobe} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "website" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("facebook") && <FontAwesomeIcon icon={faFacebook} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "facebook" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("twich") && <FontAwesomeIcon icon={faTwitch} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "twich" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("youtube") && <FontAwesomeIcon icon={faYoutube} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "youtube" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("twitter") && <FontAwesomeIcon icon={faTwitter} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "twitter" ? "" : "ml-6"}`} />
+                    }
+
+                    {
+                        socialMedia.includes("linkedin") && <FontAwesomeIcon icon={faLinkedin} size='2x' width={22} height={22} className={`text-[${colorsPalettes[colorPalette].texts}] ${socialMedia[0] === "linkedin" ? "" : "ml-6"}`} />
+                    }
+
                 </div>
+
                 <p className={`-translate-y-12 mt-1 px-[12%] text-[${colorsPalettes[colorPalette].texts}]`}>{desc}</p>
             </div>
             <div>

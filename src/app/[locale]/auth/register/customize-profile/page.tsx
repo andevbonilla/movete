@@ -44,8 +44,10 @@ const CustomizePage = () => {
 
 
     const [openSocialMediaForm, setopenSocialMediaForm] = useState(0);
+    const [socialMediaList, setsocialMediaList] = useState<any>([]);
 
     const [instagramAccount, setInstagramAccount] = useState("");
+    const [linkedInAccount, setlinkedInAccount] = useState("");
     const [twitterAccount, settwitterAccount] = useState("");
     const [facebookAccount, setfacebookAccount] = useState("");
     const [youtubeAccount, setyoutubeAccount] = useState("");
@@ -136,6 +138,75 @@ const CustomizePage = () => {
         data.readAsDataURL(e.target.files[0]);
     }
 
+    const setNewSocialMediaLink = (name: string, link: string) => {
+        if (!name) return;
+        if (link === "") {
+            notifyError(`you must add a correct link for: ${name}`);
+            return;
+        }
+        if (link.length < 5) {
+            notifyError(`the link is incorrect`);
+            return;
+        }
+        switch (name) {
+            case "website": {
+                setsocialMediaList([...socialMediaList, "website"]);
+                return;
+            }
+            case "instagram": {
+                if (!link.includes("instagram.com")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "instagram"]);
+                return;
+            }
+            case "twitter": {
+                if (!link.includes("x.com")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "twitter"]);
+                return;
+            }
+            case "facebook": {
+                if (!link.includes("facebook.com")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "facebook"]);
+                return;
+            }
+            case "linkedin": {
+                if (!link.includes("linkedin.com")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "linkedin"]);
+                return;
+            }
+            case "youtube": {
+                if (!link.includes("youtube.com")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "youtube"]);
+                return;
+            }
+            case "twich": {
+                if (!link.includes("twich.tv")) {
+                    notifyError(`the ${name} link is incorrect`);
+                    return;
+                }
+                setsocialMediaList([...socialMediaList, "twich"]);
+                return;
+            }
+            default: {
+                return;
+            }
+        }
+    }
+
     return (
         <>
             <ToastContainer />
@@ -148,6 +219,7 @@ const CustomizePage = () => {
                         bannerUrl={bannerImg}
                         colorPalette={colorPalletInput}
                         exercises={exercises}
+                        socialMedia={socialMediaList}
                     />
                     <button onClick={closePreview} type='button' className='opacity-90 fixed mx-[15%] bottom-0 left-0 right-0 mb-8 bg-red-600 text-white font-bold text-xl rounded-full py-3 px-6'>
                         <FontAwesomeIcon icon={faEye} className='mr-3' />
@@ -370,11 +442,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 1) && <div className='flex flex-col w-full'>
                             <input
+                                value={websiteAccount}
+                                onChange={(e) => setwebsiteAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your website'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("website", websiteAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Website
                             </button>
                         </div>
@@ -391,11 +468,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 2) && <div className='flex flex-col w-full'>
                             <input
+                                value={instagramAccount}
+                                onChange={(e) => setInstagramAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your instagram account'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("instagram", instagramAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Instagram
                             </button>
                         </div>
@@ -411,11 +493,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 3) && <div className='flex flex-col w-full'>
                             <input
+                                value={twitterAccount}
+                                onChange={(e) => settwitterAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your twitter account'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("twitter", twitterAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Twitter
                             </button>
                         </div>
@@ -432,11 +519,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 4) && <div className='flex flex-col w-full'>
                             <input
+                                value={linkedInAccount}
+                                onChange={(e) => setlinkedInAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your linkedin profile'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("linkedin", linkedInAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add LinkedIn
                             </button>
                         </div>
@@ -452,11 +544,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 5) && <div className='flex flex-col w-full'>
                             <input
+                                value={facebookAccount}
+                                onChange={(e) => setfacebookAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your facebook account'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("facebook", facebookAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Facebook
                             </button>
                         </div>
@@ -473,11 +570,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 6) && <div className='flex flex-col w-full'>
                             <input
+                                value={twichAccount}
+                                onChange={(e) => setTwichAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your twich account'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("twich", twichAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Twich
                             </button>
                         </div>
@@ -492,11 +594,16 @@ const CustomizePage = () => {
                     {
                         (openSocialMediaForm === 7) && <div className='flex flex-col w-full'>
                             <input
+                                value={youtubeAccount}
+                                onChange={(e) => setyoutubeAccount(e.target.value)}
                                 type='text'
                                 placeholder='Link of your youtube channel'
                                 className='py-4 px-5 text-black w-full rounded-full h-full mt-5'
                             />
-                            <button type='button' className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
+                            <button
+                                onClick={() => setNewSocialMediaLink("youtube", youtubeAccount)}
+                                type='button'
+                                className={`bg-[#00FF8F] text-white mt-5 py-3 px-5 text-center w-full rounded-full font-extrabold text-lg mb-8`}>
                                 Add Youtube
                             </button>
                         </div>

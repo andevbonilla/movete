@@ -4,5 +4,6 @@ export interface Profile {
     imgUrl: string,
     bannerUrl: string,
     colorPalette: number,
-    exercises: Array<any>
+    exercises: Array<any>,
+    socialMedia: Array<any>
 }
