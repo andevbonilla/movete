@@ -22,12 +22,37 @@ export const ExampleProfiles = () => {
 
                     <ExampleProfile
                         username={"Alexa"}
-                        desc='Professional powerlifter & proud mother of three.'
+                        desc='Professional powerlifter & proud mother of three beautiful children.'
                         imgUrl='profile-img-1-example.jpg'
                         bannerUrl='background-img-2-example.jpg'
                         colorPalette={0}
-                        exercises={[]}
-                        socialMedia={[]}
+                        exercises={[
+                            {
+                                name: "Squads",
+                                reps: 1,
+                                weight: 230,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Calf Raises",
+                                reps: 7,
+                                weight: 150,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Hack Squats",
+                                reps: 6,
+                                weight: 100,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Hip Thrusts",
+                                reps: 6,
+                                weight: 186,
+                                metric: "kg"
+                            }
+                        ]}
+                        socialMedia={["youtube", "twich", "instagram", "twitter"]}
                     />
 
 
@@ -37,12 +62,49 @@ export const ExampleProfiles = () => {
 
                     <ExampleProfile
                         username={"Jose"}
-                        desc='Medical student and passionate about the world.'
+                        desc='Medical student - Living in Japan 🏯.'
                         imgUrl='profile-img-2-example.jpg'
                         bannerUrl='background-img-example.jpg'
                         colorPalette={1}
-                        exercises={[]}
-                        socialMedia={[]}
+                        exercises={[
+                            {
+                                name: "Squads",
+                                reps: 8,
+                                weight: 110,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Bicep Curls",
+                                reps: 4,
+                                weight: 45,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Pull-ups",
+                                reps: 3,
+                                weight: 66,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Push-ups",
+                                reps: 6,
+                                weight: 189,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Deadlifts",
+                                reps: 9,
+                                weight: 103,
+                                metric: "kg"
+                            },
+                            {
+                                name: "Military Press",
+                                reps: 12,
+                                weight: 200,
+                                metric: "kg"
+                            }
+                        ]}
+                        socialMedia={["instagram", "twitter", "facebook"]}
                     />
 
 
@@ -56,8 +118,32 @@ export const ExampleProfiles = () => {
                         imgUrl='profile-img-3-example.jpg'
                         bannerUrl='background-img-3-example.jpg'
                         colorPalette={2}
-                        exercises={[]}
-                        socialMedia={[]}
+                        exercises={[
+                            {
+                                name: "Bench Press",
+                                reps: 10,
+                                weight: 67,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Squads",
+                                reps: 11,
+                                weight: 40,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Hack Squats",
+                                reps: 3,
+                                weight: 55,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Calf Raises",
+                                reps: 7,
+                                weight: 120,
+                                metric: "Lb"
+                            }]}
+                        socialMedia={["website", "twitter"]}
                     />
 
 
