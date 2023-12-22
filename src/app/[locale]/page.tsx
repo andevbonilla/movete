@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ExampleProfiles } from '@/components/ExampleProfiles';
 import Link from 'next/link';
+import { Fqas } from '@/components/Fqas';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -72,6 +73,9 @@ export default function Index() {
                         className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>Get starter</Link>
                 </section>
 
+                <section>
+                    <Fqas />
+                </section>
 
             </main>
             <Footer />
