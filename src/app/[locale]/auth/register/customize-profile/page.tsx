@@ -24,6 +24,14 @@ const CustomizePage = () => {
     const notifySuccess = (message: string) => toast.success(message);
     const notifyError = (message: string) => toast.error(message);
 
+    const [canContinue, setcanContinue] = useState(false);
+    // error handling part
+    const [nameError, setNameError] = useState("");
+    const [descError, setDescError] = useState("");
+
+    const [profileImgError, setProfileImgError] = useState("");
+    const [bannerImgError, setBannerImgError] = useState("");
+
     const [showPreviewProfile, setShowPreviewProfile] = useState(false);
     const [nameInput, setNameInput] = useState("");
     const [descInput, setDescInput] = useState("");
@@ -46,6 +54,7 @@ const CustomizePage = () => {
     const [openSocialMediaForm, setopenSocialMediaForm] = useState(0);
     const [socialMediaList, setsocialMediaList] = useState<any>([]);
 
+    // handling social media content
     const [instagramAccount, setInstagramAccount] = useState("");
     const [linkedInAccount, setlinkedInAccount] = useState("");
     const [twitterAccount, settwitterAccount] = useState("");
@@ -57,9 +66,86 @@ const CustomizePage = () => {
     const router = useRouter();
 
     const continueUserInfo = () => {
+        if (!canContinue) return;
         router.push("/en/auth/register");
     };
 
+    // handle states
+    const changeNameState = (e: any) => {
+
+        const charactersNotValid = ["<", ">", "?", ":", "!", `"`, "[", "]", "(", ")", "|", "/", "*", "%"];
+
+        let sanitizeLink = e.target.value.toString();
+
+        if (sanitizeLink.length > 40) {
+            setNameError(`the name is too long try another one of less than 40 characters.`);
+            return;
+        }
+
+        let errorCount = 0;
+
+        for (let i = 0; i < charactersNotValid.length; i++) {
+            if (sanitizeLink.includes(charactersNotValid[i])) {
+                errorCount++;
+                if (errorCount > 0) {
+                    setNameError(`The character ${charactersNotValid[i]} is not allowed.`);
+                }
+            } else {
+                if (errorCount === 0) {
+                    setNameError(``);
+                }
+            }
+        }
+
+        if (sanitizeLink.length === 0) {
+            setNameError(`the name is required.`);
+        } else {
+            if (errorCount === 0) {
+                setNameError("");
+            }
+        }
+
+        setNameInput(sanitizeLink);
+    }
+
+    const changeDescState = (e: any) => {
+
+        let sanitizeLink = e.target.value.toString();
+
+        if (sanitizeLink.length > 150) {
+            setDescError(`the description is too long try another one of less than 150 characters.`);
+            return;
+        }
+
+        if (sanitizeLink.length === 0) {
+            setDescError(`the description is required`);
+        } else {
+            setDescError("");
+        }
+
+        setDescInput(sanitizeLink);
+
+    }
+
+    const previewProfilePicture = (e: any) => {
+        const data = new FileReader();
+        data.addEventListener("load", () => {
+            let result: any = (data.result) ? data.result : "";
+            setProfileImg(result);
+        })
+        data.readAsDataURL(e.target.files[0]);
+    }
+
+    const previewBannerPicture = (e: any) => {
+        const data = new FileReader();
+        data.addEventListener("load", () => {
+            let result: any = (data.result) ? data.result : "";
+            setBannerImg(result);
+        })
+        data.readAsDataURL(e.target.files[0]);
+    }
+
+    // -------------------------------------------
     const openPreview = () => {
         setShowPreviewProfile(true);
     }
@@ -123,24 +209,6 @@ const CustomizePage = () => {
 
     const goBackButton = () => {
         router.push("/en/auth/register/link");
-    }
-
-    const previewProfilePicture = (e: any) => {
-        const data = new FileReader();
-        data.addEventListener("load", () => {
-            let result: any = (data.result) ? data.result : "";
-            setProfileImg(result);
-        })
-        data.readAsDataURL(e.target.files[0]);
-    }
-
-    const previewBannerPicture = (e: any) => {
-        const data = new FileReader();
-        data.addEventListener("load", () => {
-            let result: any = (data.result) ? data.result : "";
-            setBannerImg(result);
-        })
-        data.readAsDataURL(e.target.files[0]);
     }
 
     const setNewSocialMediaLink = (name: string, link: string) => {
@@ -263,23 +331,33 @@ const CustomizePage = () => {
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Tell us your name:</p>
                     <input
-                        onChange={(e) => setNameInput(e.currentTarget.value)}
+                        onChange={changeNameState}
                         value={nameInput}
                         type="text"
                         placeholder='Your Name'
-                        className='py-3 px-5 text-black w-full rounded'
+                        className={`${(nameError.length > 0) ? "border-2 border-red-600 text-red-600" : "text-black"} py-3 px-5 text-black w-full rounded`}
                     />
+                    {
+                        nameError.length > 0 && <div className='w-full text-start mt-2'>
+                            <span className='font-bold text-red-600'>{nameError}</span>
+                        </div>
+                    }
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
                     <p className='text-white mb-2 text-lg font-bold'>Description (optional):</p>
                     <textarea
-                        onChange={(e) => setDescInput(e.currentTarget.value)}
+                        onChange={changeDescState}
                         value={descInput}
-                        className='w-full h-20 rounded py-3 px-5'
+                        className={`${(nameError.length > 0) ? "border-2 border-red-600 text-red-600" : "text-black"} w-full h-20 rounded py-3 px-5`}
                         placeholder='Write a short description about yourself'
                     >
                     </textarea>
+                    {
+                        descError.length > 0 && <div className='w-full text-start mt-2'>
+                            <span className='font-bold text-red-600'>{descError}</span>
+                        </div>
+                    }
                 </div>
 
                 <div className='w-full flex flex-col items-start mb-10'>
@@ -331,6 +409,11 @@ const CustomizePage = () => {
                             onChange={previewProfilePicture}
                         />
                     </div>
+                    {
+                        profileImgError.length > 0 && <div className='w-full text-start mt-2'>
+                            <span className='font-bold text-red-600'>{profileImgError}</span>
+                        </div>
+                    }
                     <div className='mt-8 flex items-center justify-center w-full'>
 
                         {
@@ -356,6 +439,11 @@ const CustomizePage = () => {
                             onChange={previewBannerPicture}
                         />
                     </div>
+                    {
+                        bannerImgError.length > 0 && <div className='w-full text-start mt-2'>
+                            <span className='font-bold text-red-600'>{bannerImgError}</span>
+                        </div>
+                    }
                     {
                         (bannerImg !== "")
                             ? <img
@@ -655,7 +743,7 @@ const CustomizePage = () => {
 
                 <div className='flex justify-between w-full items-center'>
                     <button onClick={goBackButton} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
-                    <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
+                    <button onClick={continueUserInfo} type='button' className={`${(!canContinue) ? "opacity-50" : "opacity-100"} bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
                 </div>
 
 

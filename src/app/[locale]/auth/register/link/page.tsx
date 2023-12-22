@@ -19,11 +19,11 @@ const SetLinkPage = () => {
 
     const changeLink = (e: any) => {
 
-        const charactersNotValid = ["<", ">", "?", "&", ":", "-", "@", "!", `"`, "[", "]", "(", ")", "'", "|", "/", "+", ".", "*", "%", "#"];
+        const charactersNotValid = ["<", ">", "?", "&", ":", "~", "@", "!", `"`, "[", "]", "(", ")", "'", "|", "/", "+", ".", "*", "%", "#"];
         let sanitizeLink = e.target.value.toString().toLowerCase();
 
         if (sanitizeLink.length > 40) {
-            setError(`the link is too long try another one of less than 40 letters.`);
+            setError(`the link is too long try another one of less than 40 characters.`);
             return;
         }
 
@@ -39,6 +39,14 @@ const SetLinkPage = () => {
                 if (errorCount === 0) {
                     setError(``);
                 }
+            }
+        }
+
+        if (sanitizeLink.length === 0) {
+            setError(`the name is required.`);
+        } else {
+            if (errorCount === 0) {
+                setError("");
             }
         }
 
