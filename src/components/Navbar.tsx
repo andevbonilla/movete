@@ -24,13 +24,13 @@ export const Navbar = () => {
     }
 
     return (
-        <nav>
+        <nav className='z-[998]'>
             <div className='bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
                 <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Fitalgo</Link>
                 <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu' />
             </div>
             {
-                showSideMenu && <div className='fixed h-screen w-full top-0 left-0 z-[995] flex'>
+                showSideMenu && <div className='fixed h-screen w-full top-0 left-0 z-[999] flex'>
 
                     <div onClick={closeSideMenu} className='bg-black bg-opacity-60 w-1/3 h-screen'></div>
 

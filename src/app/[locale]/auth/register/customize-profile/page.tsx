@@ -5,13 +5,13 @@ import { Dela_Gothic_One } from '@next/font/google';
 import { faEye, faGlobe, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NoUserSVG } from '@/lib/Svgs';
-import { ExampleProfile } from '@/components/ExplampleProfile';
 import { NoPhotoBanner } from '@/components/NoPhotoBanner';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { PrettySelect } from '@/components/PrettySelect';
 import { faFacebook, faInstagram, faLinkedin, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { Profile } from '@/components/Profile';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -357,7 +357,7 @@ const CustomizePage = () => {
             <ToastContainer />
             {
                 showPreviewProfile && <div className={`fixed top-0 w-full z-[999]`}>
-                    <ExampleProfile
+                    <Profile
                         username={nameInput}
                         desc={descInput}
                         imgUrl={profileImg}

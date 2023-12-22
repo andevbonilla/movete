@@ -7,9 +7,8 @@ import { faFacebook, faInstagram, faLinkedin, faTwitch, faTwitter, faYoutube } f
 import { ProfileInterface } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 import { NoPhotoBanner } from './NoPhotoBanner';
-import Image from 'next/image';
 
-export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises, socialMedia }: ProfileInterface) => {
+export const Profile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises, socialMedia }: ProfileInterface) => {
 
     const [colorsPalettes, setColorsPalettes] = useState([
         {
@@ -44,8 +43,8 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />
-                    : <Image
-                        src={require(`@/assets/${bannerUrl}`)}
+                    : <img
+                        src={bannerUrl}
                         alt='background image example'
                         className='w-full h-[8rem] rounded-t-2xl'
                     />
@@ -54,8 +53,8 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                 {
                     (imgUrl === "")
                         ? <NoUserSVG classList={"rounded-full -translate-y-12 w-24 h-24"} color="#ffffff" />
-                        : <Image
-                            src={require(`@/assets/${imgUrl}`)}
+                        : <img
+                            src={`${imgUrl}`}
                             alt='background image example'
                             className='rounded-full -translate-y-12 w-[6rem] h-[6rem] p-1 bg-white'
                         />
