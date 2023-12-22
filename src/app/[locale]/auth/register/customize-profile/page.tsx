@@ -122,7 +122,7 @@ const CustomizePage = () => {
     }
 
     const goBackButton = () => {
-        router.push("/en/auth/register");
+        router.push("/en/auth/register/link");
     }
 
     const previewProfilePicture = (e: any) => {
