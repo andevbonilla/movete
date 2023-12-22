@@ -87,6 +87,11 @@ const CustomizePage = () => {
             return;
         }
 
+        if (newExer.metric === "") {
+            notifyError("select lb or kg to create a product.");
+            return;
+        }
+
         if (newExer.weight === "") {
             notifyError("To add an exercise you must enter how much weight you lift in that exercise.");
             return;
