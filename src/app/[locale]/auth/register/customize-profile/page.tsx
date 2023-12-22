@@ -144,13 +144,15 @@ const CustomizePage = () => {
             notifyError(`you must add a correct link for: ${name}`);
             return;
         }
-        if (link.length < 5) {
+        if (link.length < 10) {
             notifyError(`the link is incorrect`);
             return;
         }
         switch (name) {
             case "website": {
                 setsocialMediaList([...socialMediaList, "website"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "instagram": {
@@ -159,6 +161,8 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "instagram"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "twitter": {
@@ -167,6 +171,8 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "twitter"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "facebook": {
@@ -175,6 +181,8 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "facebook"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "linkedin": {
@@ -183,6 +191,8 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "linkedin"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "youtube": {
@@ -191,6 +201,8 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "youtube"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             case "twich": {
@@ -199,9 +211,13 @@ const CustomizePage = () => {
                     return;
                 }
                 setsocialMediaList([...socialMediaList, "twich"]);
+                notifySuccess("The link has been successfully added");
+                setopenSocialMediaForm(0);
                 return;
             }
             default: {
+                notifyError(`Ups, there was an error`);
+                setopenSocialMediaForm(0);
                 return;
             }
         }
@@ -435,7 +451,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 1 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(1) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("website") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faGlobe} className='mr-2' />
                         Website
                     </button>
@@ -461,7 +477,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 2 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(2) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("instagram") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faInstagram} className='mr-2' />
                         Instagram
                     </button>
@@ -486,7 +502,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 3 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(3) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("twitter") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faTwitter} className='mr-2' />
                         Twitter
                     </button>
@@ -512,7 +528,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 4 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(4) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("linkedin") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faLinkedin} className='mr-2' />
                         LinkedIn
                     </button>
@@ -537,7 +553,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 5 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(5) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("facebook") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faFacebook} className='mr-2' />
                         Facebook
                     </button>
@@ -563,7 +579,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 6 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(6) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("twich") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faTwitch} className='mr-2' />
                         Twich
                     </button>
@@ -587,7 +603,7 @@ const CustomizePage = () => {
                     <button
                         onClick={() => { openSocialMediaForm === 7 ? setopenSocialMediaForm(0) : setopenSocialMediaForm(7) }}
                         type='button'
-                        className='text-white w-full mt-6 py-3 px-4 text-center bg-slate-600 rounded-full text-lg font-bold'>
+                        className={`${socialMediaList.includes("youtube") ? "bg-[#00FF8F]" : "bg-slate-600"} text-white w-full mt-6 py-3 px-4 text-center rounded-full text-lg font-bold`}>
                         <FontAwesomeIcon icon={faYoutube} className='mr-2' />
                         Youtube
                     </button>
