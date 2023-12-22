@@ -128,21 +128,77 @@ const CustomizePage = () => {
     }
 
     const previewProfilePicture = (e: any) => {
+
+        if (!e) return;
+        if (!e.target) return;
+        if (!e.target.files) return;
+
+        const allowedExtensions = ['png', 'jpeg', 'jpg', 'gif'];
+
+        const fileToEvaluate = e.target.files[0];
+
         const data = new FileReader();
+
+        const fileType = fileToEvaluate.type.toString().split("/").reverse()[0];
+
+        if (fileToEvaluate.size > 1000000) {
+            setProfileImgError("Files larger than 1MB are not allowed.");
+            return;
+        } else {
+            setProfileImgError("");
+        }
+
+        if (!allowedExtensions.includes(fileType)) {
+            setProfileImgError("The file must be of type: .png, .jpeg, .jpg or .gif");
+            return;
+        } else {
+            setProfileImgError("");
+        }
+
         data.addEventListener("load", () => {
             let result: any = (data.result) ? data.result : "";
             setProfileImg(result);
         })
-        data.readAsDataURL(e.target.files[0]);
+
+        data.readAsDataURL(fileToEvaluate);
+
     }
 
     const previewBannerPicture = (e: any) => {
+
+        if (!e) return;
+        if (!e.target) return;
+        if (!e.target.files) return;
+
+        const allowedExtensions = ['png', 'jpeg', 'jpg'];
+
+        const fileToEvaluate = e.target.files[0];
+
         const data = new FileReader();
+
+        const fileType = fileToEvaluate.type.toString().split("/").reverse()[0];
+
+        if (fileToEvaluate.size > 2000000) {
+            setProfileImgError("Files larger than 2MB are not allowed.");
+            return;
+        } else {
+            setProfileImgError("");
+        }
+
+        if (!allowedExtensions.includes(fileType)) {
+            setBannerImgError("The file must be of type: .png, .jpeg, .jpg or .gif");
+            return;
+        } else {
+            setBannerImgError("");
+        }
+
         data.addEventListener("load", () => {
             let result: any = (data.result) ? data.result : "";
             setBannerImg(result);
         })
-        data.readAsDataURL(e.target.files[0]);
+
+        data.readAsDataURL(fileToEvaluate);
+
     }
 
     // -------------------------------------------
@@ -399,10 +455,10 @@ const CustomizePage = () => {
                     </div>
                 </div>
 
-                <div className='w-full flex flex-col items-start mb-10'>
+                <div className='w-full flex flex-col items-start'>
                     <p className='text-white mb-2 text-lg font-bold'>Select a profile picture (optional):</p>
                     <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
-                        Select a picture
+                        Select a profile picture
                         <input
                             type="file"
                             className='absolute top-0 left-0 right-0 h-full opacity-0'
@@ -410,11 +466,11 @@ const CustomizePage = () => {
                         />
                     </div>
                     {
-                        profileImgError.length > 0 && <div className='w-full text-start mt-2'>
+                        (profileImgError.length > 0) && <div className='w-full text-start mt-2 mb-10'>
                             <span className='font-bold text-red-600'>{profileImgError}</span>
                         </div>
                     }
-                    <div className='mt-8 flex items-center justify-center w-full'>
+                    <div className='my-10 flex items-center justify-center w-full'>
 
                         {
                             (profileImg !== "")
@@ -429,10 +485,10 @@ const CustomizePage = () => {
                     </div>
                 </div>
 
-                <div className='w-full flex flex-col items-start mb-10'>
+                <div className='w-full flex flex-col items-start'>
                     <p className='text-white mb-2 text-lg font-bold'>Select a banner picture (optional):</p>
-                    <div className='text-white w-full mb-10 relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
-                        Select a picture
+                    <div className='text-white w-full relative h-12 rounded bg-[#00FF8F] flex justify-center items-center font-bold'>
+                        Select a banner
                         <input
                             type="file"
                             className='absolute top-0 left-0 right-0 h-full opacity-0'
@@ -440,7 +496,7 @@ const CustomizePage = () => {
                         />
                     </div>
                     {
-                        bannerImgError.length > 0 && <div className='w-full text-start mt-2'>
+                        bannerImgError.length > 0 && <div className='w-full text-start mt-2 mb-10'>
                             <span className='font-bold text-red-600'>{bannerImgError}</span>
                         </div>
                     }
@@ -449,9 +505,9 @@ const CustomizePage = () => {
                             ? <img
                                 src={bannerImg}
                                 alt='banner img preview'
-                                className='w-full h-[8rem]'
+                                className='w-full h-[8rem] my-10'
                             />
-                            : <NoPhotoBanner title={nameInput} />
+                            : <div className='w-full my-10'><NoPhotoBanner title={nameInput} /></div>
                     }
                 </div>
 
