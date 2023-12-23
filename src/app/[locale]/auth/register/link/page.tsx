@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Dela_Gothic_One } from '@next/font/google';
 import Link from 'next/link';
 
@@ -13,8 +13,12 @@ const delaGothic = Dela_Gothic_One({
 const SetLinkPage = () => {
 
     const router = useRouter();
+    const searchParams = useSearchParams();
 
-    const [userLink, setUserLink] = useState("");
+    const usernameInParams = searchParams.get('username');
+    console.log(usernameInParams)
+
+    const [userLink, setUserLink] = useState(usernameInParams ? usernameInParams : "");
     const [error, setError] = useState("");
 
     const changeLink = (e: any) => {

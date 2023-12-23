@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { ExampleProfiles } from '@/components/ExampleProfiles';
 import Link from 'next/link';
 import { Fqas } from '@/components/Fqas';
+import { ClaimLink } from '@/components/ClaimLink';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -39,16 +40,7 @@ export default function Index() {
                     <p className={`text-xl mt-6 text-opacity-50`}>
                         {t('sub-presentation')}
                     </p>
-                    <div className='w-full flex flex-col'>
-                        <div className='w-full flex items-center justify-start bg-white py-3 px-4 text-black rounded mt-4 text-lg'>
-                            <span className='font-bold'>fitalgo.com/</span>
-                            <input className='w-full' type="text" placeholder={`${t('yourname-placeholder')}`} />
-                        </div>
-                        <Link href={'/en/auth/register/link'}
-                            className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>
-                            {t('get-url')}
-                        </Link>
-                    </div>
+                    <ClaimLink />
                 </section>
 
                 <section className='overflow-hidden mb-10'>
