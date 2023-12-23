@@ -16,10 +16,10 @@ export const Fqas = () => {
                 FQAs
             </h2>
 
-            <Question />
-            <Question />
-            <Question />
-            <Question />
+            <Question title={"what?"} answer={"lorenkcjsjek iehkjhdfjk dsab sdjkafb jksadbfjkhsbdaf jk sd f"} />
+            <Question title={"what?"} answer={"lorenkcjsjek iehkjhdfjk dsab sdjkafb jksadbfjkhsbdaf jk sd f"} />
+            <Question title={"what?"} answer={"lorenkcjsjek iehkjhdfjk dsab sdjkafb jksadbfjkhsbdaf jk sd f"} />
+            <Question title={"what?"} answer={"lorenkcjsjek iehkjhdfjk dsab sdjkafb jksadbfjkhsbdaf jk sd f"} />
 
         </div>
     )
