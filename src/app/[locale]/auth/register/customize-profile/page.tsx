@@ -24,7 +24,6 @@ const CustomizePage = () => {
     const notifySuccess = (message: string) => toast.success(message);
     const notifyError = (message: string) => toast.error(message);
 
-    const [canContinue, setcanContinue] = useState(false);
     // error handling part
     const [nameError, setNameError] = useState("");
     const [descError, setDescError] = useState("");
@@ -66,8 +65,32 @@ const CustomizePage = () => {
     const router = useRouter();
 
     const continueUserInfo = () => {
-        if (!canContinue) return;
-        router.push("/en/auth/register");
+        if (nameInput === "") {
+            setNameError(`the name is required.`);
+            notifyError("You need to enter a name to create your profile.");
+            return;
+        }
+        if (nameError.length > 0) {
+            notifyError("You have errors in the name, in order to continue, please fix them");
+            return;
+        }
+        if (descError.length > 0) {
+            notifyError("You have errors in the description, in order to continue, please fix them");
+            return;
+        }
+        if (profileImgError.length > 0) {
+            notifyError(profileImgError);
+            return;
+        }
+        if (bannerImgError.length > 0) {
+            notifyError(bannerImgError);
+            return;
+        }
+        if (exercises.length < 1) {
+            notifyError("In order to create a profile add at least one exercise");
+            return;
+        }
+        router.push("/en");
     };
 
     // handle states
@@ -594,7 +617,7 @@ const CustomizePage = () => {
                 {/* ================================= social media ================================== */}
                 {/* ================================================================================= */}
                 <div className='w-full'>
-                    <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Links</h2>
+                    <h2 className='text-[#00FF8F] mb-10 text-xl font-bold text-center mt-10'>Links (optional)</h2>
                     <p className='text-white mb-2 text-lg font-bold text-start'>Add the links you want to be displayed on your profile:</p>
 
                     <button
@@ -799,7 +822,7 @@ const CustomizePage = () => {
 
                 <div className='flex justify-between w-full items-center'>
                     <button onClick={goBackButton} type='button' className={`bg-slate-500 mr-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Back</button>
-                    <button onClick={continueUserInfo} type='button' className={`${(!canContinue) ? "opacity-50" : "opacity-100"} bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
+                    <button onClick={continueUserInfo} type='button' className={`bg-[#00FF8F] ml-2 text-white mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-[5rem]`}>Continue</button>
                 </div>
 
 
