@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 import { Dela_Gothic_One } from '@next/font/google';
-import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faSquareXTwitter, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
