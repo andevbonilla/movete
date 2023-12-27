@@ -19,7 +19,6 @@ export const ClaimLink = () => {
             </div>
             <a
                 href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/register/claim-your-link${(linkInput.length > 0) ? `?username=${linkInput}` : ""}`}
-                target='_blank'
                 className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
             >
                 Claim your link

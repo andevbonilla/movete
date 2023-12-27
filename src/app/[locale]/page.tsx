@@ -54,7 +54,6 @@ export default function Index() {
                     <p className='mt-3'>Show everyone how much weight you lift, add your links like tiktok, instagram, website, etc. connect with people with the same interest as you and much more.</p>
                     <a
                         href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                        target='_blank'
                         className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
                     >
                         Get starter
@@ -68,7 +67,6 @@ export default function Index() {
                     <p className='mt-3'>Upload photos of your lifestyle, show what you listen to most when you exercise, add custom buttons like: train with me and meet people with the same interests and much more.</p>
                     <a
                         href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                        target='_blank'
                         className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
                     >
                         Get starter
