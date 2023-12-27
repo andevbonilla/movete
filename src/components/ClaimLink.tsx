@@ -1,6 +1,5 @@
 "use client"
-import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export const ClaimLink = () => {
 
@@ -18,11 +17,13 @@ export const ClaimLink = () => {
                     placeholder={"yourusername"}
                 />
             </div>
-            <Link href={`/en/auth/register/link?username=${linkInput}`}
-                className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}>
-                {/* {t('get-url')} */}
+            <a
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/register/claim-your-link${(linkInput.length > 0) ? `?username=${linkInput}` : ""}`}
+                target='_blank'
+                className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
+            >
                 Claim your link
-            </Link>
+            </a>
         </div>
     )
 
