@@ -7,12 +7,12 @@ import { ProfileInterface } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 import Image from 'next/image';
 import { NoPhotoBanner } from '../NoPhotoBanner';
-import { Stat } from '../Stat';
+import { GreenStat } from '../stats/GreenStat';
 
 export const ExampleProfileTwo = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-[#00FF8F] text-white`}>
+        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-[#001429] text-white`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />
@@ -73,8 +73,7 @@ export const ExampleProfileTwo = ({ username, desc, imgUrl, bannerUrl, exercises
 
                 {
                     exercises.map((exer, index) => (
-                        <Stat
-                            backColor={"#00FF8F"}
+                        <GreenStat
                             Weight={exer.weight}
                             ExerciseType={exer.name}
                             NumReps={exer.reps}

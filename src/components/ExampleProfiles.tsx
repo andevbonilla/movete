@@ -4,6 +4,8 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import { ExampleProfileOne } from './profiles/ProfileOne';
+import { ExampleProfileThree } from './profiles/ProfileThree';
+import { ExampleProfileTwo } from './profiles/ProfileTwo';
 
 export const ExampleProfiles = () => {
 
@@ -59,7 +61,7 @@ export const ExampleProfiles = () => {
 
                 <SwiperSlide>
 
-                    <ExampleProfileOne
+                    <ExampleProfileThree
                         username={"Jose"}
                         desc='Medical student - Living in Japan 🏯.'
                         imgUrl='profile-img-2-example.jpg'
@@ -110,7 +112,7 @@ export const ExampleProfiles = () => {
 
                 <SwiperSlide>
 
-                    <ExampleProfileOne
+                    <ExampleProfileTwo
                         username={"Mohamed"}
                         desc='Professor of Mathematics, Phd in Physics'
                         imgUrl='profile-img-3-example.jpg'

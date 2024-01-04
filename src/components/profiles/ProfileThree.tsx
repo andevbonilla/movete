@@ -7,7 +7,7 @@ import { ProfileInterface } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 import Image from 'next/image';
 import { NoPhotoBanner } from '../NoPhotoBanner';
-import { Stat } from '../Stat';
+import { PinkStat } from '../stats/PinkStat';
 
 export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
@@ -73,8 +73,7 @@ export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercis
 
                 {
                     exercises.map((exer, index) => (
-                        <Stat
-                            backColor={"#000000"}
+                        <PinkStat
                             Weight={exer.weight}
                             ExerciseType={exer.name}
                             NumReps={exer.reps}
