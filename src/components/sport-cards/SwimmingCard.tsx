@@ -15,31 +15,30 @@ export const SwimmingCard = () => {
 
             <div className='flex flex-col justify-between w-full items-center'>
 
-                <div className='mb-5'>
-                    <NoTeamPhoto />
-                </div>
-
                 <div>
 
-                    <div>
-                        <h2 className={`${delaGothic.className} font-bold text-xl`}>Real Valencianos</h2>
-                    </div>
-
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
-                            <h3 className='font-bold'>Position:</h3>
-                            <p className={`${delaGothic.className}`}>Striker</p>
+                            <h3 className='font-bold'>Best Distance:</h3>
+                            <p className={`${delaGothic.className}`}>100 M</p>
                         </div>
                         <div>
-                            <h3 className='font-bold'>Total Goals:</h3>
-                            <p className={`${delaGothic.className}`}>217</p>
+                            <h3 className='font-bold'>Time:</h3>
+                            <p className={`${delaGothic.className}`}>72 seconds</p>
                         </div>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
-                            <h3 className='font-bold'>Total Attendances:</h3>
-                            <p className={`${delaGothic.className}`}>117</p>
+                            <h3 className='font-bold'>Number of achievements:</h3>
+                            <p className={`${delaGothic.className}`}>53</p>
+                        </div>
+                    </div>
+
+                    <div className='flex w-full justify-between mt-4'>
+                        <div className='mr-3'>
+                            <h3 className='font-bold'>Major achievement:</h3>
+                            <p className={`${delaGothic.className} text-xl`}>Silver Medal</p>
                         </div>
                     </div>
 
@@ -48,7 +47,7 @@ export const SwimmingCard = () => {
 
             <div>
 
-                <h3 className='font-bold text-lg mt-4 mb-3'>my most outstanding play: </h3>
+                <h3 className='font-bold text-lg mt-4 mb-3'>Best video of my career: </h3>
                 <video src="" controls className='w-full h-[6rem]'></video>
 
             </div>
