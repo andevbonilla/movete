@@ -8,11 +8,12 @@ import { NoUserSVG } from '@/lib/Svgs';
 import Image from 'next/image';
 import { NoPhotoBanner } from '../NoPhotoBanner';
 import { PinkStat } from '../stats/PinkStat';
+import { SoccerCard } from '../sport-cards/SoccerCard';
 
 export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-white text-black`}>
+        <div className={`h-[34rem] overflow-y-scroll rounded-t-2xl bg-white text-black`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />
@@ -69,6 +70,8 @@ export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercis
 
                 <p className={`-translate-y-12 mt-1 px-[12%]`}>{desc}</p>
             </div>
+
+            <SoccerCard />
             <div>
 
                 {

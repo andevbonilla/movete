@@ -12,7 +12,7 @@ import { GreenStat } from '../stats/GreenStat';
 export const ExampleProfileTwo = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-[#001429] text-white`}>
+        <div className={`h-[34rem] overflow-y-scroll rounded-t-2xl bg-[#001429] text-white`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />

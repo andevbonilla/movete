@@ -12,7 +12,7 @@ import { RedStat } from '../stats/RedStat';
 export const ExampleProfileOne = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-white text-black`}>
+        <div className={`h-[34rem] overflow-y-scroll rounded-t-2xl bg-white text-black`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />

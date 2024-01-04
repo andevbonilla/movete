@@ -3,9 +3,10 @@ import { Dela_Gothic_One } from "@next/font/google";
 
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { ExampleProfiles } from '@/components/ExampleProfiles';
+import { ExampleProfiles } from '@/components/cards-profiles/ExampleProfiles';
 import { Fqas } from '@/components/Fqas';
 import { ClaimLink } from '@/components/ClaimLink';
+import { ExampleSportProfiles } from '@/components/cards-profiles/ExampleSportProfiles';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -14,6 +15,14 @@ const delaGothic = Dela_Gothic_One({
 });
 
 export default function Index() {
+
+    // palletes
+    // 1. bg-white stat-red
+    // 1. bg-default stat-green
+    // 1. bg-white stat-pink
+    // 1. bg-white stat-blue
+    // 1. bg-image stat-green
+    // 1. bg-image stat-blue
 
     // 1. #001429
     // 2. #00FF8F
@@ -45,6 +54,25 @@ export default function Index() {
                 <section className='overflow-hidden mb-10'>
                     <ExampleProfiles />
                 </section>
+
+                {/* second seccion */}
+                <section className='p-[10%] w-full flex flex-col'>
+                    <h2 className={`text-2xl ${delaGothic.className}`}>
+                        Not only show off your stats in the gym but also in the sports you are good at.
+                    </h2>
+                    <p className='mt-3'>Add beautiful cards that show how good you are at one or more sports of your choice.</p>
+                    <a
+                        href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
+                        className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-14`}
+                    >
+                        Get starter
+                    </a>
+                </section>
+
+                <section className='overflow-hidden mb-10'>
+                    <ExampleSportProfiles />
+                </section>
+
 
                 <section className='p-[10%] w-full flex flex-col'>
                     <h2 className={`text-2xl ${delaGothic.className}`}>

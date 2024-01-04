@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
-import { ExampleProfileOne } from './profiles/ProfileOne';
-import { ExampleProfileThree } from './profiles/ProfileThree';
-import { ExampleProfileTwo } from './profiles/ProfileTwo';
+import { ExampleProfileOne } from '../profiles/ProfileOne';
+import { ExampleProfileThree } from '../profiles/ProfileThree';
+import { ExampleProfileTwo } from '../profiles/ProfileTwo';
 
-export const ExampleProfiles = () => {
+export const ExampleSportProfiles = () => {
 
 
     return (
