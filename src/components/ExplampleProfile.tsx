@@ -35,7 +35,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
     ]);
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-[${colorsPalettes[colorPalette].primary}] ${colorsPalettes[colorPalette].textBlack ? " text-black" : " text-white"}`}>
+        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl ${colorsPalettes[colorPalette].textBlack ? " bg-white" : " bg-[#001429]"} ${colorsPalettes[colorPalette].textBlack ? " text-black" : " text-white"}`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />

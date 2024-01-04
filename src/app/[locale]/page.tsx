@@ -7,6 +7,7 @@ import { ExampleProfiles } from '@/components/ExampleProfiles';
 import Link from 'next/link';
 import { Fqas } from '@/components/Fqas';
 import { ClaimLink } from '@/components/ClaimLink';
+import { ExampleProfile } from '@/components/ExplampleProfile';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -54,10 +55,43 @@ export default function Index() {
                     <p className='mt-3'>Show everyone how much weight you lift, add your links like tiktok, instagram, website, etc. connect with people with the same interest as you and much more.</p>
                     <a
                         href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                        className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
+                        className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg mb-14`}
                     >
                         Get starter
                     </a>
+                    <ExampleProfile
+                        username={"Mohamed"}
+                        desc='Professor of Mathematics, Phd in Physics'
+                        imgUrl='profile-img-3-example.jpg'
+                        bannerUrl='background-img-3-example.jpg'
+                        colorPalette={2}
+                        exercises={[
+                            {
+                                name: "Bench Press",
+                                reps: 10,
+                                weight: 67,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Squads",
+                                reps: 11,
+                                weight: 40,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Hack Squats",
+                                reps: 3,
+                                weight: 55,
+                                metric: "Lb"
+                            },
+                            {
+                                name: "Calf Raises",
+                                reps: 7,
+                                weight: 120,
+                                metric: "Lb"
+                            }]}
+                        socialMedia={["website", "twitter"]}
+                    />
                 </section>
 
                 <section className='p-[10%] w-full flex flex-col'>
