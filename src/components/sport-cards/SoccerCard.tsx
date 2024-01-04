@@ -32,7 +32,7 @@ export const SoccerCard = () => {
                         </div>
                         <div>
                             <h3 className='font-bold'>Total Goals:</h3>
-                            <p className={`${delaGothic.className}`}>217</p>
+                            <p className={`${delaGothic.className} text-2xl`}>217</p>
                         </div>
                     </div>
 

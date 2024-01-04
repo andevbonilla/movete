@@ -27,19 +27,26 @@ export const AthleticCard = () => {
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
-                            <h3 className='font-bold'>Position:</h3>
-                            <p className={`${delaGothic.className}`}>Striker</p>
+                            <h3 className='font-bold'>Medals:</h3>
+                            <p className={`${delaGothic.className}`}>16</p>
                         </div>
                         <div>
-                            <h3 className='font-bold'>Total Goals:</h3>
-                            <p className={`${delaGothic.className}`}>217</p>
+                            <h3 className='font-bold'>Marathons:</h3>
+                            <p className={`${delaGothic.className}`}>7</p>
                         </div>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
-                            <h3 className='font-bold'>Total Attendances:</h3>
-                            <p className={`${delaGothic.className}`}>117</p>
+                            <h3 className='font-bold'>Max. speed:</h3>
+                            <p className={`${delaGothic.className} text-xl`}>32 km/h</p>
+                        </div>
+                    </div>
+
+                    <div className='flex w-full justify-between mt-4'>
+                        <div className='mr-3'>
+                            <h3 className='font-bold'>Max. distance:</h3>
+                            <p className={`${delaGothic.className} text-xl`}>15 km</p>
                         </div>
                     </div>
 
@@ -48,7 +55,7 @@ export const AthleticCard = () => {
 
             <div>
 
-                <h3 className='font-bold text-lg mt-4 mb-3'>my most outstanding play: </h3>
+                <h3 className='font-bold text-lg mt-4 mb-3'>My best video:</h3>
                 <video src="" controls className='w-full h-[6rem]'></video>
 
             </div>

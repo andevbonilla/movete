@@ -26,13 +26,13 @@ export const BasketCard = () => {
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
-                        <div className='mr-3'>
+                        <div className='mr-4'>
                             <h3 className='font-bold'>Position:</h3>
                             <p className={`${delaGothic.className}`}>Power Forward</p>
                         </div>
                         <div>
                             <h3 className='font-bold'>Points Scored:</h3>
-                            <p className={`${delaGothic.className}`}>10.300</p>
+                            <p className={`${delaGothic.className} text-xl`}>10.300</p>
                         </div>
                     </div>
 
