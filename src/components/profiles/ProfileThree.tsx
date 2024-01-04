@@ -9,6 +9,10 @@ import Image from 'next/image';
 import { NoPhotoBanner } from '../NoPhotoBanner';
 import { PinkStat } from '../stats/PinkStat';
 import { SoccerCard } from '../sport-cards/SoccerCard';
+import { BasketCard } from '../sport-cards/BasketCard';
+import { AthleticCard } from '../sport-cards/AthelticCard';
+import { SwimmingCard } from '../sport-cards/SwimmingCard';
+import { FootballCard } from '../sport-cards/FootballCard';
 
 export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
@@ -72,6 +76,11 @@ export const ExampleProfileThree = ({ username, desc, imgUrl, bannerUrl, exercis
             </div>
 
             <SoccerCard />
+            <BasketCard />
+            <AthleticCard />
+            <SwimmingCard />
+            <FootballCard />
+
             <div>
 
                 {

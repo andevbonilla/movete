@@ -1,9 +1,9 @@
 import React from 'react'
 import { NoTeamPhoto } from '../no-file-components/NoTeamPhoto'
 
-export const SoccerCard = () => {
+export const FootballCard = () => {
     return (
-        <div className='soccer-card rounded-lg p-8 text-white mx-[10%] mb-10'>
+        <div className='football-card rounded-lg p-8 text-white mx-[10%] mb-10'>
 
             <div className='flex flex-col justify-between w-full items-center'>
 

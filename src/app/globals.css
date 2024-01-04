@@ -44,6 +44,42 @@
     animation-direction: normal;
 }
 
+/* cards designs */
+.soccer-card{
+  background-image: url("../assets/bg-soccer-card.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.basket-card{
+  background-image: url("../assets/bg-basket-card.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.football-card{
+  background-image: url("../assets/bg-football-card.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swimming-card{
+  background-image: url("../assets/bg-swiming-card.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.atletism-card{
+  background-image: url("../assets/bg-running-card.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 @keyframes sidefromright {
   0%{transform: translateX(20rem);}
