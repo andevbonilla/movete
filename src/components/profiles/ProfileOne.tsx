@@ -1,41 +1,18 @@
 "use client"
-import React, { useEffect, useState } from 'react';
-import { Stat } from './Stat';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faLinkedin, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { ProfileInterface } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
-import { NoPhotoBanner } from './NoPhotoBanner';
 import Image from 'next/image';
+import { NoPhotoBanner } from '../NoPhotoBanner';
+import { Stat } from '../Stat';
 
-export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette, exercises, socialMedia }: ProfileInterface) => {
-
-    const [colorsPalettes, setColorsPalettes] = useState([
-        {
-            primary: "#ffffff",
-            secondary: "#0092F7",
-            textBlack: true
-        },
-        {
-            primary: "#001429",
-            secondary: "#00FF8F",
-            textBlack: false
-        },
-        {
-            primary: "#ffffff",
-            secondary: "#FF0303",
-            textBlack: true
-        },
-        {
-            primary: "#ffffff",
-            secondary: "#7203FF",
-            textBlack: true
-        },
-    ]);
+export const ExampleProfileOne = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
     return (
-        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl ${colorsPalettes[colorPalette].textBlack ? " bg-white" : " bg-[#001429]"} ${colorsPalettes[colorPalette].textBlack ? " text-black" : " text-white"}`}>
+        <div className={`h-[40rem] overflow-y-scroll rounded-t-2xl bg-white text-black`}>
             {
                 (bannerUrl === "")
                     ? <NoPhotoBanner title={username} />
@@ -97,7 +74,7 @@ export const ExampleProfile = ({ username, desc, imgUrl, bannerUrl, colorPalette
                 {
                     exercises.map((exer, index) => (
                         <Stat
-                            backColor={colorsPalettes[colorPalette].secondary}
+                            backColor={"#000000"}
                             Weight={exer.weight}
                             ExerciseType={exer.name}
                             NumReps={exer.reps}

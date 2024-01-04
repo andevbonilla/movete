@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
-import { ExampleProfile } from './ExplampleProfile';
+import { ExampleProfileOne } from './profiles/ProfileOne';
 
 export const ExampleProfiles = () => {
 
@@ -20,12 +20,11 @@ export const ExampleProfiles = () => {
             >
                 <SwiperSlide>
 
-                    <ExampleProfile
+                    <ExampleProfileOne
                         username={"Alexa"}
                         desc='Professional powerlifter & proud mother of three beautiful children.'
                         imgUrl='profile-img-1-example.jpg'
                         bannerUrl='background-img-2-example.jpg'
-                        colorPalette={0}
                         exercises={[
                             {
                                 name: "Squads",
@@ -60,12 +59,11 @@ export const ExampleProfiles = () => {
 
                 <SwiperSlide>
 
-                    <ExampleProfile
+                    <ExampleProfileOne
                         username={"Jose"}
                         desc='Medical student - Living in Japan 🏯.'
                         imgUrl='profile-img-2-example.jpg'
                         bannerUrl='background-img-example.jpg'
-                        colorPalette={1}
                         exercises={[
                             {
                                 name: "Squads",
@@ -112,12 +110,11 @@ export const ExampleProfiles = () => {
 
                 <SwiperSlide>
 
-                    <ExampleProfile
+                    <ExampleProfileOne
                         username={"Mohamed"}
                         desc='Professor of Mathematics, Phd in Physics'
                         imgUrl='profile-img-3-example.jpg'
                         bannerUrl='background-img-3-example.jpg'
-                        colorPalette={2}
                         exercises={[
                             {
                                 name: "Bench Press",

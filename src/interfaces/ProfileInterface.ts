@@ -3,7 +3,6 @@ export interface ProfileInterface {
     desc: string,
     imgUrl: string,
     bannerUrl: string,
-    colorPalette: number,
     exercises: Array<any>,
     socialMedia: Array<any>
 }
