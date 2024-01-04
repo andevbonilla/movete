@@ -22,24 +22,24 @@ export const BasketCard = () => {
                 <div>
 
                     <div>
-                        <h2 className={`${delaGothic.className} font-bold text-xl`}>Real Valencianos</h2>
+                        <h2 className={`${delaGothic.className} font-bold text-xl`}>Lakers</h2>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
                             <h3 className='font-bold'>Position:</h3>
-                            <p className={`${delaGothic.className}`}>Striker</p>
+                            <p className={`${delaGothic.className}`}>Power Forward</p>
                         </div>
                         <div>
-                            <h3 className='font-bold'>Total Goals:</h3>
-                            <p className={`${delaGothic.className}`}>217</p>
+                            <h3 className='font-bold'>Points Scored:</h3>
+                            <p className={`${delaGothic.className}`}>10.300</p>
                         </div>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
-                            <h3 className='font-bold'>Total Attendances:</h3>
-                            <p className={`${delaGothic.className}`}>117</p>
+                            <h3 className='font-bold'>Total Triples:</h3>
+                            <p className={`${delaGothic.className}`}>596</p>
                         </div>
                     </div>
 

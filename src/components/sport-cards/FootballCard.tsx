@@ -22,24 +22,24 @@ export const FootballCard = () => {
                 <div>
 
                     <div>
-                        <h2 className={`${delaGothic.className} font-bold text-xl`}>Real Valencianos</h2>
+                        <h2 className={`${delaGothic.className} font-bold text-xl`}>New England Patriots</h2>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
                         <div className='mr-3'>
                             <h3 className='font-bold'>Position:</h3>
-                            <p className={`${delaGothic.className}`}>Striker</p>
+                            <p className={`${delaGothic.className}`}>Punter</p>
                         </div>
-                        <div>
-                            <h3 className='font-bold'>Total Goals:</h3>
-                            <p className={`${delaGothic.className}`}>217</p>
+                        <div className='mr-3'>
+                            <h3 className='font-bold'>Total yards:</h3>
+                            <p className={`${delaGothic.className}`}>18.903</p>
                         </div>
                     </div>
 
                     <div className='flex w-full justify-between mt-4'>
-                        <div className='mr-3'>
-                            <h3 className='font-bold'>Total Attendances:</h3>
-                            <p className={`${delaGothic.className}`}>117</p>
+                        <div>
+                            <h3 className='font-bold'>Total Touchdown pases:</h3>
+                            <p className={`${delaGothic.className}`}>163</p>
                         </div>
                     </div>
 
