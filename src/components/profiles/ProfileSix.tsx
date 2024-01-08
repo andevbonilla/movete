@@ -7,7 +7,7 @@ import { ProfileInterface } from '@/interfaces/ProfileInterface';
 import { NoUserSVG } from '@/lib/Svgs';
 import Image from 'next/image';
 import { NoPhotoBanner } from '../NoPhotoBanner';
-import { RedStat } from '../stats/RedStat';
+import { RedStat } from '../stats/GymStat';
 
 export const ExampleProfileSix = ({ username, desc, imgUrl, bannerUrl, exercises, socialMedia }: ProfileInterface) => {
 
