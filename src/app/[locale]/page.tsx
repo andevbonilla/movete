@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Dela_Gothic_One } from "@next/font/google";
-
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ExampleProfiles } from '@/components/cards-profiles/ExampleProfiles';
@@ -16,14 +15,6 @@ const delaGothic = Dela_Gothic_One({
 
 export default function Index() {
 
-    // palletes
-    // 1. bg-white stat-red
-    // 1. bg-default stat-green
-    // 1. bg-white stat-pink
-    // 1. bg-white stat-blue
-    // 1. bg-image stat-green
-    // 1. bg-image stat-blue
-
     // 1. #001429
     // 2. #00FF8F
 
@@ -34,26 +25,32 @@ export default function Index() {
         <>
             <Navbar />
             <main className='text-white mt-18'>
-                <section className='mt-[4rem] mb-[3rem] p-[10%]'>
-                    <h2 className={`text-4xl ${delaGothic.className}`}>
-                        {t('presentation-part1')}
-                        <span className='beautiful-underline'>{t('presentation-part2')}</span>
-                        {t('presentation-part3')}
-                        <span className='beautiful-underline'>{t('presentation-part4')}</span>
-                        {t('presentation-part5')}
-                        <span className='beautiful-underline'>{t('presentation-part6')}</span>
-                        {t('presentation-part7')}
-                        <span className='beautiful-underline'>{t('presentation-part8')}</span>
-                    </h2>
-                    <p className={`text-xl mt-6 text-opacity-50`}>
-                        {t('sub-presentation')}
-                    </p>
-                    <ClaimLink />
+
+                <section className='lg:mt-[8rem] lg:flex lg:justify-between lg:items-center md:px-[15%] px-[10%]'>
+
+                    <div className='mt-[4rem] mb-[3rem] py-[5rem] lg:w-1/2 lg:mr-10'>
+                        <h2 className={`text-4xl ${delaGothic.className}`}>
+                            {t('presentation-part1')}
+                            <span className='beautiful-underline'>{t('presentation-part2')}</span>
+                            {t('presentation-part3')}
+                            <span className='beautiful-underline'>{t('presentation-part4')}</span>
+                            {t('presentation-part5')}
+                            <span className='beautiful-underline'>{t('presentation-part6')}</span>
+                            {t('presentation-part7')}
+                            <span className='beautiful-underline'>{t('presentation-part8')}</span>
+                        </h2>
+                        <p className={`text-xl mt-6 text-opacity-50`}>
+                            {t('sub-presentation')}
+                        </p>
+                        <ClaimLink />
+                    </div>
+
+                    <div className='overflow-hidden mb-10 lg:w-1/2'>
+                        <ExampleProfiles />
+                    </div>
+
                 </section>
 
-                <section className='overflow-hidden mb-10'>
-                    <ExampleProfiles />
-                </section>
 
                 {/* second seccion */}
                 <section className='p-[10%] w-full flex flex-col'>
