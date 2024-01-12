@@ -1,8 +1,12 @@
 export interface ProfileInterface {
-    username: string,
-    desc: string,
-    imgUrl: string,
-    bannerUrl: string,
-    exercises: Array<any>,
-    socialMedia: Array<any>
+    exercises:any
+    sportList: any
+    actualBackColor: any
+    actualBannerPic: any
+    actualProfPic: any
+    actualName: any
+    socialMediaList: any
+    actualDescription: any
+    buttonTrain: any
+    buttonCardio: any
 }

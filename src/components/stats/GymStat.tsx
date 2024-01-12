@@ -3,7 +3,7 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-export const RedStat = ({ NumReps, ExerciseType, Weight, metric }: StatInterface) => {
+export const GymStat = ({ NumReps, ExerciseType, Weight, metric }: StatInterface) => {
 
     return (
         <div className={`flex items-center justify-between mx-8 py-4 px-5 bg-red-500 rounded-lg mb-5`}>

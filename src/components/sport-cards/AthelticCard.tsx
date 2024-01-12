@@ -7,8 +7,10 @@ const delaGothic = Dela_Gothic_One({
     subsets: ["latin"]
 });
 
-export const AthleticCard = () => {
+export const AthleticCard = ({ sportInfo }: any) => {
+
     return (
+
         <div className='atletism-card rounded-lg p-8 text-white mx-[10%] mb-10'>
 
             <div className='flex flex-col justify-between w-full items-center'>
@@ -16,35 +18,41 @@ export const AthleticCard = () => {
                 <div className='flex w-full justify-between mt-4'>
                     <div className='mr-3'>
                         <h3 className='font-bold'>Medals:</h3>
-                        <p className={`${delaGothic.className}`}>16</p>
+                        <p className={`${delaGothic.className}`}>{sportInfo.medals}</p>
                     </div>
                     <div>
                         <h3 className='font-bold'>Marathons:</h3>
-                        <p className={`${delaGothic.className}`}>7</p>
+                        <p className={`${delaGothic.className}`}>{sportInfo.marathons}</p>
                     </div>
                 </div>
 
                 <div className='flex w-full justify-between mt-4'>
                     <div className='mr-3'>
                         <h3 className='font-bold'>Max. speed:</h3>
-                        <p className={`${delaGothic.className} text-xl`}>32 km/h</p>
+                        <p className={`${delaGothic.className} text-xl`}>{sportInfo.maxSpeed} {sportInfo.maxSpeedMetric}</p>
                     </div>
                 </div>
 
                 <div className='flex w-full justify-between mt-4'>
                     <div className='mr-3'>
                         <h3 className='font-bold'>Max. distance:</h3>
-                        <p className={`${delaGothic.className} text-xl`}>15 km</p>
+                        <p className={`${delaGothic.className} text-xl`}>{sportInfo.maxDistance} {sportInfo.maxDistanceMetric}</p>
                     </div>
                 </div>
             </div>
 
-            <div>
 
-                <h3 className='font-bold text-lg mt-8 mb-3'>My best video:</h3>
-                <video src="" controls className='w-full h-[6rem]'></video>
+            {
+                (sportInfo.bestVideo !== "") && <div>
 
-            </div>
+                    <h3 className='font-bold text-lg mt-8 mb-3'>Best video of my career: </h3>
+                    {
+
+                    }
+                    <video src={sportInfo.bestVideo} controls className='w-full h-[6rem]'></video>
+
+                </div>
+            }
 
         </div>
     )
