@@ -6,6 +6,7 @@ import { ExampleProfiles } from '@/components/cards-profiles/ExampleProfiles';
 import { Fqas } from '@/components/Fqas';
 import { ClaimLink } from '@/components/ClaimLink';
 import { ExampleSportProfiles } from '@/components/cards-profiles/ExampleSportProfiles';
+import { ExampleSportProfiles2 } from '@/components/cards-profiles/ExampleSportProfiles2';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -91,7 +92,7 @@ export default function Index() {
                     </div>
 
                     <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
-                        <ExampleSportProfiles />
+                        <ExampleSportProfiles2 />
                     </div>
 
                 </section>

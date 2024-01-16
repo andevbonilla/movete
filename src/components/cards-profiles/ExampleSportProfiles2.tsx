@@ -5,7 +5,7 @@ import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import { ProfileExample } from '../profiles/ProfileExample';
 
-export const ExampleSportProfiles = () => {
+export const ExampleSportProfiles2 = () => {
 
 
     return (
@@ -46,23 +46,20 @@ export const ExampleSportProfiles = () => {
                                 NumReps: "6",
                                 metric: "kg"
                             },
+                            {
+                                Weight: "90",
+                                ExerciseType: "Curl Biceps",
+                                NumReps: "6",
+                                metric: "kg"
+                            },
                         ]}
-                        sportList={{
-                            basketball: {
-                                teamLogo: "",
-                                teamName: "Lakers",
-                                position: "Power Forward",
-                                points: 3200,
-                                triples: 403,
-                                bestVideo: ""
-                            }
-                        }}
+                        sportList={{}}
                         actualBackColor={0}
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
-                        actualName={"Luca Rossi"}
-                        socialMediaList={["instagram", "vsco"]}
-                        actualDescription={"Giocatore di basket semiprofessionista."}
+                        actualName={"Ana"}
+                        socialMediaList={["youtube", "instagram", "vsco"]}
+                        actualDescription={`"A única maneira de fazer um ótimo trabalho é amar o que você faz." - Steve Jobs`}
                         buttonTrain={true}
                         buttonCardio={true}
 
@@ -73,23 +70,32 @@ export const ExampleSportProfiles = () => {
                 <SwiperSlide>
 
                     <ProfileExample
-                        exercises={[]}
-                        sportList={{
-                            soccer: {
-                                teamLogo: "",
-                                teamName: "Real Madrid",
-                                position: "Striker",
-                                goals: "200",
-                                attendances: "117",
-                                bestVideo: ""
-                            }
-                        }}
+                        exercises={[
+                            {
+                                Weight: "100",
+                                ExerciseType: "Press",
+                                NumReps: "7",
+                                metric: "kg"
+                            },
+                            {
+                                Weight: "110",
+                                ExerciseType: "Pull Ups",
+                                NumReps: "15",
+                                metric: "kg"
+                            },
+                            {
+                                Weight: "60",
+                                ExerciseType: "Military Press",
+                                NumReps: "7",
+                                metric: "kg"
+                            },]}
+                        sportList={{}}
                         actualBackColor={0}
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
-                        actualName={"Carlos Ramirez Torres"}
-                        socialMediaList={["twich", "instagram", "tiktok"]}
-                        actualDescription={"⚽"}
+                        actualName={"James Jones"}
+                        socialMediaList={["youtube", "instagram", "vsco"]}
+                        actualDescription={"Photographer and Audiovisual Producer"}
                         buttonTrain={true}
                         buttonCardio={true}
 
@@ -109,31 +115,21 @@ export const ExampleSportProfiles = () => {
                             }
                         ]}
                         sportList={{
-                            swimming: {
-                                distance: "100",
-                                distanceMetric: "KM",
-                                time: "25",
-                                timeMetric: "Minutes",
-                                totalAchivements: "12",
-                                bestAchivement: "Medal of my school",
-                                bestVideo: ""
-                            },
-                            athelic: {
-                                maxSpeed: "17",
-                                maxSpeedMetric: "Mi/h",
-                                maxDistance: "12",
-                                maxDistanceMetric: "Mi",
-                                medals: "3",
-                                marathons: "6",
+                            football: {
+                                teamLogo: "",
+                                teamName: "The north wolves",
+                                position: "Wide Receiver",
+                                yards: "106",
+                                touchdownsPasses: "4007",
                                 bestVideo: ""
                             }
                         }}
                         actualBackColor={0}
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
-                        actualName={"John"}
-                        socialMediaList={["website", "youtube"]}
-                        actualDescription={"Former professional swimmer - buy my course on how to become an expert swimmer in one month."}
+                        actualName={"Sophie Dubois Martin"}
+                        socialMediaList={["youtube", "instagram", "vsco"]}
+                        actualDescription={"Étudiant au lycée et passionné de football."}
                         buttonTrain={true}
                         buttonCardio={true}
 
