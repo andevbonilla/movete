@@ -16,7 +16,7 @@ export const Footer = () => {
         <footer className='text-white px-[10%]'>
 
             <div className='flex items-center justify-start'>
-                <Link href={"/"} className={`${delaGothic.className} text-3xl my-3`}>Fitalgo</Link>
+                <Link href={"/"} className={`${delaGothic.className} text-3xl my-3`}>Movete</Link>
             </div>
 
             <div className='flex items-center justify-start mt-6 mb-10'>
@@ -53,7 +53,7 @@ export const Footer = () => {
             </div>
 
             <div className='flex justify-center items-center my-5'>
-                <p className='text-opacity-25 my-4'>Fitalgo © All rights reserved.</p>
+                <p className='text-opacity-25 my-4'>Movete © All rights reserved.</p>
             </div>
 
         </footer>

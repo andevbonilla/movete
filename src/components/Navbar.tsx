@@ -25,19 +25,19 @@ export const Navbar = () => {
 
     return (
         <nav className='z-[998]'>
-            <div className='bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
-                <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Fitalgo</Link>
-                <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu' />
+            <div className='md:px-[20%] bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
+                <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Movete</Link>
+                <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu cursor-pointer' />
             </div>
             {
                 showSideMenu && <div className='fixed h-screen w-full top-0 left-0 z-[999] flex'>
 
-                    <div onClick={closeSideMenu} className='bg-black bg-opacity-60 w-1/3 h-screen'></div>
+                    <div onClick={closeSideMenu} className='xl:w-3/4 md:w-2/3 bg-black bg-opacity-60 w-1/3 h-screen cursor-pointer'></div>
 
-                    <div className='bg-black bg-opacity-60 w-2/3 h-screen'>
+                    <div className='xl:w-1/4 md:w-1/3 bg-black bg-opacity-60 w-2/3 h-screen'>
                         <div className={`${showSideMenu && "move-animation"} bg-white text-black py-5 px-10 h-full w-full flex flex-col items-start`}>
 
-                            <FontAwesomeIcon onClick={closeSideMenu} icon={faTimes} size='3x' className='openSideMenu my-5' />
+                            <FontAwesomeIcon onClick={closeSideMenu} icon={faTimes} size='3x' className='openSideMenu my-5 cursor-pointer' />
 
                             <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
                                 About
@@ -51,8 +51,6 @@ export const Navbar = () => {
 
                         </div>
                     </div>
-
-
 
                 </div>
             }

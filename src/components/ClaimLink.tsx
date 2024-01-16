@@ -8,7 +8,7 @@ export const ClaimLink = () => {
     return (
         <div className='w-full flex flex-col'>
             <div className='w-full flex items-center justify-start bg-white py-3 px-4 text-black rounded mt-4 text-lg'>
-                <span className='font-bold'>fitalgo.com/</span>
+                <span className='font-bold'>movete.bio/</span>
                 <input
                     value={linkInput}
                     onChange={(e) => setlinkInput(e.target.value)}
