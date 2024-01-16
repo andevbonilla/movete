@@ -23,15 +23,27 @@ export const ExampleSportProfiles = () => {
                     <ProfileExample
                         exercises={[
                             {
-                                Weight: "200",
-                                ExerciseType: "Squad",
-                                NumReps: "12",
+                                Weight: "100",
+                                ExerciseType: "Press",
+                                NumReps: "7",
                                 metric: "kg"
                             },
                             {
-                                Weight: "220",
-                                ExerciseType: "Powerlift",
-                                NumReps: "2",
+                                Weight: "110",
+                                ExerciseType: "Pull Ups",
+                                NumReps: "15",
+                                metric: "kg"
+                            },
+                            {
+                                Weight: "60",
+                                ExerciseType: "Military Press",
+                                NumReps: "7",
+                                metric: "kg"
+                            },
+                            {
+                                Weight: "90",
+                                ExerciseType: "Curl Biceps",
+                                NumReps: "6",
                                 metric: "kg"
                             },
                         ]}
@@ -61,27 +73,14 @@ export const ExampleSportProfiles = () => {
                 <SwiperSlide>
 
                     <ProfileExample
-                        exercises={[
-                            {
-                                Weight: "200",
-                                ExerciseType: "Squad",
-                                NumReps: "12",
-                                metric: "kg"
-                            },
-                            {
-                                Weight: "220",
-                                ExerciseType: "Powerlift",
-                                NumReps: "2",
-                                metric: "kg"
-                            },
-                        ]}
+                        exercises={[]}
                         sportList={{
-                            soccer: {
+                            basketball: {
                                 teamLogo: "",
-                                teamName: "Real Madrid",
-                                position: "Striker",
-                                goals: "200",
-                                attendances: "117",
+                                teamName: "Lakers",
+                                position: "Power Forward",
+                                points: 3200,
+                                triples: 403,
                                 bestVideo: ""
                             }
                         }}
@@ -103,25 +102,29 @@ export const ExampleSportProfiles = () => {
                     <ProfileExample
                         exercises={[
                             {
-                                Weight: "200",
-                                ExerciseType: "Squad",
-                                NumReps: "12",
-                                metric: "kg"
-                            },
-                            {
-                                Weight: "220",
-                                ExerciseType: "Powerlift",
-                                NumReps: "2",
-                                metric: "kg"
-                            },
+                                Weight: "70",
+                                ExerciseType: "Diamond push ups",
+                                NumReps: "40",
+                                metric: "Lb"
+                            }
                         ]}
                         sportList={{
-                            soccer: {
-                                teamLogo: "",
-                                teamName: "Real Madrid",
-                                position: "Striker",
-                                goals: "200",
-                                attendances: "117",
+                            swimming: {
+                                distance: "100",
+                                distanceMetric: "KM",
+                                time: "25",
+                                timeMetric: "Minutes",
+                                totalAchivements: "12",
+                                bestAchivement: "Medal of my school",
+                                bestVideo: ""
+                            },
+                            athelic: {
+                                maxSpeed: "17",
+                                maxSpeedMetric: "Mi/h",
+                                maxDistance: "12",
+                                maxDistanceMetric: "Mi",
+                                medals: "3",
+                                marathons: "6",
                                 bestVideo: ""
                             }
                         }}

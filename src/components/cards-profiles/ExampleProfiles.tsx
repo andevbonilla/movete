@@ -35,16 +35,7 @@ export const ExampleProfiles = () => {
                                 metric: "kg"
                             },
                         ]}
-                        sportList={{
-                            soccer: {
-                                teamLogo: "",
-                                teamName: "Real Madrid",
-                                position: "Striker",
-                                goals: "200",
-                                attendances: "117",
-                                bestVideo: ""
-                            }
-                        }}
+                        sportList={{}}
                         actualBackColor={0}
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
@@ -92,7 +83,7 @@ export const ExampleProfiles = () => {
                         socialMediaList={["youtube", "instagram", "vsco"]}
                         actualDescription={"Happy person"}
                         buttonTrain={true}
-                        buttonCardio={true}
+                        buttonCardio={false}
 
                     />
 
@@ -115,24 +106,15 @@ export const ExampleProfiles = () => {
                                 metric: "kg"
                             },
                         ]}
-                        sportList={{
-                            soccer: {
-                                teamLogo: "",
-                                teamName: "Real Madrid",
-                                position: "Striker",
-                                goals: "200",
-                                attendances: "117",
-                                bestVideo: ""
-                            }
-                        }}
+                        sportList={{}}
                         actualBackColor={0}
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
                         actualName={"John"}
                         socialMediaList={["youtube", "instagram", "vsco"]}
                         actualDescription={"Happy person"}
-                        buttonTrain={true}
-                        buttonCardio={true}
+                        buttonTrain={false}
+                        buttonCardio={false}
 
                     />
 
