@@ -16,7 +16,7 @@ export const ProfileExample = ({ exercises, sportList, actualBackColor, actualBa
 
     return (
 
-        <div className={`h-[35rem] rounded-t-2xl overflow-y-scroll text-black pb-[12rem] ${(actualBackColor === 0) ? "bg-white text-black" : "bg-[#001429] text-white"}`}>
+        <div className={`um:h-[25rem] sm:h-[35rem] rounded-t-2xl overflow-y-scroll text-black pb-[12rem] ${(actualBackColor === 0) ? "bg-white text-black" : "bg-[#001429] text-white"}`}>
             <Image
                 src={require(`@/assets/${actualBannerPic}`)}
                 alt='profile banner picture'

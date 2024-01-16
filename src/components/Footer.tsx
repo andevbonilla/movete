@@ -13,7 +13,7 @@ const delaGothic = Dela_Gothic_One({
 
 export const Footer = () => {
     return (
-        <footer className='text-white px-[10%]'>
+        <footer className='md:px-[20%] text-white px-[10%] mt-24'>
 
             <div className='flex items-center justify-start'>
                 <Link href={"/"} className={`${delaGothic.className} text-3xl my-3`}>Movete</Link>
@@ -34,25 +34,28 @@ export const Footer = () => {
                 </Link>
             </div>
 
-            <div>
-                <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>Enterprise</h3>
-                <div className='flex flex-col items-start justify-start'>
-                    <Link href={"/"} className={`text-lg mt-3`}>About</Link>
-                    <Link href={"/"} className={`text-lg mt-3`}>Jobs</Link>
-                    <Link href={"/"} className={`text-lg mt-3`}>Blog</Link>
+            <div className='flex sm:flex-row flex-col'>
+                <div className='sm:mr-14'>
+                    <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>Enterprise</h3>
+                    <div className='flex flex-col items-start justify-start'>
+                        <Link href={"/"} className={`text-lg mt-3`}>About</Link>
+                        <Link href={"/"} className={`text-lg mt-3`}>Jobs</Link>
+                        <Link href={"/"} className={`text-lg mt-3`}>Blog</Link>
+                    </div>
+                </div>
+
+                <div className='md:mt-0 mt-8'>
+                    <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>Help</h3>
+                    <div className='flex flex-col items-start justify-start'>
+                        <Link href={"/"} className={`text-lg mt-3`}>FQAs</Link>
+                        <Link href={"/"} className={`text-lg mt-3`}>Contact</Link>
+                        <Link href={"/"} className={`text-lg mt-3`}>Support</Link>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>Help</h3>
-                <div className='flex flex-col items-start justify-start'>
-                    <Link href={"/"} className={`text-lg mt-3`}>FQAs</Link>
-                    <Link href={"/"} className={`text-lg mt-3`}>Contact</Link>
-                    <Link href={"/"} className={`text-lg mt-3`}>Support</Link>
-                </div>
-            </div>
 
-            <div className='flex justify-center items-center my-5'>
+            <div className='flex justify-center items-center my-5 mt-3'>
                 <p className='text-opacity-25 my-4'>Movete © All rights reserved.</p>
             </div>
 

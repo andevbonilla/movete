@@ -10,9 +10,9 @@ const delaGothic = Dela_Gothic_One({
 
 export const Fqas = () => {
     return (
-        <div className='px-[10%] text-white mt-6 mb-12'>
+        <div className='md:px-[20%] xl:px-[30%] px-[10%] text-white mt-24 mb-12'>
 
-            <h2 className={`text-2xl mb-6 ${delaGothic.className}`}>
+            <h2 className={`text-2xl mb-6 text-center ${delaGothic.className}`}>
                 FQAs
             </h2>
 

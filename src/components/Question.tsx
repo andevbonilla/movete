@@ -10,7 +10,7 @@ export const Question = ({ title, answer }: any) => {
 
     return (
         <div className='mb-6'>
-            <div onClick={() => setShowQuestion(!showQuestion)} className='flex justify-between w-full items-center'>
+            <div onClick={() => setShowQuestion(!showQuestion)} className='flex justify-between w-full items-center cursor-pointer border-b-2 border-white py-4'>
                 <h3 className='font-bold text-xl'>{title}</h3>
                 {
                     !showQuestion && <FontAwesomeIcon icon={faChevronDown} />
