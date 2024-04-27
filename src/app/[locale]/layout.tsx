@@ -17,7 +17,7 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 
     return (
         <html lang={locale}>
-            <body className={`${lato.className} bg-[#001429]`}>{children}</body>
+            <body className={`${lato.className} bg-black`}>{children}</body>
         </html>
     );
 }
