@@ -25,7 +25,7 @@ export const Navbar = () => {
 
     return (
         <nav className='z-[998]'>
-            <div className='md:px-[20%] bg-[#001429] flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
+            <div className='md:px-[20%] bg-black flex items-center justify-between px-[10%] pt-8 pb-6 text-white fixed top-0 left-0 w-full'>
                 <Link href={"/"} className={`${delaGothic.className} text-2xl`}>Movete</Link>
                 <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu cursor-pointer' />
             </div>
