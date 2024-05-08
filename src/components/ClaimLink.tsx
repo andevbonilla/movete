@@ -1,8 +1,11 @@
 "use client"
+import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 export const ClaimLink = () => {
 
+
+    const t = useTranslations('ClaimYourLink');
     const [linkInput, setlinkInput] = useState("");
 
     return (
@@ -14,7 +17,7 @@ export const ClaimLink = () => {
                     onChange={(e) => setlinkInput(e.target.value)}
                     className='w-full'
                     type="text"
-                    placeholder={"yourusername"}
+                    placeholder={t('placeholder')}
                 />
             </div>
             <a

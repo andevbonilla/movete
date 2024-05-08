@@ -16,5 +16,8 @@
   },
   "Navbar": {
     "logo": "Fitalgo"
+  },
+  "ClaimYourLink": {
+    "placeholder": "yourname"
   }
 }

@@ -42,11 +42,11 @@ export const Navbar = () => {
                             <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
                                 About
                             </Link>
-                            <a href={`${process.env.NEXT_PUBLIC_PROFILES_LINK}`} className={`${delaGothic.className} text-xl my-5`}>
+                            <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/`} className={`${delaGothic.className} text-xl my-5`}>
                                 Search
                             </a>
-                            <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}`} className={`${delaGothic.className} text-xl my-5`}>
-                                Profile
+                            <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/dashboard`} className={`${delaGothic.className} text-xl my-5`}>
+                                Dashboard
                             </a>
 
                         </div>
