@@ -1,21 +1,20 @@
 {
   "Index": {
-    "title": "¡Hola mundo!",
     "presentation-part1": " El. ",
     "presentation-part2": "enlace",
     "presentation-part3": " que representa tu",
-    "presentation-part4": "estilo de vida,",
-    "presentation-part5": " presume de tus ",
+    "presentation-part4": "estilo de vida.",
+    "presentation-part5": " Presume de tus ",
     "presentation-part6": "logros deportivos",
     "presentation-part7": " con. ",
-    "presentation-part8": "Fitalgo.",
-    "sub-presentation": "El enlace que representa tu estilo de vida, presume de tus logros deportivos con Fitalgo.",
+    "presentation-part8": "Movete.",
+    "sub-presentation": "El enlace que representa tu estilo de vida, presume de tus logros deportivos con Movete.",
     "yourname-placeholder": "tunombre",
     "get-url": "Obtén Tu URL",
     "alexa-example-desc": "Levantadora de pesas profesional y madre de dos hermosos niños"
   },
   "Navbar": {
-    "logo": "Fitalgo",
+    "logo": "Movete",
     "about": "Acerca de",
     "search": "Buscar",
     "dashboard": "Panel de control"

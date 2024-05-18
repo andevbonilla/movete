@@ -1,6 +1,5 @@
 {
   "Index": {
-    "title": "Hello world!",
     "presentation-part1": " The. ",
     "presentation-part2": "link",
     "presentation-part3": " that represents your",
@@ -8,14 +7,14 @@
     "presentation-part5": " show off your ",
     "presentation-part6": "sporting achievements",
     "presentation-part7": " with. ",
-    "presentation-part8": "Fitalgo.",
-    "sub-presentation": "The link that represents your lifestyle, show off your sporting achievements with fitalgo.",
+    "presentation-part8": "Movete.",
+    "sub-presentation": "The link that represents your lifestyle, show off your sporting achievements with Movete.",
     "yourname-placeholder": "yourname",
     "get-url": "Get Your Url",
     "alexa-example-desc": "Professional powerlifter and mother of two beautiful boys"
   },
   "Navbar": {
-    "logo": "Fitalgo",
+    "logo": "Movete",
     "about": "About",
     "search": "Search",
     "dashboard": "Dashboard"
