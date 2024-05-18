@@ -20,11 +20,16 @@ export default function Index() {
     // 2. #00FF8F
 
     const t = useTranslations('Index');
-    const navbarTranstalate = useTranslations('Navbar');
+    const navarI18n = useTranslations('Navbar');
+    const claimLinkI18n = useTranslations('ClaimYourLink');
 
     return (
         <>
-            <Navbar />
+            <Navbar
+                aboutText={navarI18n('about')}
+                searchText={navarI18n('search')}
+                dashboardText={navarI18n('dashboard')}
+            />
             <main className='text-white mt-18'>
 
                 <section className='lg:mt-[8rem] lg:flex lg:justify-between lg:items-center md:px-[20%] sm:px-[12%] px-[10%]'>
@@ -43,7 +48,9 @@ export default function Index() {
                         <p className={`text-xl mt-6 text-opacity-50`}>
                             {t('sub-presentation')}
                         </p>
-                        <ClaimLink />
+                        <ClaimLink
+                            placeholderText={claimLinkI18n('placeholder')}
+                        />
                     </div>
 
                     <div className='overflow-hidden mb-10 lg:w-1/2 sm:px-[2%] lg:px-0 xl:px-[2%]'>

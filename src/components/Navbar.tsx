@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Dela_Gothic_One } from '@next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useTranslations } from 'next-intl';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -11,7 +12,7 @@ const delaGothic = Dela_Gothic_One({
     subsets: ["latin"]
 });
 
-export const Navbar = () => {
+export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
 
     const [showSideMenu, setshowSideMenu] = useState(false);
 
@@ -40,13 +41,13 @@ export const Navbar = () => {
                             <FontAwesomeIcon onClick={closeSideMenu} icon={faTimes} size='3x' className='openSideMenu my-5 cursor-pointer' />
 
                             <Link href={"/"} className={`${delaGothic.className} text-xl my-5`}>
-                                About
+                                {aboutText}
                             </Link>
                             <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/`} className={`${delaGothic.className} text-xl my-5`}>
-                                Search
+                                {searchText}
                             </a>
                             <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/dashboard`} className={`${delaGothic.className} text-xl my-5`}>
-                                Dashboard
+                                {dashboardText}
                             </a>
 
                         </div>

@@ -1,5 +1,26 @@
 {
   "Index": {
-    "title": "Hola Mundo!"
+    "title": "¡Hola mundo!",
+    "presentation-part1": " El. ",
+    "presentation-part2": "enlace",
+    "presentation-part3": " que representa tu",
+    "presentation-part4": "estilo de vida,",
+    "presentation-part5": " presume de tus ",
+    "presentation-part6": "logros deportivos",
+    "presentation-part7": " con. ",
+    "presentation-part8": "Fitalgo.",
+    "sub-presentation": "El enlace que representa tu estilo de vida, presume de tus logros deportivos con Fitalgo.",
+    "yourname-placeholder": "tunombre",
+    "get-url": "Obtén Tu URL",
+    "alexa-example-desc": "Levantadora de pesas profesional y madre de dos hermosos niños"
+  },
+  "Navbar": {
+    "logo": "Fitalgo",
+    "about": "Acerca de",
+    "search": "Buscar",
+    "dashboard": "Panel de control"
+  },
+  "ClaimYourLink": {
+    "placeholder": "tunombre"
   }
 }

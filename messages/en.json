@@ -15,7 +15,10 @@
     "alexa-example-desc": "Professional powerlifter and mother of two beautiful boys"
   },
   "Navbar": {
-    "logo": "Fitalgo"
+    "logo": "Fitalgo",
+    "about": "About",
+    "search": "Search",
+    "dashboard": "Dashboard"
   },
   "ClaimYourLink": {
     "placeholder": "yourname"
