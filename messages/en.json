@@ -20,6 +20,29 @@
     "dashboard": "Dashboard"
   },
   "ClaimYourLink": {
-    "placeholder": "yourname"
+    "placeholder": "yourname",
+    "button": "Claim Your Link"
+  },
+  "SecctionTwo": {
+    "title": "Not only show off your stats in the gym but also in the sports you are good at.",
+    "description": "Add beautiful cards that show how good you are at one or more sports of your choice.",
+    "button": "Get starter"
+  },
+  "SecctionThree": {
+    "title": "Create and customize your bio fitness with Movete in a short time",
+    "description": "Show everyone how much weight you lift, add your links like tiktok, instagram, website, etc. connect with people with the same interest as you and much more."
+  },
+  "FourthSection": {
+    "title": "The fitness child between linktree and VSCO",
+    "description": "Upload photos of your lifestyle, show what you listen to most when you exercise, add custom buttons like: train with me and meet people with the same interests and much more."
+  },
+  "Footer": {
+    "title": "Movete",
+    "header1": "Enterprise",
+    "linkAbout": "About",
+    "linkContact": "Contact",
+    "linkSupport": "Support",
+    "header2": "Help",
+    "copyright": "Movete © All rights reserved."
   }
 }

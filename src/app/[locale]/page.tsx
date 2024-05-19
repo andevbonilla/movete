@@ -20,6 +20,10 @@ export default function Index() {
     const t = useTranslations('Index');
     const navarI18n = useTranslations('Navbar');
     const claimLinkI18n = useTranslations('ClaimYourLink');
+    const secctionTwoI18n = useTranslations('SecctionTwo');
+    const secctionThreeI18n = useTranslations('SecctionThree');
+    const secctionFourthI18n = useTranslations('FourthSection');
+    const footerI18n = useTranslations('Footer');
 
     return (
         <>
@@ -48,6 +52,7 @@ export default function Index() {
                         </p>
                         <ClaimLink
                             placeholderText={claimLinkI18n('placeholder')}
+                            buttonText={claimLinkI18n('button')}
                         />
                     </div>
 
@@ -63,14 +68,14 @@ export default function Index() {
 
                     <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
                         <h2 className={`text-2xl ${delaGothic.className}`}>
-                            Not only show off your stats in the gym but also in the sports you are good at.
+                            {secctionTwoI18n('title')}
                         </h2>
-                        <p className='mt-3 mb-8'>Add beautiful cards that show how good you are at one or more sports of your choice.</p>
+                        <p className='mt-3 mb-8'>{secctionTwoI18n('description')}</p>
                         <a
                             href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
                             className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
                         >
-                            Get starter
+                            {secctionTwoI18n('button')}
                         </a>
                     </div>
 
@@ -85,14 +90,14 @@ export default function Index() {
 
                     <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
                         <h2 className={`text-2xl ${delaGothic.className}`}>
-                            Create and customize your bio fitness with fitalgo in a short time
+                            {secctionThreeI18n('title')}
                         </h2>
-                        <p className='mt-3 mb-8'>Show everyone how much weight you lift, add your links like tiktok, instagram, website, etc. connect with people with the same interest as you and much more.</p>
+                        <p className='mt-3 mb-8'>{secctionThreeI18n("description")}</p>
                         <a
                             href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
                             className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
                         >
-                            Get starter
+                            {secctionTwoI18n('button')}
                         </a>
                     </div>
 
@@ -107,14 +112,14 @@ export default function Index() {
 
                     <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
                         <h2 className={`text-2xl ${delaGothic.className}`}>
-                            The fitness child between linktree and VSCO
+                            {secctionFourthI18n("title")}
                         </h2>
-                        <p className='mt-3 mb-8'>Upload photos of your lifestyle, show what you listen to most when you exercise, add custom buttons like: train with me and meet people with the same interests and much more.</p>
+                        <p className='mt-3 mb-8'>{secctionFourthI18n("description")}</p>
                         <a
                             href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
                             className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
                         >
-                            Get starter
+                            {secctionTwoI18n('button')}
                         </a>
                     </div>
 
@@ -129,7 +134,15 @@ export default function Index() {
                 </section>
 
             </main >
-            <Footer />
+            <Footer
+                title={footerI18n('title')}
+                header1={footerI18n("header1")}
+                linkAbout={footerI18n("linkAbout")}
+                linkContact={footerI18n("linkContact")}
+                linkSupport={footerI18n("linkSupport")}
+                header2={footerI18n("header2")}
+                copyright={footerI18n("copyright")}
+            />
         </>
     );
 }

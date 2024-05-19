@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-export const ClaimLink = ({ placeholderText }: any) => {
+export const ClaimLink = ({ placeholderText, buttonText }: any) => {
 
     const [linkInput, setlinkInput] = useState("");
 
@@ -21,7 +21,7 @@ export const ClaimLink = ({ placeholderText }: any) => {
                 href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/register/claim-your-link${(linkInput.length > 0) ? `?username=${linkInput}` : ""}`}
                 className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
             >
-                Claim your link
+                {buttonText}
             </a>
         </div>
     )

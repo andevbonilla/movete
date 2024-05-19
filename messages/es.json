@@ -1,25 +1,50 @@
 {
   "Index": {
-    "presentation-part1": " El. ",
+    "presentation-part1": " El ",
     "presentation-part2": "enlace",
     "presentation-part3": " que representa tu",
-    "presentation-part4": "estilo de vida.",
-    "presentation-part5": " Presume de tus ",
+    "presentation-part4": "estilo de vida,",
+    "presentation-part5": " presume tus ",
     "presentation-part6": "logros deportivos",
-    "presentation-part7": " con. ",
+    "presentation-part7": " con ",
     "presentation-part8": "Movete.",
-    "sub-presentation": "El enlace que representa tu estilo de vida, presume de tus logros deportivos con Movete.",
+    "sub-presentation": "El enlace que representa tu estilo de vida, presume tus logros deportivos con Movete.",
     "yourname-placeholder": "tunombre",
-    "get-url": "Obtén Tu URL",
+    "get-url": "Obtén tu URL",
     "alexa-example-desc": "Levantadora de pesas profesional y madre de dos hermosos niños"
   },
   "Navbar": {
     "logo": "Movete",
     "about": "Acerca de",
     "search": "Buscar",
-    "dashboard": "Panel de control"
+    "dashboard": "Panel"
   },
   "ClaimYourLink": {
-    "placeholder": "tunombre"
+    "placeholder": "tunombre",
+    "button": "Reclama tu enlace"
+  },
+  "SecctionTwo": {
+    "title": "No solo presumas tus estadísticas en el gimnasio, sino también en los deportes en los que destacas.",
+    "description": "Añade hermosas tarjetas que muestren lo bueno que eres en uno o más deportes de tu elección.",
+    "button": "Comenzar"
+  },
+  "SecctionThree": {
+    "title": "Crea y personaliza tu biografía fitness con Movete en poco tiempo",
+    "description": "Muestra a todos cuánto peso levantas, agrega tus enlaces como TikTok, Instagram, sitio web, etc. Conéctate con personas que tienen los mismos intereses que tú y mucho más."
+  },
+  "fourthSection": {
+    "title": "La fusión fitness entre Linktree y VSCO",
+    "description": "Sube fotos de tu estilo de vida, muestra lo que más escuchas cuando haces ejercicio, agrega botones personalizados como: entrena conmigo y conoce personas con los mismos intereses y mucho más."
+  },
+  "Footer": {
+    "title": "Movete",
+    "header1": "Empresa",
+    "linkAbout": "Acerca de",
+    "linkContact": "Contacto",
+    "linkSupport": "Soporte",
+    "header2": "Ayuda",
+    "copyright": "Movete © Todos los derechos reservados."
   }
 }
+
+
