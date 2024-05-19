@@ -5,6 +5,8 @@ import { Footer } from '@/components/Footer';
 import { ExampleProfiles } from '@/components/cards-profiles/ExampleProfiles';
 import { Fqas } from '@/components/Fqas';
 import { ClaimLink } from '@/components/ClaimLink';
+import Image from 'next/image';
+import { DashboardExample } from '@/components/mini-dashboard/DashboardExample';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -64,7 +66,7 @@ export default function Index() {
 
 
                 {/* second seccion */}
-                <section className="lg:flex-row lg:items-center lg:justify-center lg:flex sm:px-[20%] flex-col w-full px-[10%] mt-32">
+                <section className="lg:items-center lg:justify-between lg:flex sm:px-[20%] w-full px-[10%] mt-32">
 
                     <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
                         <h2 className={`text-2xl ${delaGothic.className}`}>
@@ -79,31 +81,28 @@ export default function Index() {
                         </a>
                     </div>
 
-                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
-                        <div className='w-[10rem] h-[10rem] bg-pink-300'></div>
+                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%] ml-6'>
+                        <Image
+                            src={require(`@/assets/sports-stats-example.jpg`)}
+                            alt='online page'
+                            width={1000}
+                            height={1000}
+                        />
                     </div>
 
                 </section>
 
                 {/* third seccion */}
-                <section className="lg:flex-row lg:items-center lg:justify-center lg:flex sm:px-[20%] flex-col w-full px-[10%] mt-32">
+                <section className="sm:px-[20%] w-full px-[10%] mt-32">
 
-                    <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
-                        <h2 className={`text-2xl ${delaGothic.className}`}>
+                    <div className='text-center w-full mb-32'>
+                        <h2 className={`text-3xl ${delaGothic.className}`}>
                             {secctionThreeI18n('title')}
                         </h2>
-                        <p className='mt-3 mb-8'>{secctionThreeI18n("description")}</p>
-                        <a
-                            href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                            className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
-                        >
-                            {secctionTwoI18n('button')}
-                        </a>
+                        <p className='mt-6 mb-8 px-[12%]'>{secctionThreeI18n("description")}</p>
                     </div>
 
-                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
-                        <div className='w-[10rem] h-[10rem] bg-pink-300'></div>
-                    </div>
+                    <DashboardExample />
 
                 </section>
 
