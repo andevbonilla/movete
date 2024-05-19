@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Dela_Gothic_One } from '@next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faLanguage, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const delaGothic = Dela_Gothic_One({
     weight: ["400"], // bold de la fuente
@@ -13,15 +13,8 @@ const delaGothic = Dela_Gothic_One({
 
 export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
 
-    const navbarContainer: any = useRef(null);
-
     const [showSideMenu, setshowSideMenu] = useState(false);
-
-    useEffect(() => {
-        if (navbarContainer.current) {
-            navbarContainer.current.style.zIndex = '1000';
-        }
-    }, []);
+    const [showLanguageMenu, setshowLanguageMenu] = useState(false);
 
     const openSideMenu = () => {
         setshowSideMenu(true);
@@ -31,11 +24,26 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
         setshowSideMenu(false);
     };
 
+    const openLanguageMenu = () => {
+        setshowLanguageMenu(true);
+    };
+
+    const closeLanguageMenu = () => {
+        setshowLanguageMenu(false);
+    };
+
     return (
-        <nav ref={navbarContainer} className="fixed top-0 left-0 w-full z-[1000]">
+        <nav className="fixed top-0 left-0 w-full z-[1000]">
             <div className='md:px-[20%] bg-black flex items-center justify-between px-[10%] pt-8 pb-6 text-white'>
                 <Link href="/" className={`${delaGothic.className} text-2xl`}>Movete</Link>
-                <FontAwesomeIcon onClick={openSideMenu} icon={faBars} size='2x' className='text-white openSideMenu cursor-pointer' />
+                <div className='flex items-center'>
+                    <button className='' type='button' title='change language' onClick={openLanguageMenu}>
+                        <FontAwesomeIcon icon={faLanguage} className='w-10 h-10 cursor-pointer text-white mr-6' />
+                    </button>
+                    <button className='' type='button' title='open side menu' onClick={openSideMenu}>
+                        <FontAwesomeIcon icon={faBars} size='2x' className='text-white openSideMenu cursor-pointer' />
+                    </button>
+                </div>
             </div>
             {
                 showSideMenu && <div className='fixed h-screen w-full top-0 left-0 z-[1001] flex'>
@@ -52,6 +60,40 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
                             <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/dashboard`} className={`${delaGothic.className} text-xl my-5`}>
                                 {dashboardText}
                             </a>
+                        </div>
+                    </div>
+                </div>
+            }
+            {
+                showLanguageMenu && <div className='z-[997] fixed w-full top-0 bottom-0 left-0 bg-black bg-opacity-25 flex justify-center items-center'>
+                    <div onClick={closeLanguageMenu} className='cursor-pointer z-[998] fixed w-full top-0 bottom-0 left-0'></div>
+                    <div className='bg-white p-10 rounded z-[999] overflow-y-scroll lg:overflow-hidden max-h-[80vh]'>
+                        <h3 className='font-bold mb-8 text-xl'>Change language</h3>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                            <Link href={'/en'} className={`${(location.pathname === "/") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                English
+                            </Link>
+                            <Link href={'/es'} className={`${(location.pathname === "/es") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                Español
+                            </Link>
+                            <Link href={'/fr'} className={`${(location.pathname === "/fr") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                Français
+                            </Link>
+                            <Link href={'/ch'} className={`${(location.pathname === "/zh") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                中文繁體
+                            </Link>
+                            <Link href={'/ja'} className={`${(location.pathname === "/ja") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                日本語
+                            </Link>
+                            <Link href={'/po'} className={`${(location.pathname === "/po") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                Português
+                            </Link>
+                            <Link href={'/in'} className={`${(location.pathname === "/hi") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                हिंदी
+                            </Link>
+                            <Link href={'/ru'} className={`${(location.pathname === "/ru") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                                Русский
+                            </Link>
                         </div>
                     </div>
                 </div>

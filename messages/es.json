@@ -15,9 +15,9 @@
   },
   "Navbar": {
     "logo": "Movete",
-    "about": "Acerca de",
+    "about": "Inicio",
     "search": "Buscar",
-    "dashboard": "Panel"
+    "dashboard": "Mi perfil"
   },
   "ClaimYourLink": {
     "placeholder": "tunombre",
