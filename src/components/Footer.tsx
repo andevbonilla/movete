@@ -21,7 +21,7 @@ export const Footer = ({
     copyright }: any) => {
 
     return (
-        <footer className='md:px-[20%] text-white px-[10%] mt-24'>
+        <footer className='md:px-[20%] text-white px-[10%] mt-32'>
 
             <div className='flex items-center justify-start'>
                 <Link href={"/"} className={`${delaGothic.className} text-3xl my-3`}>{title}</Link>

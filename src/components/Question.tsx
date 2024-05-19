@@ -10,7 +10,7 @@ export const Question = ({ title, answer }: any) => {
 
     return (
         <div className='mb-6'>
-            <div onClick={() => setShowQuestion(!showQuestion)} className='flex justify-between w-full items-center cursor-pointer border-b-2 border-white py-4'>
+            <div onClick={() => setShowQuestion(!showQuestion)} className='py-3 px-5 rounded-lg flex justify-between w-full items-center cursor-pointer bg-white bg-opacity-20'>
                 <h3 className='font-bold text-xl'>{title}</h3>
                 {
                     !showQuestion && <FontAwesomeIcon icon={faChevronDown} />
@@ -20,7 +20,7 @@ export const Question = ({ title, answer }: any) => {
                 }
             </div>
             {
-                showQuestion && <p className='mt-4'>
+                showQuestion && <p className='mt-4 px-5'>
                     {answer}
                 </p>
             }

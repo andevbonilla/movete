@@ -107,28 +107,6 @@ export default function Index() {
 
                 </section>
 
-                {/* fourth seccion */}
-                <section className="lg:flex-row lg:items-center lg:justify-center lg:flex sm:px-[20%] flex-col w-full px-[10%] mt-32">
-
-                    <div className='lg:w-1/2 lg:mb-0 w-full mb-32'>
-                        <h2 className={`text-2xl ${delaGothic.className}`}>
-                            {secctionFourthI18n("title")}
-                        </h2>
-                        <p className='mt-3 mb-8'>{secctionFourthI18n("description")}</p>
-                        <a
-                            href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                            className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
-                        >
-                            {secctionTwoI18n('button')}
-                        </a>
-                    </div>
-
-                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
-                        <div className='w-[10rem] h-[10rem] bg-pink-300'></div>
-                    </div>
-
-                </section>
-
                 <section>
                     <Fqas />
                 </section>
