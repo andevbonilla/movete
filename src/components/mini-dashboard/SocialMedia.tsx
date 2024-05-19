@@ -20,6 +20,7 @@ export const SocialMedia = () => {
                 <div className='bg-white text-black p-5 rounded m-2'><FontAwesomeIcon className='w-6 h-6' icon={faDiscord} /></div>
                 <div className='bg-white text-black p-5 rounded m-2'><FontAwesomeIcon className='w-6 h-6' icon={faTwitch} /></div>
             </div>
+
         </div>
     )
 }

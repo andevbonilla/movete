@@ -11,7 +11,7 @@ const delaGothic = Dela_Gothic_One({
 
 export const AddSport = () => {
     return (
-        <div className='m-3 bg-blue-500 relative h-full px-5 py-6 text-start text-white rounded-md overflow-hidden flex justify-between items-center'>
+        <div className={`m-3 bg-blue-500 relative h-full w-full px-5 py-6 text-start text-white rounded-md overflow-hidden flex justify-between items-center`}>
             <div>
                 <h2 className='font-bold text-lg'>Add your sport:</h2>
                 <h3 className={`font-bold text-3xl ${delaGothic.className}`}>stats</h3>

@@ -81,12 +81,13 @@ export default function Index() {
                         </a>
                     </div>
 
-                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%] ml-6'>
+                    <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
                         <Image
                             src={require(`@/assets/sports-stats-example.jpg`)}
                             alt='online page'
                             width={1000}
                             height={1000}
+                            className='lg:ml-6'
                         />
                     </div>
 
@@ -99,7 +100,7 @@ export default function Index() {
                         <h2 className={`text-3xl ${delaGothic.className}`}>
                             {secctionThreeI18n('title')}
                         </h2>
-                        <p className='mt-6 mb-8 px-[12%]'>{secctionThreeI18n("description")}</p>
+                        <p className='mt-6 mb-8 lg:px-[12%]'>{secctionThreeI18n("description")}</p>
                     </div>
 
                     <DashboardExample />

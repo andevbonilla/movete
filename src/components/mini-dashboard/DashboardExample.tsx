@@ -9,21 +9,25 @@ import { AddSport } from './AddSport'
 
 export const DashboardExample = () => {
     return (
-        <div className='flex'>
-            <div>
+        <div className='w-full relative h-[15rem] overflow-hidden flex justify-center items-center lg:h-[20rem]'>
+            <div className='absolute scale-[0.6] sm:scale-[0.8] lg:scale-[1]'>
                 <div className='flex'>
-                    <SelectColor />
-                    <CardioProposals />
-                    <TrainProposals />
-                    <PhotoExample />
+                    <div>
+                        <div className='flex'>
+                            <SelectColor />
+                            <CardioProposals />
+                            <TrainProposals />
+                            <PhotoExample />
+                        </div>
+                        <div className='flex'>
+                            <SocialMedia />
+                            <AddGym />
+                        </div>
+                    </div>
+                    <div>
+                        <AddSport />
+                    </div>
                 </div>
-                <div className='flex'>
-                    <SocialMedia />
-                    <AddGym />
-                </div>
-            </div>
-            <div>
-                <AddSport />
             </div>
         </div>
     )
