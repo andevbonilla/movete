@@ -1,0 +1,46 @@
+{
+  "Index": {
+    "presentation-part1": " あなたの",
+    "presentation-part2": "ライフスタイル",
+    "presentation-part3": "を表す",
+    "presentation-part4": "リンク、",
+    "presentation-part5": "スポーツの",
+    "presentation-part6": "成果を誇る",
+    "presentation-part7": " Movete。",
+    "presentation-part8": "",
+    "sub-presentation": "あなたのライフスタイルを表すリンク、スポーツの成果を誇る Movete。",
+    "yourname-placeholder": "あなたの名前",
+    "get-url": "URLを取得",
+    "alexa-example-desc": "プロのウェイトリフティング選手で、2人の美しい子供の母親"
+  },
+  "Navbar": {
+    "logo": "Movete",
+    "about": "ホーム",
+    "search": "検索",
+    "dashboard": "マイプロフィール"
+  },
+  "ClaimYourLink": {
+    "placeholder": "あなたの名前",
+    "button": "リンクを請求"
+  },
+  "SecctionTwo": {
+    "title": "ジムでの統計データだけでなく、得意なスポーツでも自慢しましょう。",
+    "description": "選んだスポーツの一つまたは複数であなたの優れたパフォーマンスを示す美しいカードを追加します。",
+    "button": "開始する"
+  },
+  "SecctionThree": {
+    "title": "Moveteで短時間でフィットネスのプロフィールを作成・カスタマイズ",
+    "description": "持ち上げる重量を皆に見せ、TikTok、Instagram、ウェブサイトなどのリンクを追加しましょう。同じ興味を持つ人々と繋がり、さらに多くのことができます。"
+  },
+  "Footer": {
+    "title": "Movete",
+    "header1": "会社",
+    "linkAbout": "概要",
+    "linkContact": "連絡先",
+    "linkSupport": "サポート",
+    "header2": "ヘルプ",
+    "copyright": "Movete © 全著作権所有。"
+  }
+}
+
+

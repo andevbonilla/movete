@@ -1,0 +1,47 @@
+{
+  "Index": {
+    "presentation-part1": " O ",
+    "presentation-part2": "link",
+    "presentation-part3": " que representa seu",
+    "presentation-part4": "estilo de vida,",
+    "presentation-part5": " mostre suas ",
+    "presentation-part6": "conquistas esportivas",
+    "presentation-part7": " com ",
+    "presentation-part8": "Movete.",
+    "sub-presentation": "O link que representa seu estilo de vida, mostre suas conquistas esportivas com Movete.",
+    "yourname-placeholder": "seunome",
+    "get-url": "Obtenha seu URL",
+    "alexa-example-desc": "Levantadora de peso profissional e mãe de dois lindos filhos"
+  },
+  "Navbar": {
+    "logo": "Movete",
+    "about": "Início",
+    "search": "Buscar",
+    "dashboard": "Meu perfil"
+  },
+  "ClaimYourLink": {
+    "placeholder": "seunome",
+    "button": "Reivindique seu link"
+  },
+  "SecctionTwo": {
+    "title": "Não apenas mostre suas estatísticas na academia, mas também nos esportes em que se destaca.",
+    "description": "Adicione belos cartões que mostrem o quão bom você é em um ou mais esportes de sua escolha.",
+    "button": "Começar"
+  },
+  "SecctionThree": {
+    "title": "Crie e personalize sua biografia fitness com Movete em pouco tempo",
+    "description": "Mostre a todos quanto peso você levanta, adicione seus links como TikTok, Instagram, site, etc. Conecte-se com pessoas que têm os mesmos interesses que você e muito mais."
+  },
+  "Footer": {
+    "title": "Movete",
+    "header1": "Empresa",
+    "linkAbout": "Sobre",
+    "linkContact": "Contato",
+    "linkSupport": "Suporte",
+    "header2": "Ajuda",
+    "copyright": "Movete © Todos os direitos reservados."
+  }
+}
+
+
+

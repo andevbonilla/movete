@@ -1,0 +1,46 @@
+{
+  "Index": {
+    "presentation-part1": " वह ",
+    "presentation-part2": "लिंक",
+    "presentation-part3": " जो आपकी",
+    "presentation-part4": "जीवनशैली को प्रतिष्ठित करता है,",
+    "presentation-part5": " अपनी ",
+    "presentation-part6": "खेल की उपलब्धियों",
+    "presentation-part7": " के साथ ",
+    "presentation-part8": "Movete।",
+    "sub-presentation": "वह लिंक जो आपकी जीवनशैली को प्रतिष्ठित करता है, अपनी खेल की उपलब्धियों के साथ Movete।",
+    "yourname-placeholder": "तुम्हारा नाम",
+    "get-url": "अपना URL प्राप्त करें",
+    "alexa-example-desc": "पेशेवर वेटलिफ्टर और दो सुंदर बच्चों की मां"
+  },
+  "Navbar": {
+    "logo": "Movete",
+    "about": "होम",
+    "search": "खोज",
+    "dashboard": "मेरी प्रोफ़ाइल"
+  },
+  "ClaimYourLink": {
+    "placeholder": "तुम्हारा नाम",
+    "button": "अपना लिंक दावा करें"
+  },
+  "SecctionTwo": {
+    "title": "केवल अपने जिम के आंकड़ों को ही नहीं, बल्कि उन खेलों में भी गर्वित हो जिनमें आप अच्छे हैं।",
+    "description": "एक या एक से अधिक अपने चयनित खेलों में आपकी बेहतरीन प्रदर्शन को दिखाने वाले खूबसूरत कार्ड जोड़ें।",
+    "button": "शुरू करें"
+  },
+  "SecctionThree": {
+    "title": "Movete के साथ अपनी फिटनेस जीवनचरित्र को तेजी से बनाएं और व्यक्तिगत करें",
+    "description": "सभी को दिखाएं कि आप कितना वजन उठा सकते हैं, अपने लिंक जैसे कि TikTok, Instagram, वेबसाइट आदि जोड़ें। जो लोग आपके समान इंटरेस्ट रखते हैं, उनसे जुड़ें और और भी बहुत कुछ।"
+  },
+  "Footer": {
+    "title": "Movete",
+    "header1": "कंपनी",
+    "linkAbout": "के बारे में",
+    "linkContact": "संपर्क करें",
+    "linkSupport": "सहायता",
+    "header2": "मदद",
+    "copyright": "Movete © सभी अधिकार सुरक्षित।"
+  }
+}
+
+
