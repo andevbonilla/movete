@@ -40,10 +40,10 @@ export const ExampleProfiles = () => {
                         actualBannerPic={"background-img-2-example.jpg"}
                         actualProfPic={"profile-img-2-example.jpg"}
                         actualName={"John"}
-                        socialMediaList={["youtube", "instagram", "vsco"]}
-                        actualDescription={"Happy person"}
-                        buttonTrain={true}
-                        buttonCardio={true}
+                        socialMediaList={["youtube", "instagram"]}
+                        actualDescription={"Big data engineer and travel lover"}
+                        buttonTrain={false}
+                        buttonCardio={false}
 
                     />
 
@@ -77,13 +77,13 @@ export const ExampleProfiles = () => {
                             }
                         }}
                         actualBackColor={0}
-                        actualBannerPic={"background-img-2-example.jpg"}
-                        actualProfPic={"profile-img-2-example.jpg"}
-                        actualName={"John"}
-                        socialMediaList={["youtube", "instagram", "vsco"]}
-                        actualDescription={"Happy person"}
+                        actualBannerPic={"background-img-3-example.jpg"}
+                        actualProfPic={"profile-img-3-example.jpg"}
+                        actualName={"Miguel"}
+                        socialMediaList={["instagram", "tiktok", "twitter"]}
+                        actualDescription={"futuro sr. olimpia, estava a brincar"}
                         buttonTrain={true}
-                        buttonCardio={false}
+                        buttonCardio={true}
 
                     />
 
@@ -108,12 +108,12 @@ export const ExampleProfiles = () => {
                         ]}
                         sportList={{}}
                         actualBackColor={0}
-                        actualBannerPic={"background-img-2-example.jpg"}
-                        actualProfPic={"profile-img-2-example.jpg"}
-                        actualName={"John"}
+                        actualBannerPic={"background-img-example.jpg"}
+                        actualProfPic={"profile-img-1-example.jpg"}
+                        actualName={"Sofia Agudelo"}
                         socialMediaList={["youtube", "instagram", "vsco"]}
-                        actualDescription={"Happy person"}
-                        buttonTrain={false}
+                        actualDescription={"Abogada y Mama"}
+                        buttonTrain={true}
                         buttonCardio={false}
 
                     />
