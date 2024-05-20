@@ -70,7 +70,7 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
                     <div className='bg-white p-10 rounded z-[999] overflow-y-scroll lg:overflow-hidden max-h-[80vh]'>
                         <h3 className='font-bold mb-8 text-xl'>Change language</h3>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-                            <Link href={'/en'} className={`${(location.pathname === "/") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                            <Link href={'/en'} className={`${(location.pathname === "/" || location.pathname === "/en") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 English
                             </Link>
                             <Link href={'/es'} className={`${(location.pathname === "/es") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
@@ -79,16 +79,16 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
                             <Link href={'/fr'} className={`${(location.pathname === "/fr") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 Français
                             </Link>
-                            <Link href={'/ch'} className={`${(location.pathname === "/zh") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                            <Link href={'/zh'} className={`${(location.pathname === "/zh") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 中文繁體
                             </Link>
                             <Link href={'/ja'} className={`${(location.pathname === "/ja") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 日本語
                             </Link>
-                            <Link href={'/po'} className={`${(location.pathname === "/po") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                            <Link href={'/pt'} className={`${(location.pathname === "/pt") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 Português
                             </Link>
-                            <Link href={'/in'} className={`${(location.pathname === "/hi") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
+                            <Link href={'/hi'} className={`${(location.pathname === "/hi") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>
                                 हिंदी
                             </Link>
                             <Link href={'/ru'} className={`${(location.pathname === "/ru") ? "bg-slate-300" : ""} hover:bg-slate-300 transition-all p-4 rounded`}>

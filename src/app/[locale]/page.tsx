@@ -24,7 +24,6 @@ export default function Index() {
     const claimLinkI18n = useTranslations('ClaimYourLink');
     const secctionTwoI18n = useTranslations('SecctionTwo');
     const secctionThreeI18n = useTranslations('SecctionThree');
-    const secctionFourthI18n = useTranslations('FourthSection');
     const footerI18n = useTranslations('Footer');
 
     return (
