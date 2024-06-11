@@ -3,7 +3,7 @@ import "../globals.css";
 import { Lato } from "@next/font/google";
 
 // Can be imported from a shared config
-const locales = ['en', 'es'];
+const locales = ['en', 'es', 'hi', 'fr', 'ru', 'pt', 'ja', 'zh'];
 
 const lato = Lato({
     weight: ["400", "700", "900"], // bold de la fuente
