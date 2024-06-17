@@ -49,8 +49,8 @@ export const Footer = ({
                     <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>{header1}</h3>
                     <div className='flex flex-col items-start justify-start'>
                         <Link href={"/"} className={`text-lg mt-3`}>{linkAbout}</Link>
-                        <Link href={"/"} className={`text-lg mt-3`}>{linkTerms}</Link>
-                        <Link href={"/"} className={`text-lg mt-3`}>{linkPrivacy}</Link>
+                        <Link href={"/terms-of-use"} className={`text-lg mt-3`}>{linkTerms}</Link>
+                        <Link href={"/privacy"} className={`text-lg mt-3`}>{linkPrivacy}</Link>
                     </div>
                 </div>
 
