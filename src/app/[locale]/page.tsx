@@ -117,6 +117,8 @@ export default function Index() {
                 linkAbout={footerI18n("linkAbout")}
                 linkContact={footerI18n("linkContact")}
                 linkSupport={footerI18n("linkSupport")}
+                linkTerms={footerI18n("linkTerms")}
+                linkPrivacy={footerI18n("linkPrivacy")}
                 header2={footerI18n("header2")}
                 copyright={footerI18n("copyright")}
             />
