@@ -37,10 +37,10 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
             <div className='md:px-[20%] bg-black flex items-center justify-between px-[10%] pt-8 pb-6 text-white'>
                 <Link href="/" className={`${delaGothic.className} text-2xl`}>Movete</Link>
                 <div className='flex items-center'>
-                    <button className='' type='button' title='change language' onClick={openLanguageMenu}>
+                    <button type='button' title='change language' onClick={openLanguageMenu}>
                         <FontAwesomeIcon icon={faLanguage} className='w-10 h-10 cursor-pointer text-white mr-6' />
                     </button>
-                    <button className='' type='button' title='open side menu' onClick={openSideMenu}>
+                    <button type='button' title='open side menu' onClick={openSideMenu}>
                         <FontAwesomeIcon icon={faBars} size='2x' className='text-white openSideMenu cursor-pointer' />
                     </button>
                 </div>

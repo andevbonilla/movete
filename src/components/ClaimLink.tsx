@@ -19,7 +19,7 @@ export const ClaimLink = ({ placeholderText, buttonText }: any) => {
             </div>
             <a
                 href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/claim-your-link${(linkInput.length > 0) ? `?username=${linkInput}` : ""}`}
-                className={`bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
+                className={`hover:bg-[#00CE74] transition duration-300 bg-[#00FF8F] mt-4 py-3 px-5 text-center w-full rounded font-extrabold text-lg`}
             >
                 {buttonText}
             </a>

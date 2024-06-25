@@ -80,10 +80,10 @@ export const ProfileExample = ({ exercises, sportList, actualBackColor, actualBa
             {
                 (buttonTrain || buttonCardio) && <div className='mx-[10%] mb-10'>
                     {
-                        buttonTrain && <button type='button' className={`w-full py-3 px-4 text-white cursor-pointer font-bold bg-blue-400 rounded`}>💪 Let&apos;s train together</button>
+                        buttonTrain && <button type='button' className={`hover:bg-[#5898E7] transition duration-300 w-full py-3 px-4 text-white cursor-pointer font-bold bg-blue-400 rounded`}>💪 Let&apos;s train together</button>
                     }
                     {
-                        buttonCardio && <button type='button' className={`w-full py-3 px-4 text-white cursor-pointer mt-5 font-bold bg-red-600 rounded`}>😉 Let&apos;s do cardio</button>
+                        buttonCardio && <button type='button' className={`hover:bg-[#C62323] transition duration-300 w-full py-3 px-4 text-white cursor-pointer mt-5 font-bold bg-red-600 rounded`}>😉 Let&apos;s do cardio</button>
                     }
                 </div>
             }

@@ -74,7 +74,7 @@ export default function Index() {
                         <p className='mt-3 mb-8'>{secctionTwoI18n('description')}</p>
                         <a
                             href={`${process.env.DASHBOARD_LINK}/register/claim-your-link`}
-                            className={`lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
+                            className={`hover:bg-[#00CE74] transition duration-300 lg:w-auto bg-[#00FF8F] py-3 px-5 text-center rounded font-extrabold text-lg mb-14`}
                         >
                             {secctionTwoI18n('button')}
                         </a>
