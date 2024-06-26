@@ -2,6 +2,13 @@ import { notFound } from 'next/navigation';
 import "../globals.css";
 import { Lato } from "@next/font/google";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Link for all your social networks, to show all your sport and gym achievements | Movete',
+    description: 'Create an account on Movete and show your sporting achievements to everyone'
+};
+
 // Can be imported from a shared config
 const locales = ['en', 'es', 'hi', 'fr', 'ru', 'pt', 'ja', 'zh'];
 
