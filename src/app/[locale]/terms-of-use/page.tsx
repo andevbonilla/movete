@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 const TOSpage = () => {
 
     const navarI18n = useTranslations('Navbar');
-    const footerI18n = useTranslations('Footer');
+    const footerI18n = useTranslations('Footer')
 
     return (
         <>

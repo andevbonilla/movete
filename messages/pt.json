@@ -42,7 +42,23 @@
     "linkSupport": "Suporte",
     "header2": "Ajuda",
     "copyright": "Movete © Todos os direitos reservados."
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidade",
+    "headerSection1": "Política de Privacidade",
+    "contentSection1": "Esta Política de Privacidade estabelece os termos nos quais o Movete usa e protege as informações fornecidas pelos usuários ao utilizar seu site. Esta empresa está comprometida com a segurança dos dados de seus usuários. Quando solicitamos que você preencha os campos de informações pessoais através dos quais pode ser identificado, garantimos que essas informações serão utilizadas apenas de acordo com os termos deste documento. No entanto, esta Política de Privacidade pode ser alterada ao longo do tempo ou ser atualizada, por isso recomendamos e enfatizamos revisar esta página periodicamente para garantir que concorde com tais mudanças.",
+    "headerSection2": "Informações coletadas",
+    "contentSection2": "Nosso site pode coletar informações pessoais, como nome, informações de contato como seu endereço de e-mail e informações demográficas. Da mesma forma, quando necessário, pode ser solicitada informação específica para processar um pedido ou realizar uma entrega ou faturamento.",
+    "headerSection3": "Uso das informações coletadas",
+    "contentSection3": "Nosso site utiliza as informações para fornecer o melhor serviço possível, especialmente para manter um registro de usuários, pedidos (se aplicável) e melhorar nossos produtos e serviços. Emails podem ser enviados periodicamente através de nosso site com ofertas especiais, novos produtos e outras informações publicitárias que consideramos relevantes para você ou que possam trazer benefícios, esses emails serão enviados para o endereço que você fornecer e podem ser cancelados a qualquer momento. O Movete está altamente comprometido em cumprir sua obrigação de manter suas informações seguras. Utilizamos os sistemas mais avançados e os atualizamos constantemente para garantir que não haja acesso não autorizado.",
+    "headerSection4": "Política de cookies",
+    "contentSection4": "Um cookie refere-se a um arquivo que é enviado com o objetivo de solicitar permissão para ser armazenado em seu computador, ao aceitar este arquivo é criado e o cookie então serve para ter informações sobre o tráfego da web e também facilita futuras visitas recorrentes. Outra função dos cookies é que eles permitem que o site o reconheça individualmente e, portanto, forneça o melhor serviço personalizado em seu site. Nosso site utiliza cookies para identificar as páginas visitadas e sua frequência. Essas informações são usadas apenas para análise estatística e, em seguida, as informações são permanentemente excluídas. Você pode excluir os cookies a qualquer momento do seu computador. No entanto, os cookies ajudam a fornecer um melhor serviço nos sites, eles não dão acesso a informações do seu computador ou de você, a menos que você queira e forneça diretamente. Você pode aceitar ou recusar o uso de cookies, no entanto, a maioria dos navegadores aceita cookies automaticamente, pois isso é necessário para fornecer um serviço web melhor. Você também pode alterar as configurações do seu computador para recusar cookies. Se forem recusados, você pode não ser capaz de usar alguns de nossos serviços.",
+    "headerSection5": "Links para terceiros",
+    "contentSection5": "Este site pode conter links para outros sites que possam ser do seu interesse. Uma vez que você clique nesses links e saia de nossa página, não temos mais controle sobre o site para o qual você é redirecionado e, portanto, não somos responsáveis pelos termos ou políticas de privacidade nem pela proteção de seus dados nesses outros sites de terceiros. Esses sites estão sujeitos às suas próprias políticas de privacidade, portanto, é recomendável que você as consulte para confirmar que concorda com elas.",
+    "headerSection6": "Controle de suas informações pessoais",
+    "contentSection6": "A qualquer momento, você pode restringir a coleta ou uso das informações pessoais fornecidas ao nosso site. Sempre que for solicitado a preencher um formulário, como registro de usuário, você pode marcar ou desmarcar a opção de receber informações por e-mail. Caso tenha marcado a opção de receber nosso boletim informativo ou publicidade, você pode cancelá-la a qualquer momento. Esta empresa não venderá, transferirá ou distribuirá as informações pessoais coletadas sem seu consentimento, exceto conforme exigido por um juiz com ordem judicial. O Movete reserva-se o direito de alterar os termos desta Política de Privacidade a qualquer momento."
   }
+
 }
 
 
