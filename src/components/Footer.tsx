@@ -20,7 +20,8 @@ export const Footer = ({
     linkTerms,
     linkPrivacy,
     header2,
-    copyright }: any) => {
+    copyright,
+    lang }: any) => {
 
     return (
         <footer className='md:px-[20%] text-white px-[10%] mt-32'>
@@ -49,17 +50,17 @@ export const Footer = ({
                     <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>{header1}</h3>
                     <div className='flex flex-col items-start justify-start'>
                         <Link href={"/"} className={`text-lg mt-3`}>{linkAbout}</Link>
-                        <Link href={"/terms-of-use"} className={`text-lg mt-3`}>{linkTerms}</Link>
-                        <Link href={"/privacy"} className={`text-lg mt-3`}>{linkPrivacy}</Link>
+                        <Link href={`${lang}/terms-of-use`} className={`text-lg mt-3`}>{linkTerms}</Link>
+                        <Link href={`${lang}/privacy`} className={`text-lg mt-3`}>{linkPrivacy}</Link>
                     </div>
                 </div>
 
                 <div className='md:mt-0 mt-8'>
                     <h3 className={`${delaGothic.className} text-lg mt-4 mb-2`}>{header2}</h3>
                     <div className='flex flex-col items-start justify-start'>
-                        <Link href={"/"} className={`text-lg mt-3`}>FQAs</Link>
-                        <Link href={"/"} className={`text-lg mt-3`}>{linkContact}</Link>
-                        <Link href={"/"} className={`text-lg mt-3`}>{linkSupport}</Link>
+                        <Link href={`/${lang}`} className={`text-lg mt-3`}>FQAs</Link>
+                        <Link href={`/${lang}`} className={`text-lg mt-3`}>{linkContact}</Link>
+                        <Link href={`/${lang}`} className={`text-lg mt-3`}>{linkSupport}</Link>
                     </div>
                 </div>
             </div>

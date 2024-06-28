@@ -14,7 +14,9 @@ const delaGothic = Dela_Gothic_One({
     subsets: ["latin"]
 });
 
-export default function Index() {
+export default function Index(props: any) {
+
+    const lang = props.params.locale;
 
     // 1. #001429
     // 2. #00FF8F
@@ -121,6 +123,7 @@ export default function Index() {
                 linkPrivacy={footerI18n("linkPrivacy")}
                 header2={footerI18n("header2")}
                 copyright={footerI18n("copyright")}
+                lang={lang}
             />
         </>
     );
