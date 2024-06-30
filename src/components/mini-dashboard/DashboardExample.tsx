@@ -10,7 +10,7 @@ import { AddSport } from './AddSport'
 export const DashboardExample = () => {
     return (
         <div className='w-full relative h-[15rem] overflow-hidden flex justify-center items-center lg:h-[20rem]'>
-            <div className='absolute scale-[0.6] sm:scale-[0.8] lg:scale-[1]'>
+            <div className='absolute scale-[0.6] sm:scale-[0.8] lg:scale-[1]' id='fqas'>
                 <div className='flex'>
                     <div>
                         <div className='flex'>
