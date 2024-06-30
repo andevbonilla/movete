@@ -70,7 +70,24 @@
     "contentSection4": "No puede reclamar propiedad intelectual o exclusiva de ninguno de nuestros productos, modificado o sin modificar. Todos los productos son propiedad de los proveedores de contenido. A menos que se especifique lo contrario, nuestros productos se proporcionan sin ningún tipo de garantía, expresa o implícita. En ningún caso esta empresa será responsable de ningún daño, incluidos, entre otros, daños directos, indirectos, especiales, incidentales o consecuentes u otras pérdidas derivadas del uso o la imposibilidad de uso de nuestros productos.",
     "headerSection5": "POLÍTICA DE REEMBOLSO Y GARANTÍA",
     "contentSection5": "Los reembolsos serán aprobados siempre y cuando la razón del reembolso sea porque el programa al que se suscribió fue fraude o información engañosa, de lo contrario no habrá reembolso."
+  },
+  "FQAs": {
+    "title": "Preguntas frecuentes",
+    "titleQuestion1": "¿Qué es Movete?",
+    "contentQuestion1": "Movete es una herramienta que te permite crear un perfil rápidamente, donde puedes mostrar todos tus logros y progresos en el gimnasio o en deportes. A través de un enlace que puedes compartir en todas tus redes sociales, incluso en Tinder, ¡para que tengas aún más éxito!",
+    "titleQuestion2": "¿Cómo puedo crear un perfil en Movete?",
+    "subtitleQuestion2": "En estos sencillos pasos puedes obtener el enlace que muestra tu fuerza.",
+    "step1Question2": "Haz clic en el siguiente enlace para crear una cuenta:",
+    "linkStep1Question2": "Crear cuenta",
+    "step2Question2": "Elige un nombre único para identificarte. No te preocupes demasiado por ello, puedes cambiarlo en cualquier momento.",
+    "step3Question2": "Si el nombre está disponible, solo necesitas registrarte. Puedes hacerlo con Google o creando una contraseña.",
+    "step4Question2": "¡Y listo! Así se creará tu perfil. ¡Es así de fácil!",
+    "step5Question2": "Ahora, haz clic en el botón azul que dice EDITAR PERFIL. Allí podrás agregar tus logros deportivos, cambiar la paleta de colores, añadir enlaces a tus redes sociales, actualizar tu foto de perfil, escribir una descripción y más.",
+    "titleQuestion3": "¿Movete tiene algún costo?",
+    "contentQuestion3": "Movete es completamente gratuito. Ganamos dinero mediante la venta de artículos deportivos en nuestra tienda, lo que nos ayuda a mantener la herramienta gratuita para todos. Puedes visitar la tienda en el siguiente enlace:",
+    "linkQuestion3": "Tienda Movete"
   }
+
 }
 
 

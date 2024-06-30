@@ -70,5 +70,21 @@
     "contentSection4": "You cannot declare intellectual or exclusive property to any of our products, modified or unmodified. All products are the property of the content providers. Unless otherwise specified, our products are provided without any kind of warranty, express or implied. In no way will this company be liable for any damages including, but not limited to, direct, indirect, special, incidental or consequential damages or other losses resulting from the use or inability to use our products.",
     "headerSection5": "REFUND AND GUARANTEE POLICY",
     "contentSection5": "Refunds will be approved as long as the reason for the refund is because the program you subscribed to was fraud or misleading information, otherwise there will be no refund."
+  },
+  "FQAs": {
+    "title": "FQAs",
+    "titleQuestion1": "What is movete?",
+    "contentQuestion1": "Movete is a tool that allows you to create a profile quickly, where you can show all your achievements and progress in the gym or in sports. Through a link that you can share on all your social networks, even on Tinder, to make you even more successful!",
+    "titleQuestion2": "How can I create a Movete profile?",
+    "subtitleQuestion2": "In these simple steps you can have the link that shows how strong you are.",
+    "step1Question2": "Click on the following link to create an account:",
+    "linkStep1Question2": "Create Account",
+    "step2Question2": "Choose a unique name to identify yourself. Don't worry too much about it—you can change it at any time.",
+    "step3Question2": "If the name is available, you just need to register. You can do this with Google or by creating a password.",
+    "step4Question2": "With this, your profile will be created. It's as easy as that!",
+    "step5Question2": "Now, click on the blue button that says EDIT PROFILE. There, you can add your sports achievements, change the color palette, add links to your social networks, update your profile picture, write a description, and more.",
+    "titleQuestion3": "Does Movete have any cost?",
+    "contentQuestion3": "Movete is completely free to use. We earn money through the sale of sporting goods at our store, which helps us keep the tool free for everyone. You can check out the store in the following link:",
+    "linkQuestion3": "Movete Store"
   }
 }
