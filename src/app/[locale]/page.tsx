@@ -118,7 +118,6 @@ export default function Index(props: any) {
                 header1={footerI18n("header1")}
                 linkAbout={footerI18n("linkAbout")}
                 linkContact={footerI18n("linkContact")}
-                linkSupport={footerI18n("linkSupport")}
                 linkTerms={footerI18n("linkTerms")}
                 linkPrivacy={footerI18n("linkPrivacy")}
                 header2={footerI18n("header2")}
