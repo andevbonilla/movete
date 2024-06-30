@@ -3,7 +3,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
-export const Question = ({ title, answer }: any) => {
+export const Question = ({ title, children }: any) => {
 
     const [showQuestion, setShowQuestion] = useState(false);
 
@@ -20,9 +20,10 @@ export const Question = ({ title, answer }: any) => {
                 }
             </div>
             {
-                showQuestion && <p className='mt-4 px-5'>
-                    {answer}
-                </p>
+                showQuestion &&
+                <>
+                    {children}
+                </>
             }
         </div>
     )
