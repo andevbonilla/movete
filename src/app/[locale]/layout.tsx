@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import "../globals.css";
 import { Lato } from "@next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+
 
 import { Metadata } from 'next';
 
@@ -24,7 +26,10 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 
     return (
         <html lang={locale}>
-            <body className={`${lato.className} bg-black`}>{children}</body>
+            <body className={`${lato.className} bg-black`}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }
