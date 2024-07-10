@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Dela_Gothic_One } from '@next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faSquareXTwitter, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { useParams } from 'next/navigation';
 
 const delaGothic = Dela_Gothic_One({
@@ -33,18 +33,38 @@ export const Footer = ({
             </div>
 
             <div className='flex items-center justify-start mt-6 mb-10'>
-                <Link href={"/"} className={`text-lm`} title='instagram link'>
+                <a
+                    href="https://www.instagram.com/movete.me"
+                    target="_blank"
+                    className={`text-lm`}
+                    title='instagram link'
+                >
                     <FontAwesomeIcon icon={faInstagram} size="2x" className='mr-12' />
-                </Link>
-                <Link href={"/"} className={`text-lm`} title='twitter link'>
-                    <FontAwesomeIcon icon={faSquareXTwitter} size="2x" className='mr-12' />
-                </Link>
-                <Link href={"/"} className={`text-lm`} title='tiktok link'>
+                </a>
+                <a
+                    href="https://www.youtube.com/@movete_latam"
+                    target="_blank"
+                    className={`text-lm`}
+                    title='youtube link'
+                >
+                    <FontAwesomeIcon icon={faYoutube} size="2x" className='mr-12' />
+                </a>
+                <a
+                    href="https://www.tiktok.com/@movete.me"
+                    target="_blank"
+                    className={`text-lm`}
+                    title='tiktok link'
+                >
                     <FontAwesomeIcon icon={faTiktok} size="2x" className='mr-12' />
-                </Link>
-                <Link href={"/"} className={`text-lm`} title='linkedIn link'>
+                </a>
+                <a
+                    href="https://www.linkedin.com/company/movete-latam"
+                    target="_blank"
+                    className={`text-lm`}
+                    title='linkedIn link'
+                >
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                </Link>
+                </a>
             </div>
 
             <div className='flex sm:flex-row flex-col'>
