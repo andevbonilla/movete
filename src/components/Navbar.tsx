@@ -58,7 +58,7 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
                             <Link href="/" className={`${delaGothic.className} text-xl my-5`}>
                                 {aboutText}
                             </Link>
-                            <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/`} className={`${delaGothic.className} text-xl my-5`}>
+                            <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/search`} className={`${delaGothic.className} text-xl my-5`}>
                                 {searchText}
                             </a>
                             <a href={`${process.env.NEXT_PUBLIC_DASHBOARD_LINK}/dashboard`} className={`${delaGothic.className} text-xl my-5`}>
