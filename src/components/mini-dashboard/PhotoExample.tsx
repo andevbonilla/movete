@@ -5,7 +5,7 @@ export const PhotoExample = () => {
     return (
         <div className='w-full flex items-center justify-center'>
             <Image
-                src={require('../../assets/pedro.png')}
+                src={require('../../assets/pedro.webp')}
                 alt='Pedro example photo'
                 width={180}
                 height={180}

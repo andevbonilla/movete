@@ -37,8 +37,8 @@ export const ExampleProfiles = () => {
                         ]}
                         sportList={{}}
                         actualBackColor={0}
-                        actualBannerPic={"background-img-2-example.webp"}
-                        actualProfPic={"profile-img-2-example.webp"}
+                        actualBannerPic={"background-img-3-example.webp"}
+                        actualProfPic={"profile-img-3-example.webp"}
                         actualName={"John"}
                         socialMediaList={["youtube", "instagram"]}
                         actualDescription={"Big data engineer and travel lover"}
@@ -77,11 +77,11 @@ export const ExampleProfiles = () => {
                             }
                         }}
                         actualBackColor={0}
-                        actualBannerPic={"background-img-3-example.webp"}
+                        actualBannerPic={"background-img-example.webp"}
                         actualProfPic={"pedro.webp"}
-                        actualName={"Miguel"}
+                        actualName={"Pedro"}
                         socialMediaList={["instagram", "tiktok", "twitter"]}
-                        actualDescription={"futuro sr. olimpia, estava a brincar"}
+                        actualDescription={"ワールドスター"}
                         buttonTrain={true}
                         buttonCardio={true}
 
@@ -109,7 +109,7 @@ export const ExampleProfiles = () => {
                         sportList={{}}
                         actualBackColor={0}
                         actualBannerPic={"background-img-example.webp"}
-                        actualProfPic={"profile-img-3-example.webp"}
+                        actualProfPic={"profile-img-1-example.webp"}
                         actualName={"Sofia Agudelo"}
                         socialMediaList={["youtube", "instagram", "vsco"]}
                         actualDescription={"Abogada y Mama"}
