@@ -84,7 +84,7 @@ export default function Index(props: any) {
 
                     <div className='lg:w-1/2 overflow-hidden w-full sm:px-[2%] lg:px-0 xl:px-[2%]'>
                         <Image
-                            src={require(`@/assets/sports-stats-example.jpg`)}
+                            src={require(`@/assets/sports-stats-example.webp`)}
                             alt='online page'
                             width={1000}
                             height={1000}
