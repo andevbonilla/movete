@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Dela_Gothic_One } from '@next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +18,12 @@ export const Navbar = ({ aboutText, searchText, dashboardText }: any) => {
     const [showLanguageMenu, setshowLanguageMenu] = useState(false);
 
     const params: { locale: string } = useParams();
-    const currentUrl = location.href;
+    const [currentUrl, setcurrentUrl] = useState("");
+
+    useEffect(() => {
+        setcurrentUrl(location.href);
+    }, [])
+
 
     const openSideMenu = () => {
         setshowSideMenu(true);
